@@ -1,0 +1,186 @@
+.header {
+	--background-color: rgba(12, 11, 9, 0.61);
+	color: var(--default-color);
+	transition: all 0.5s;
+	z-index: 997;
+}
+.header .branding {
+	background-image: linear-gradient(0deg, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.3) 20%, rgba(0, 0, 0, 0.7) 50%, #000);
+	min-height: 60px;
+	padding: 1.2em 0;
+	transition: 0.3s;
+}
+.header .logo {
+	line-height: 1;
+}
+.header .logo h1 {
+	font-size: 20px;
+	margin: 0;
+	font-weight: 600;
+	color: var(--heading-color);
+}
+@media (min-width: 1200px) {
+	.navmenu {
+		padding: 0;
+	}
+	.navmenu ul {
+		margin: 0;
+		padding: 0;
+		display: flex;
+		list-style: none;
+		align-items: center;
+	}
+	.navmenu li {
+		position: relative;
+	}
+	.navmenu a,
+	.navmenu a:focus {
+		color: var(--nav-color);
+		padding: 18px 15px;
+		font-size: 16px;
+		font-family: var(--nav-font);
+		font-weight: 400;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		white-space: nowrap;
+		transition: 0.3s;
+		text-transform: uppercase;
+		letter-spacing: 3px;
+	}
+	.navmenu a i,
+	.navmenu a:focus i {
+		font-size: 12px;
+		line-height: 0;
+		margin-left: 5px;
+		transition: 0.3s;
+	}
+	.navmenu li:last-child a {
+		padding-right: 0;
+	}
+	.navmenu .active,
+	.navmenu .active:focus,
+	.navmenu li:hover > a {
+		color: var(--nav-hover-color);
+	}
+}
+@media (max-width: 1199px) {
+	.mobile-nav-toggle {
+		color: var(--nav-color);
+		font-size: 28px;
+		line-height: 0;
+		cursor: pointer;
+		transition: color 0.3s;
+	}
+	.navmenu {
+		padding: 0;
+		z-index: 9997;
+	}
+	.navmenu ul {
+		display: none;
+		list-style: none;
+		position: absolute;
+		inset: 60px 20px 20px 20px;
+		padding: 10px 0;
+		margin: 0;
+		border-radius: 6px;
+		background-color: var(--nav-mobile-background-color);
+		border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+		overflow-y: auto;
+		transition: 0.3s;
+		z-index: 9998;
+	}
+	.navmenu a,
+	.navmenu a:focus {
+		color: var(--nav-dropdown-color);
+		padding: 10px 20px;
+		font-family: var(--nav-font);
+		font-size: 17px;
+		font-weight: 500;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		white-space: nowrap;
+		transition: 0.3s;
+	}
+	.navmenu a i,
+	.navmenu a:focus i {
+		font-size: 12px;
+		line-height: 0;
+		margin-left: 5px;
+		width: 30px;
+		height: 30px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 50%;
+		transition: 0.3s;
+		background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+	}
+	.navmenu a i:hover,
+	.navmenu a:focus i:hover {
+		background-color: var(--accent-color);
+		color: var(--contrast-color);
+	}
+	.navmenu .active,
+	.navmenu .active:focus,
+	.navmenu a:hover {
+		color: var(--nav-dropdown-hover-color);
+	}
+	.navmenu .active i,
+	.navmenu .active:focus i {
+		background-color: var(--accent-color);
+		color: var(--contrast-color);
+		transform: rotate(180deg);
+	}
+	.mobile-nav-active {
+		overflow: hidden;
+	}
+	.mobile-nav-active .mobile-nav-toggle {
+		color: #fff;
+		position: absolute;
+		font-size: 32px;
+		top: 15px;
+		right: 15px;
+		margin-right: 0;
+		z-index: 9999;
+	}
+	.mobile-nav-active .navmenu {
+		position: fixed;
+		overflow: hidden;
+		inset: 0;
+		background: rgba(33, 37, 41, 0.8);
+		transition: 0.3s;
+	}
+	.mobile-nav-active .navmenu > ul {
+		display: block;
+	}
+}
+@keyframes animate-preloader {
+	0% {
+		transform: rotate(0);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+@media screen and (max-width: 768px) {
+	[data-aos-delay] {
+		transition-delay: 0 !important;
+	}
+}
+@keyframes pulse {
+	0%,
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+	50% {
+		opacity: 0.5;
+		transform: translateY(10px);
+	}
+}
+body,
+html {
+	height: 100%;
+}

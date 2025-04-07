@@ -1,0 +1,115 @@
+.section-category {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 3rem 1rem;
+}
+
+.custom-image-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 500px;
+	position: relative;
+}
+
+.green-underline {
+	color: #cc8b00;
+	font-family: cursive;
+	font-size: 2.5rem;
+	font-weight: 500;
+}
+
+.main-heading {
+	font-size: 3rem;
+	font-weight: 600;
+	margin-bottom: 1rem;
+}
+
+.custom-btn {
+	border: 1px solid var(--nav-hover-color);
+	color: var(--nav-hover-color);
+	background: transparent;
+	padding: 0.5rem 1.5rem;
+	font-weight: 500;
+	font-size: 1.2rem;
+}
+p {
+	font-size: 1.5rem;
+	color: #fff;
+}
+
+.custom-btn:hover {
+	background-color: var(--nav-hover-color);
+	color: #0e0e0f;
+}
+
+.stacked-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+}
+
+.stacked-container img {
+	border-radius: 10px;
+	width: 450px;
+	height: 450px;
+	z-index: 1;
+	object-fit: cover;
+	transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+.stacked-container img:hover {
+	transform: scale(1.05) rotate(3deg);
+	box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+	filter: brightness(1.1);
+}
+
+.green-border-stack {
+	width: 350px;
+	height: 500px;
+	background-color: transparent;
+	border: 10px solid #815e13de;
+	border-radius: 8px;
+	position: absolute;
+	top: 0;
+	z-index: 0;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+	.stacked-container img {
+		width: 300px; /* Reduce image size on mobile */
+		height: 300px;
+	}
+
+	.green-border-stack {
+		width: 250px; /* Adjust the green border for smaller screens */
+		height: 350px;
+	}
+	.custom-image-container {
+		height: 350px;
+	}
+
+	.main-heading {
+		font-size: 1.8rem; /* Make the heading smaller on mobile */
+		text-align: center;
+	}
+
+	.green-underline {
+		font-size: 1.5rem; /* Adjust the underline text size for mobile */
+		text-align: center;
+	}
+	p {
+		text-align: center;
+	}
+
+	.custom-btn {
+		padding: 0.5rem 1rem; /* Adjust button padding on mobile */
+		display: flex;
+		justify-content: center;
+		width: 100%;
+	}
+}
