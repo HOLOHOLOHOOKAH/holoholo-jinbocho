@@ -1,9 +1,7 @@
 .hero {
 	width: 100%;
 	position: relative;
-	height: 100vh !important;
-	max-height: -webkit-fill-available !important;
-	min-height: -webkit-fill-available !important;
+	height: calc(100vh - calc(100vh - 100%));
 }
 
 /* Video background */
