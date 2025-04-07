@@ -36,7 +36,7 @@ interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = ({ page }) => {
-	const { isMobileNavActive } = useMobileNavToggle();
+	useMobileNavToggle();
 	useMobileNavCloseOnLinkClick();
 	useScrollspy();
 
@@ -50,18 +50,20 @@ const Header: React.FC<HeaderProps> = ({ page }) => {
 						</div>
 					</Link>
 
-					<nav id="navmenu" className="navmenu">
-						<ul>
-							{sections[page]?.map(({ key, label }, index) => (
-								<li key={key}>
-									<a href={`#${key}`} className={index === 0 ? "active" : ""}>
-										{label}
-									</a>
-								</li>
-							))}
-						</ul>
-						<i className="mobile-nav-toggle d-xl-none bi bi-list" />
-					</nav>
+					{sections[page]?.length > 0 && (
+						<nav id="navmenu" className="navmenu">
+							<ul>
+								{sections[page].map(({ key, label }, index) => (
+									<li key={key}>
+										<a href={`#${key}`} className={index === 0 ? "active" : ""}>
+											{label}
+										</a>
+									</li>
+								))}
+							</ul>
+							<i className="mobile-nav-toggle d-xl-none bi bi-list" />
+						</nav>
+					)}
 				</div>
 			</div>
 		</header>

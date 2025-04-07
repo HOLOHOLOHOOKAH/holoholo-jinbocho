@@ -79,7 +79,7 @@ p {
 }
 
 /* Media Queries for responsiveness */
-@media (max-width: 768px) {
+@media (max-width: 1199px) {
 	.stacked-container img {
 		width: 300px; /* Reduce image size on mobile */
 		height: 300px;

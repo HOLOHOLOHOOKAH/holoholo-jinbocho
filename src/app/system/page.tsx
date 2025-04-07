@@ -16,9 +16,9 @@ const Homepage: React.FC = () => {
 
 				<div className={styles.menuSection}>
 					<ul className="list-unstyled small mb-3">
-						<li>シーシャ：¥1800</li>
-						<li>チャージ：¥700（お通し付き）</li>
-						<li>ドリンク：¥500〜</li>
+						<li>シーシャ: ¥1800</li>
+						<li>チャージ: ¥700 (お通し付き)</li>
+						<li>ドリンク: ¥500〜</li>
 					</ul>
 				</div>
 
@@ -29,9 +29,9 @@ const Homepage: React.FC = () => {
 				<div className={styles.menuSection}>
 					<h5 className="fw-semibold">Option</h5>
 					<ul className="list-unstyled small">
-						<li>アルコールボトル：¥1000</li>
-						<li>ジュースボトル：¥500</li>
-						<li>アイスホース：¥300</li>
+						<li>アルコールボトル: ¥1000</li>
+						<li>ジュースボトル: ¥500</li>
+						<li>アイスホース: ¥300</li>
 					</ul>
 				</div>
 
@@ -50,7 +50,7 @@ const Homepage: React.FC = () => {
 					<p className="fw-semibold">
 						初回来店時 Googleレビュー投稿で
 						<br />
-						会計¥500OFF！！
+						会計¥500OFF !!
 					</p>
 					<p>投稿後、スタッフまで画面提示お願いします！</p>
 				</div>

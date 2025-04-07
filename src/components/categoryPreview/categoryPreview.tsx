@@ -1,5 +1,6 @@
 import React from "react";
 import "./categoryPreview.css";
+import Image from "next/image";
 
 interface CategoryPreviewProps {
 	reverse?: boolean;
@@ -33,7 +34,7 @@ const CategoryPreview: React.FC<CategoryPreviewProps> = ({
 					<div className="custom-image-container">
 						<div className="green-border-stack"></div>
 						<div className="stacked-container">
-							<img src={imageSrc} alt="Lounge" />
+							<Image height={500} width={300} src={imageSrc} alt={title} />
 						</div>
 					</div>
 				</div>
