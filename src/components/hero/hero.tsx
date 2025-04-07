@@ -20,7 +20,7 @@ const Hero: React.FC<HeroProps> = () => {
 					</div>
 				</div>
 
-				<div style={{ textShadow: "rgb(0 0 0) 3px 2px 5px" }} className="scroll-down mb-3 z-3">
+				<div style={{ textShadow: "rgb(0 0 0) 3px 2px 5px" }} className="scroll-down mb-3 z-3 w-100">
 					Scroll ↓
 				</div>
 			</div>

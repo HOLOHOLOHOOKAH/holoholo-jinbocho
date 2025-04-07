@@ -1,10 +1,6 @@
 .hero {
 	width: 100%;
 	position: relative;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	color: var(--default-color);
 	height: 100vh !important;
 	max-height: -webkit-fill-available !important;
 	min-height: -webkit-fill-available !important;

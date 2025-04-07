@@ -262,14 +262,16 @@ section,
 
 .scroll-down {
 	position: absolute;
+	display: flex;
+	justify-content: center;
 	bottom: 20px;
 	color: white;
 	text-transform: uppercase;
 	animation: pulse 2s infinite;
-	font-family: "Noto Sans JP", sans-serif;
 	font-size: 0.9rem;
 	letter-spacing: 0.05em;
 	font-weight: 500;
+	text-shadow: rgb(0 0 0) 3px 2px 5px;
 }
 
 @keyframes pulse {
