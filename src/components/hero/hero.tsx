@@ -8,8 +8,8 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = () => {
 	return (
-		<div id="home">
-			<div className="hero section dark-background">
+		<>
+			<div id="home" className="hero section dark-background">
 				<video src="/img/video.mp4" autoPlay playsInline loop muted className="hero-video z-0 position-absolute"></video>
 
 				<div className="container position-relative z-1">
@@ -25,7 +25,7 @@ const Hero: React.FC<HeroProps> = () => {
 				</div>
 			</div>
 			<div className="position-absolute w-100 white-line"></div>
-		</div>
+		</>
 	);
 };
 
