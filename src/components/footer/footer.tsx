@@ -7,10 +7,10 @@ const Footer: React.FC = () => {
 		<footer id="footer" className="footer">
 			<div className="container footer-top pt-3 pb-2">
 				<div className="social-links d-flex justify-content-center">
-					<Link className="m-0 mx-2" rel="noreferrer" target="_blank" href="https://www.instagram.com/holoholojinbocho/">
+					<Link aria-label="Open Instagram page" className="m-0 mx-2" rel="noreferrer" target="_blank" href="https://www.instagram.com/holoholojinbocho/">
 						<i className="bi bi-instagram" />
 					</Link>
-					<Link className="m-0 mx-2" rel="noreferrer" target="_blank" href="https://x.com/holojinbocho">
+					<Link aria-label="Open X page" className="m-0 mx-2" rel="noreferrer" target="_blank" href="https://x.com/holojinbocho">
 						<i className="bi bi-twitter-x" />
 					</Link>
 				</div>
@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
 
 				<div className="credits">
 					Powered by <br /> ウェブサイ制作 <br />
-					<Link target="_blank" style={{ color: "rgb(53, 134, 239)", fontWeight: "bold", fontSize: "16px" }} rel="noreferrer" href="https://startanalytics.net/">
+					<Link aria-label="Open startanalytics.net page" target="_blank" style={{ color: "rgb(53, 134, 239)", fontWeight: "bold", fontSize: "16px" }} rel="noreferrer" href="https://startanalytics.net/">
 						startanalytics.net
 					</Link>
 				</div>
