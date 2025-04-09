@@ -98,7 +98,7 @@ const Homepage: FC = () => {
 										<div className="text-center text-md-end mb-5">
 											{config.snacks.map((snack, index) => (
 												<p key={index}>
-													{snack.name} <span style={{ color: "grey" }}>.....................</span> {snack.price}
+													{snack.name} <span style={{ color: "grey" }}>.............</span> {snack.price}
 												</p>
 											))}
 										</div>

@@ -17,7 +17,7 @@ const Footer: React.FC = () => {
 			</div>
 
 			<div className="container copyright text-center mt-1">
-				<p style={{ fontSize: "18px" }} className="text-center">
+				<p style={{ fontSize: "16px" }} className="text-center">
 					© <span>Copyright</span> <strong className="px-1 sitename">Holo Holo Jinbocho,</strong> <span>All Rights Reserved</span>
 				</p>
 
