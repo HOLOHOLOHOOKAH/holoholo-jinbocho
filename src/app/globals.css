@@ -8,9 +8,9 @@ body,
 
 /* Fonts */
 :root {
-	--default-font: "Roboto", sans-serif;
-	--heading-font: "Roboto", sans-serif;
-	--nav-font: "Roboto", sans-serif;
+	--default-font: "delius", sans-serif;
+	--heading-font: "delius", sans-serif;
+	--nav-font: "delius", sans-serif;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
