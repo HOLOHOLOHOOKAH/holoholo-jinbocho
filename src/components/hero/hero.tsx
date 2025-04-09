@@ -10,7 +10,7 @@ const Hero: React.FC<HeroProps> = () => {
 	return (
 		<>
 			<div id="home" className="hero section dark-background">
-				<video src="/img/video.mp4" autoPlay playsInline loop muted className="hero-video z-0 position-absolute"></video>
+				<video src="/img/jinbocho/video.mp4" autoPlay playsInline loop muted className="hero-video z-0 position-absolute"></video>
 
 				<div className="container position-relative z-1">
 					<div className="row">
