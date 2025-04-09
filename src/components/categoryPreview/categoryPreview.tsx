@@ -15,7 +15,7 @@ interface CategoryPreviewProps {
 const CategoryPreview: React.FC<CategoryPreviewProps> = ({
 	reverse = false,
 	title = "About Us",
-	paragraph = "Don’t miss out on this exotic fusion of cultures! We serve dishes from all over the Mediterranean, including Turkey, Greece, Spain, and Italy. The chefs who created these wonders have decades of experience working in these lands. The kitchen is gorgeous in every way.",
+	paragraph = "Don't miss out on this exotic fusion of cultures! We serve dishes from all over the Mediterranean, including Turkey, Greece, Spain, and Italy. The chefs who created these wonders have decades of experience working in these lands. The kitchen is gorgeous in every way.",
 	buttonText = "Book now",
 	buttonLink = "#",
 	imageSrc = "https://placehold.co/400", // Default image URL

@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import "./footer.css";
 
@@ -8,8 +6,11 @@ const Footer: React.FC = () => {
 		<footer id="footer" className="footer">
 			<div className="container footer-top pt-3 pb-2">
 				<div className="social-links d-flex justify-content-center">
-					<a className="m-0" rel="noreferrer" target="_blank" href="https://www.instagram.com/sls_shisha/">
+					<a className="m-0 mx-2" rel="noreferrer" target="_blank" href="https://www.instagram.com/holoholojinbocho/">
 						<i className="bi bi-instagram" />
+					</a>
+					<a className="m-0 mx-2" rel="noreferrer" target="_blank" href="https://x.com/holojinbocho">
+						<i className="bi bi-twitter-x" />
 					</a>
 				</div>
 			</div>

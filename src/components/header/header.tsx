@@ -1,41 +1,50 @@
 "use client";
 
-import Link from "next/link";
 import "./header.css";
 import { useScrollspy } from "@/hoooks/useScrollSpy";
 import { useMobileNavCloseOnLinkClick } from "@/hoooks/useMobileNavCloseOnLinkClick";
 import { useMobileNavToggle } from "@/hoooks/useMobileNav";
+import Link from "next/dist/client/link";
 
-type PageKey = "homepage" | "flavors" | "drinks" | "snacks" | "system";
-
+type PageKey = "homepage-jinbocho" | "softDrinks-jinbocho" | "drinksFood-jinbocho" | "system-jinbocho";
+type PageName = "jinbocho" | "holo-holo";
 type SectionItem = {
 	key: string;
 	label: string;
 };
 
 const sections: Record<PageKey, SectionItem[]> = {
-	homepage: [
+	"homepage-jinbocho": [
 		{ key: "home", label: "トップ" },
 		{ key: "system", label: "システム" },
-		{ key: "flavors", label: "フレーバー" },
+		{ key: "soft-drinks", label: "ソフトドリンク" },
 		{ key: "drinks-food", label: "ドリンク＆フード" },
 		{ key: "access", label: "アクセス" },
 	],
-	flavors: [
-		{ key: "home", label: "Home" },
-		{ key: "recommended-mixes", label: "Recommended Mixes" },
-		{ key: "flavors", label: "Flavors" },
+	"system-jinbocho": [
+		{ key: "shisha", label: "Shisha" },
+		{ key: "options", label: "Options" },
+		{ key: "wifi", label: "Wi-Fi" },
+		{ key: "notes", label: "notes" },
 	],
-	drinks: [{ key: "home", label: "Home" }],
-	snacks: [{ key: "home", label: "Home" }],
-	system: [],
+	"softDrinks-jinbocho": [
+		{ key: "color-drinks", label: "推しカラードリンク" },
+		{ key: "fruit-tea", label: "フルーツティー" },
+		{ key: "chai-matcha", label: "チャイ&抹茶ミルク" },
+		{ key: "other-drinks", label: "Other Drinks" },
+	],
+	"drinksFood-jinbocho": [
+		{ key: "liqueur-beer", label: "Liqueur & Beer" },
+		{ key: "snacks", label: "Snacks" },
+	],
 };
 
 interface HeaderProps {
 	page: PageKey;
+	pageName: string;
 }
 
-const Header: React.FC<HeaderProps> = ({ page }) => {
+const Header: React.FC<HeaderProps> = ({ page, pageName }) => {
 	useMobileNavToggle();
 	useMobileNavCloseOnLinkClick();
 	useScrollspy();
@@ -44,7 +53,7 @@ const Header: React.FC<HeaderProps> = ({ page }) => {
 		<header id="header" className="header fixed-top">
 			<div className="branding d-flex align-items-cente">
 				<div className="container position-relative d-flex align-items-center justify-content-between">
-					<Link href="/" className="logo d-flex align-items-center me-auto me-xl-0">
+					<Link href={`/${pageName}`} className="logo d-flex align-items-center me-auto me-xl-0">
 						<div className="d-flex">
 							<h1 className="sitename">神保町ホロホロシーシャ</h1>
 						</div>

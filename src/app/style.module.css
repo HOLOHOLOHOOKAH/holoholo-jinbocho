@@ -1,0 +1,68 @@
+.cardWrapper {
+	margin: 0 auto;
+}
+
+.shopCard {
+	background-color: transparent;
+	border: none !important;
+	border-radius: 20px;
+	overflow: hidden;
+	transition: transform 0.3s ease, 0.3s ease;
+}
+
+.shopCard div {
+	border: none !important;
+	background-color: rgb(33, 33, 33);
+	color: white;
+}
+
+.shopCard img {
+	height: 230px;
+	object-fit: cover;
+}
+
+.shopCard:hover {
+	transform: scale(1.03);
+}
+
+.card-img-top {
+	height: 250px;
+	object-fit: cover;
+}
+
+.btnCustom {
+	padding: 0.5rem 1rem;
+	font-size: 1rem;
+	border-radius: 10px;
+	transition: background-color 0.3s ease;
+}
+
+.btnShop1 {
+	border: 3px solid #5e7e9f;
+	color: #5e7e9f;
+}
+
+.btnShop1:hover {
+	border-color: #007bff;
+	color: #007bff;
+}
+
+.btnShop2 {
+	border: 3px solid #147038;
+	color: #147038;
+}
+
+.btnShop2:hover {
+	border-color: #1e7e34;
+	color: #1e7e34;
+}
+
+.btnShop3 {
+	border: 3px solid #bd9728;
+	color: #bd9728;
+}
+
+.btnShop3:hover {
+	border-color: #e0a800;
+	color: #e0a800;
+}

@@ -1,0 +1,181 @@
+.drinkCard {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	color: white;
+}
+
+.mainTitle {
+	font-size: 3rem;
+	letter-spacing: 5px;
+	font-weight: 400 !important;
+}
+.drinkCard2 {
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	color: white;
+}
+
+.sectionSubtitle {
+	font-size: 2rem;
+	letter-spacing: 2px;
+	margin-bottom: 1.5rem;
+}
+.sectionTitle {
+	display: flex;
+	font-weight: bold;
+	font-size: 2rem;
+	margin-bottom: 2rem;
+	margin-top: 1rem;
+	color: #cc8b00;
+}
+
+.subtitle {
+	font-size: 0.95rem;
+	color: #888;
+	margin-bottom: 1rem;
+}
+
+.drinkInfo {
+	font-size: 0.95rem;
+	line-height: 1.6;
+}
+
+.price {
+	font-weight: bold;
+	font-size: 2rem;
+	color: #d5d5d5;
+	margin-top: 1rem;
+	text-align: start;
+}
+
+.sectionText {
+	text-align: start;
+	font-size: 18px;
+	letter-spacing: 3px;
+}
+
+.customImageContainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 450px;
+	position: relative;
+}
+
+.greenBorderStack {
+	width: 230px;
+	height: 450px;
+	background-color: transparent;
+	border: 10px solid #815e13de;
+	border-radius: 8px;
+	position: absolute;
+	top: 0;
+	z-index: 0;
+}
+
+.stackedContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+	z-index: 1;
+}
+
+.drinkImage {
+	height: 400px !important;
+	border-radius: 12px;
+	width: 300px !important;
+	object-fit: cover;
+	transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+.imageHover:hover {
+	transform: scale(1.05) rotate(3deg);
+	box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+	filter: brightness(1.1);
+}
+
+.customImageContainerSmall {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 300px;
+	position: relative;
+}
+
+.greenBorderStackSmall {
+	width: 220px;
+	height: 300px;
+	background-color: transparent;
+	border: 8px solid #815e13de;
+	border-radius: 8px;
+	position: absolute;
+	top: 0;
+	z-index: 0;
+}
+
+.drinkImage2 {
+	border-radius: 12px;
+	width: 250px !important;
+	height: 250px !important;
+	object-fit: cover;
+	transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1199px) {
+	.customImageContainer {
+		height: 350px;
+	}
+
+	.greenBorderStack {
+		width: 250px;
+		height: 350px;
+	}
+
+	.drinkImage {
+		width: 300px !important;
+		height: 300px !important;
+	}
+
+	.customImageContainerSmall {
+		height: 250px;
+	}
+
+	.greenBorderStackSmall {
+		width: 180px;
+		height: 200px;
+	}
+
+	.drinkImage2 {
+		width: 200px;
+		height: 200px;
+	}
+}
+
+@media (max-width: 768px) {
+	.sectionText {
+		text-align: center;
+		font-size: 16px;
+	}
+	.sectionTitle {
+		justify-content: center;
+		margin-top: 2rem;
+		font-size: 1.6rem;
+	}
+
+	.price {
+		text-align: center;
+	}
+}
+.verticalText {
+	writing-mode: vertical-rl; /* vertical right-to-left */
+	text-orientation: upright;
+	font-size: 1.5rem; /* adjust as needed */
+	margin-right: 1rem; /* spacing between text and image */
+}

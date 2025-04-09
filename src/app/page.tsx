@@ -1,30 +1,52 @@
-import Hero from "@/components/hero/hero";
-import Header from "@/components/header/header";
-import Footer from "@/components/footer/footer";
-import Access from "@/components/access/access";
-import CategoryPreview from "@/components/categoryPreview/categoryPreview";
+// components/ShopCards.tsx
+import React from "react";
+import styles from "./style.module.css";
 
-const Homepage: React.FC = () => {
+const shops = [
+	{
+		title: "ホロホロシーシャ",
+		text: " 御徒町店",
+		img: "/img/holoholo.jpg",
+		url: "https://shop1.example.com",
+		buttonClass: styles.btnShop1,
+	},
+	{
+		title: "ホロホロシーシャ",
+		text: "神保町店",
+		img: "/img/bg12.png",
+		url: "/jinbocho",
+		buttonClass: styles.btnShop2,
+	},
+	{
+		title: "アジル スモーク",
+		text: "上野 御徒町",
+		img: "/img/asile.jpg",
+		url: "https://www.asilesmokes.com/",
+		buttonClass: styles.btnShop3,
+	},
+];
+
+const Homepage = () => {
 	return (
-		<>
-			<Header page="homepage" />
-			<Hero />
-			<div id="system" style={{ backgroundColor: "#0d0d0d" }}>
-				{" "}
-				<CategoryPreview imageSrc="/img/bg12.png" title="システム" paragraph="ドリンクメニューも充実。アルコールはもちろん、豆挽きコーヒーやチャイなど豊富にご用意しております。" buttonText="もっと見る" buttonLink="/system" reverse={true} />
+		<div className="container py-5">
+			<h1 className="text-center mb-5 display-4 text-white">店舗検索</h1>
+			<div className={`row g-5 justify-content-center ${styles.cardWrapper}`}>
+				{shops.map((shop, index) => (
+					<div className="col-md-4" key={index}>
+						<div className={`card h-100 ${styles.shopCard}`}>
+							<img src={shop.img} className="card-img-top" alt={shop.title} />
+							<div className="card-body text-center">
+								<h5 className="card-title">{shop.title}</h5>
+								<p className="card-text mb-4">{shop.text}</p>
+								<a href={shop.url} className={`btn mb-2 ${styles.btnCustom} ${shop.buttonClass}`} target="_self" rel="noopener noreferrer">
+									もっと見る
+								</a>
+							</div>
+						</div>
+					</div>
+				))}
 			</div>
-			<div id="flavors">
-				{" "}
-				<CategoryPreview imageSrc="/img/shishaimg.jpg" title="フレーバー" paragraph="フレーバーは「FUMARI」「AZURE」「AL FAKHER」の3メーカーを主に使用しています。ニコチンフリーフレーバーのご用意もしております。" buttonText="もっと見る" buttonLink="/flavors" />
-			</div>
-			<div id="drinks-food" style={{ backgroundColor: "#0d0d0d" }}>
-				{" "}
-				<CategoryPreview imageSrc="/img/drinksimg.jpg" title="ドリンク＆フード" paragraph="ドリンクメニューも充実。アルコールはもちろん、豆挽きコーヒーやチャイなど豊富にご用意しております。" buttonText="もっと見る" buttonLink="/drinks-food" reverse={true} />
-			</div>
-
-			<Access />
-			<Footer />
-		</>
+		</div>
 	);
 };
 

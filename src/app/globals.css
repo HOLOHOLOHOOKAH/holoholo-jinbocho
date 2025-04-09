@@ -346,3 +346,7 @@ body,
 		opacity: 1;
 	}
 }
+
+.border-bottom {
+	border-color: rgba(255, 255, 255, 0.115) !important;
+}
