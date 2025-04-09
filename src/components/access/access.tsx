@@ -1,5 +1,3 @@
-"use client"; // Add only if you're using App Router
-
 import React from "react";
 import styles from "./access.module.css";
 

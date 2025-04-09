@@ -1,3 +1,7 @@
+.spacer {
+	height: 130px;
+}
+
 .drinkCard {
 	height: 100%;
 	display: flex;
@@ -11,6 +15,7 @@
 	letter-spacing: 5px;
 	font-weight: 400 !important;
 }
+
 .drinkCard2 {
 	height: 100%;
 	display: flex;
@@ -23,6 +28,7 @@
 	letter-spacing: 2px;
 	margin-bottom: 1.5rem;
 }
+
 .sectionTitle {
 	display: flex;
 	font-weight: bold;
@@ -163,6 +169,7 @@
 		text-align: center;
 		font-size: 14px;
 	}
+
 	.sectionTitle {
 		justify-content: center;
 		margin-top: 2rem;
@@ -173,6 +180,7 @@
 		text-align: center;
 	}
 }
+
 .verticalText {
 	writing-mode: vertical-rl; /* vertical right-to-left */
 	text-orientation: upright;

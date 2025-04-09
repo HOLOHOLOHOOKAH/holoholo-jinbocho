@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 		description: "Holo Holo Shisha",
 		images: [
 			{
-				url: "/android-chrome-512x512.png?v=4",
+				url: "/holo-holo/android-chrome-512x512.png?v=4",
 				width: 800,
 				height: 600,
 				alt: "Holo Holo Shisha",
@@ -31,11 +31,11 @@ export const metadata: Metadata = {
 		follow: true,
 	},
 	icons: {
-		icon: ["/favicon.ico?v=5"],
-		apple: ["/apple-touch-icon.png?v=5"],
-		shortcut: ["/apple-touch-icon.png"],
+		icon: ["/holo-holo/favicon.ico?v=5"],
+		apple: ["/holo-holo/apple-touch-icon.png?v=5"],
+		shortcut: ["/holo-holo/apple-touch-icon.png"],
 	},
-	manifest: "/site.webmanifest",
+	manifest: "/holo-holo/site.webmanifest",
 };
 
 export default function RootLayout({

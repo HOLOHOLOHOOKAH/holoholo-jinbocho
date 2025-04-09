@@ -6,14 +6,14 @@ const shops = [
 	{
 		title: "ホロホロシーシャ",
 		text: " 御徒町店",
-		img: "/img/holoholo.jpg",
+		img: "/img/holo-holo/holoholo.jpg",
 		url: "https://shop1.example.com",
 		buttonClass: styles.btnShop1,
 	},
 	{
 		title: "ホロホロシーシャ",
 		text: "神保町店",
-		img: "/img/bg12.png",
+		img: "/img/jinbocho/bg12.png",
 		url: "/jinbocho",
 		buttonClass: styles.btnShop2,
 	},

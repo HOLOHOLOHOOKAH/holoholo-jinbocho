@@ -15,7 +15,7 @@ const Hero: React.FC<HeroProps> = () => {
 				<div className="container position-relative z-1">
 					<div className="row">
 						<div className="position-relative d-flex justify-content-center">
-							<Image style={{ height: "600px", width: "600px" }} className="position-relative fade-in" src="/img/logo.png" alt="Logo" width={230} height={230} />
+							<Image style={{ height: "600px", width: "600px" }} className="position-relative fade-in" src="/img/jinbocho/logo.png" alt="Logo" width={230} height={230} />
 						</div>
 					</div>
 				</div>

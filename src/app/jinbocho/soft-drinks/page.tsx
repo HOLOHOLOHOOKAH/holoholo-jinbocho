@@ -1,10 +1,11 @@
-"use client";
-
 import Image from "next/image";
 import styles from "./softDrinks.module.css";
 import { FC } from "react";
 import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
+
+import { jinbochoMetadata } from "@/lib/metadata/jinbocho";
+export const metadata = jinbochoMetadata;
 
 const Homepage: FC = () => {
 	return (
@@ -23,7 +24,7 @@ const Homepage: FC = () => {
 										<div className={styles.customImageContainer}>
 											<div className={styles.greenBorderStack}></div>
 											<div className={styles.stackedContainer}>
-												<Image src="/img/drinksimg2.jpg" alt="Color Drink" width={300} height={300} className={`${styles.drinkImage} ${styles.imageHover}`} />
+												<Image src="/img/jinbocho/drinksimg2.jpg" alt="Color Drink" width={300} height={300} className={`${styles.drinkImage} ${styles.imageHover}`} />
 											</div>
 										</div>
 									</div>
@@ -107,7 +108,7 @@ const Homepage: FC = () => {
 									<div className={styles.customImageContainer}>
 										<div className={styles.greenBorderStack}></div>
 										<div className={styles.stackedContainer}>
-											<Image src="/img/drinksimg.jpg" alt="Fruit Tea" width={300} height={300} className={`${styles.drinkImage} ${styles.imageHover}`} />
+											<Image src="/img/jinbocho/drinksimg.jpg" alt="Fruit Tea" width={300} height={300} className={`${styles.drinkImage} ${styles.imageHover}`} />
 										</div>
 									</div>{" "}
 								</div>
@@ -127,7 +128,7 @@ const Homepage: FC = () => {
 							<div className={styles.customImageContainerSmall}>
 								<div className={styles.greenBorderStackSmall}></div>
 								<div className={styles.stackedContainer}>
-									<Image src="/img/drinksimg3.jpg" alt="Chai" width={250} height={250} className={`${styles.drinkImage2} ${styles.imageHover}`} />
+									<Image src="/img/jinbocho/drinksimg3.jpg" alt="Chai" width={250} height={250} className={`${styles.drinkImage2} ${styles.imageHover}`} />
 								</div>
 							</div>{" "}
 						</div>
@@ -140,7 +141,7 @@ const Homepage: FC = () => {
 							<div className={styles.customImageContainerSmall}>
 								<div className={styles.greenBorderStackSmall}></div>
 								<div className={styles.stackedContainer}>
-									<Image src="/img/drinksimg4.jpg" alt="Matcha Milk" width={250} height={250} className={`${styles.drinkImage2} ${styles.imageHover}`} />
+									<Image src="/img/jinbocho/drinksimg4.jpg" alt="Matcha Milk" width={250} height={250} className={`${styles.drinkImage2} ${styles.imageHover}`} />
 								</div>
 							</div>{" "}
 						</div>
