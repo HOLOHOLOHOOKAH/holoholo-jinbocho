@@ -17,7 +17,7 @@ const Access: React.FC = () => {
 			<h1 className={`${styles.title} mb-5`}>Access</h1>
 			<div className="row">
 				<div className="col-md-8 mb-4">
-					<iframe className={styles.map} src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12163.615315895542!2d139.74777788355766!3d35.6962041609454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188de87da1e3af%3A0xc487f232ab6fd3ac!2z56We5L-d55S644Ob44Ot44Ob44Ot44K344O844K344Oj!5e0!3m2!1sen!2sjp!4v1743944397277!5m2!1sen!2sjp" width="600" height="450" allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+					<iframe title="access" className={styles.map} src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12163.615315895542!2d139.74777788355766!3d35.6962041609454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188de87da1e3af%3A0xc487f232ab6fd3ac!2z56We5L-d55S644Ob44Ot44Ob44Ot44K344O844K344Oj!5e0!3m2!1sen!2sjp!4v1743944397277!5m2!1sen!2sjp" width="600" height="450" allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
 				</div>
 				<div className="col-md-4">
 					<div className={`${styles.hoursBox} text-white`}>
