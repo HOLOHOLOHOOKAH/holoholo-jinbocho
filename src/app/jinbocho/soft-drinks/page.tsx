@@ -5,7 +5,6 @@ import styles from "./softDrinks.module.css";
 import { FC } from "react";
 import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
-import Link from "next/dist/client/link";
 
 const Homepage: FC = () => {
 	return (

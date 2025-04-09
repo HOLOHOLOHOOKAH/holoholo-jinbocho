@@ -15,7 +15,7 @@ type SectionItem = {
 
 const sections: Record<PageKey, SectionItem[]> = {
 	"homepage-jinbocho": [
-		{ key: "home", label: "トップ" },
+		{ key: "home", label: "home" },
 		{ key: "system", label: "システム" },
 		{ key: "soft-drinks", label: "ソフトドリンク" },
 		{ key: "drinks-food", label: "ドリンク＆フード" },
@@ -41,7 +41,7 @@ const sections: Record<PageKey, SectionItem[]> = {
 
 interface HeaderProps {
 	page: PageKey;
-	pageName: string;
+	pageName: PageName;
 }
 
 const Header: React.FC<HeaderProps> = ({ page, pageName }) => {

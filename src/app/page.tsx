@@ -1,7 +1,7 @@
 // components/ShopCards.tsx
 import React from "react";
 import styles from "./style.module.css";
-
+import Image from "next/image";
 const shops = [
 	{
 		title: "ホロホロシーシャ",
@@ -34,7 +34,7 @@ const Homepage = () => {
 				{shops.map((shop, index) => (
 					<div className="col-md-4" key={index}>
 						<div className={`card h-100 ${styles.shopCard}`}>
-							<img src={shop.img} className="card-img-top" alt={shop.title} />
+							<Image height={300} width={400} src={shop.img} className="card-img-top" alt={shop.title} />
 							<div className="card-body text-center">
 								<h5 className="card-title">{shop.title}</h5>
 								<p className="card-text mb-4">{shop.text}</p>
