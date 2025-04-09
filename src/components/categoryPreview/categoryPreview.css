@@ -112,4 +112,14 @@ p {
 		justify-content: center;
 		width: 100%;
 	}
+
+	.paragraph-text {
+		font-size: 16px;
+	}
+}
+
+@media (max-width: 768px) {
+	.paragraph-text {
+		font-size: 16px;
+	}
 }

@@ -67,7 +67,7 @@ const Homepage: FC = () => {
 												※ソフトドリンクからお好きな割り材をお選びください。
 											</p>
 											<div className={styles.sectionTitle}>Beer</div>
-											<p className={`${styles.sectionText} mt-4 text-start`}>
+											<p className={`${styles.sectionText} mt-4 text-md-start text-center`}>
 												<strong>ハイネケン </strong> <span style={{ color: "grey" }}>..............</span> ¥800〜
 											</p>
 										</div>

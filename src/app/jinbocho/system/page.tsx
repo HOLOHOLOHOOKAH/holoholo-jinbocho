@@ -29,16 +29,16 @@ const Homepage: React.FC = () => {
 									<div className=" d-flex text-justify justify-content-center align-items-center">
 										<div>
 											<p>
-												シーシャ <span style={{ color: "grey" }}>..................................</span> ¥1,800
+												シーシャ <span style={{ color: "grey" }}>..............................</span> ¥1,800
 											</p>
 											<p>
-												ドリンク <span style={{ color: "grey" }}>..................................</span> ¥500〜
+												ドリンク <span style={{ color: "grey" }}>..............................</span> ¥500〜
 											</p>
 											<p>
-												チャージ <span style={{ color: "grey" }}>......................................</span> ¥700
+												チャージ <span style={{ color: "grey" }}>..................................</span> ¥700
 											</p>
 											<p>
-												シェア <span style={{ color: "grey" }}>.......................................</span> ¥1,000
+												シェア <span style={{ color: "grey" }}>...................................</span> ¥1,000
 											</p>
 											<p className="text-center">1台につき2名様まで</p>
 										</div>
@@ -59,16 +59,16 @@ const Homepage: React.FC = () => {
 									<div className=" d-flex text-center justify-content-center align-items-center">
 										<div>
 											<p>
-												トップ替え <span style={{ color: "grey" }}>..................................</span> ¥1,500
+												トップ替え <span style={{ color: "grey" }}>...........................</span> ¥1,500
 											</p>
 											<p>
-												アイスホース <span style={{ color: "grey" }}>..................................</span> ¥300
+												アイスホース <span style={{ color: "grey" }}>...........................</span> ¥300
 											</p>
 											<p>
-												ジュースボトル <span style={{ color: "grey" }}>......................................</span> ¥700
+												ジュースボトル <span style={{ color: "grey" }}>.....................</span> ¥700
 											</p>
 											<p>
-												アルコールボトル <span style={{ color: "grey" }}>.......................................</span> ¥1,000
+												アルコールボトル <span style={{ color: "grey" }}>.................</span> ¥1,000
 											</p>
 											<p className="text-center">1台につき2名様まで</p>
 										</div>

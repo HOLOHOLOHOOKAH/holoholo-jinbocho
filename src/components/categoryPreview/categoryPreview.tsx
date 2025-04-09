@@ -42,7 +42,7 @@ const CategoryPreview: React.FC<CategoryPreviewProps> = ({
 				{/* Content Column */}
 				<div className={`col-md-6 ${reverse ? "order-md-1" : "order-md-2"}`}>
 					<p className="green-underline">{title}</p>
-					<p>{paragraph}</p>
+					<p className="paragraph-text">{paragraph}</p>
 					<a href={buttonLink}>
 						<button className="btn custom-btn mt-3">{buttonText}</button>
 					</a>
