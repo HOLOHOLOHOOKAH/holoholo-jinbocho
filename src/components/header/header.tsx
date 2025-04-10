@@ -6,8 +6,10 @@ import { useMobileNavCloseOnLinkClick } from "@/hoooks/useMobileNavCloseOnLinkCl
 import { useMobileNavToggle } from "@/hoooks/useMobileNav";
 import Link from "next/dist/client/link";
 
-type PageKey = "homepage-jinbocho" | "softDrinks-jinbocho" | "drinksFood-jinbocho" | "system-jinbocho";
-type PageName = "jinbocho" | "holo-holo";
+type PageKey = "homepage-jinbocho" | "system-jinbocho" | "softDrinks-jinbocho" | "drinksFood-jinbocho" | "softDrinks-okachimachi";
+type PageName = "jinbocho" | "okachimachi";
+type Title = "神保町ホロホロシーシャ" | "御徒町ホロホロシーシャ";
+
 type SectionItem = {
 	key: string;
 	label: string;
@@ -27,6 +29,11 @@ const sections: Record<PageKey, SectionItem[]> = {
 		{ key: "wifi", label: "Wi-Fi" },
 		{ key: "notes", label: "notes" },
 	],
+	"softDrinks-okachimachi": [
+		{ key: "soft-drinks", label: "Soft Drinks" },
+		{ key: "tea-coffee", label: "Tea/Coffee" },
+		{ key: "chai-cocoa", label: "チャイ&ココア" },
+	],
 	"softDrinks-jinbocho": [
 		{ key: "color-drinks", label: "推しカラードリンク" },
 		{ key: "fruit-tea", label: "フルーツティー" },
@@ -42,9 +49,10 @@ const sections: Record<PageKey, SectionItem[]> = {
 interface HeaderProps {
 	page: PageKey;
 	pageName: PageName;
+	title: Title;
 }
 
-const Header: React.FC<HeaderProps> = ({ page, pageName }) => {
+const Header: React.FC<HeaderProps> = ({ page, pageName, title }) => {
 	useMobileNavToggle();
 	useMobileNavCloseOnLinkClick();
 	useScrollspy();
@@ -55,7 +63,7 @@ const Header: React.FC<HeaderProps> = ({ page, pageName }) => {
 				<div className="container position-relative d-flex align-items-center justify-content-between">
 					<Link href={`/${pageName}`} className="logo d-flex align-items-center me-auto me-xl-0">
 						<div className="d-flex">
-							<h1 className="sitename">神保町ホロホロシーシャ</h1>
+							<h1 className="sitename">{title}</h1>
 						</div>
 					</Link>
 

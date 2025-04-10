@@ -38,7 +38,7 @@ const Homepage: FC = () => {
 		<div className="fade-in">
 			<div className={styles.spacer}></div>
 
-			<Header title="神保町ホロホロシーシャ" page="drinksFood-jinbocho" pageName="jinbocho" />
+			<Header page="drinksFood-jinbocho" pageName="jinbocho" />
 
 			<div id="liqueur-beer" className={`${styles.container} container`}>
 				<div className="row g-4">

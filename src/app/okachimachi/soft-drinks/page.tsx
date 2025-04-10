@@ -4,19 +4,19 @@ import { FC } from "react";
 import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
 
-import { jinbochoMetadata } from "@/lib/metadata/jinbocho";
-export const metadata = jinbochoMetadata;
+import { holoHoloMetadata } from "@/lib/metadata/holoHolo";
+export const metadata = holoHoloMetadata;
 
 const Homepage: FC = () => {
 	return (
 		<div className="fade-in">
 			<div style={{ height: "130px" }}></div>
 
-			<Header title="神保町ホロホロシーシャ" page="softDrinks-jinbocho" pageName="jinbocho" />
+			<Header title="御徒町ホロホロシーシャ" page="softDrinks-okachimachi" pageName="okachimachi" />
 
 			<div className={`${styles.container} container`}>
 				<div className="row g-4">
-					<div id="color-drinks" className="col-md-12 d-flex pb-3">
+					<div id="soft-drinks" className="col-md-12 d-flex pb-3">
 						<div className={`${styles.drinkCard} w-100 pt-3`}>
 							<div>
 								<div className="row">
@@ -24,7 +24,7 @@ const Homepage: FC = () => {
 										<div className={styles.customImageContainer}>
 											<div className={styles.greenBorderStack}></div>
 											<div className={styles.stackedContainer}>
-												<Image src="/img/jinbocho/drinksimg2.jpg" alt="Color Drink" width={300} height={300} className={`${styles.drinkImage} ${styles.imageHover}`} />
+												<Image src="/img/okachimachi/softdrinks.jpg" alt="Color Drink" width={300} height={300} className={`${styles.drinkImage} ${styles.imageHover}`} />
 											</div>
 										</div>
 									</div>
@@ -32,43 +32,38 @@ const Homepage: FC = () => {
 										<div>
 											<div className="row">
 												<div className="col-12">
-													<div className={styles.sectionTitle}>推しカラードリンク</div>
+													<div className={styles.sectionTitle}>Soft Drinks</div>
 													<ul className={`${styles.sectionText} list-unstyled mb-0`}>
 														<li>
-															<strong>Red:</strong> カシス
+															<strong>コーラ</strong>
 														</li>
 														<li>
-															<strong>Blue:</strong> ブルー
+															<strong>ジンジャーエール</strong>
+														</li>
+
+														<li>
+															<strong>炭酸水</strong>
 														</li>
 														<li>
-															<strong>Orange:</strong> マンゴー
+															<strong>トニックウォーター</strong>
 														</li>
 														<li>
-															<strong>Yellow:</strong> パッション ✕
-														</li>
-													</ul>
-												</div>
-												<div className="col-12">
-													<ul className={`${styles.sectionText} list-unstyled mb-0`}>
-														<li>
-															<strong>White:</strong> カルピス
+															<strong>アップルジュース</strong>
 														</li>
 														<li>
-															<strong>Green:</strong> グリーンアップル
+															<strong>オレンジジュース</strong>
 														</li>
 														<li>
-															<strong>Purple:</strong> バタフライピー
+															<strong>グレープフルーツジュース</strong>
 														</li>
 														<li>
-															<strong>Pink:</strong> ピーチ
+															<strong>カルピス</strong>
 														</li>
 													</ul>
 												</div>
 											</div>
-											<p className={`${styles.sectionText} mt-2`}>
-												<strong>Base:</strong> Soda / Milk / Tonic
-											</p>
-											<div className={styles.price}>¥700</div>
+
+											<div className={styles.price}>¥500</div>
 										</div>
 									</div>
 								</div>
@@ -79,7 +74,7 @@ const Homepage: FC = () => {
 			</div>
 
 			<div className="border-bottom container mt-4"></div>
-			<div id="fruit-tea" className={`${styles.container} container mt-4`}>
+			<div id="tea-coffee" className={`${styles.container} container mt-4`}>
 				<div className="col-md-12 d-flex pb-3">
 					<div className={`${styles.drinkCard} w-100 pt-3`}>
 						<div>
@@ -87,17 +82,24 @@ const Homepage: FC = () => {
 								<div className="col-12 col-md-6 d-flex   justify-content-center justify-content-md-end align-items-center">
 									<div>
 										{" "}
-										<div className={`${styles.sectionTitle}  justify-content-center justify-content-md-end`}>フルーツティー</div>
+										<div className={`${styles.sectionTitle}  justify-content-center justify-content-md-end`}>Tea/Coffee</div>
 										<div className={styles.sectionText}>
 											<p className="text-center text-md-end">
-												<strong>ルイボス or ダージリン</strong>
-											</p>
-											<p className="text-center text-md-end">
-												冷凍フルーツを氷替わりに
+												烏龍茶
 												<br />
-												溶けても薄くならない
+												ルイボス茶
 												<br />
-												フルーツティーの完成です
+												ジャスミン茶
+												<br />
+												アールグレイ
+												<br />
+												ダージリン
+												<br />
+												セイロン
+												<br />
+												コーヒー (¥600)
+												<br />
+												カフェラテ (¥600)
 											</p>
 											<div className={`${styles.price} text-center text-md-end mb-4`}>¥1,000</div>
 										</div>
@@ -119,7 +121,7 @@ const Homepage: FC = () => {
 			</div>
 			<div className="border-bottom container mt-4"></div>
 
-			<div id="chai-matcha" className="container mt-4">
+			<div id="chai-cocoa" className="container mt-4">
 				<div className="row g-4">
 					{/* Chai */}
 					<div className="col-md-4 d-flex">
@@ -137,7 +139,7 @@ const Homepage: FC = () => {
 					{/* Matcha Milk */}
 					<div className="col-md-4 d-flex">
 						<div className={`${styles.drinkCard2} pt-3 w-100 d-flex align-items-center`}>
-							<div className={`${styles.verticalText} ${styles.sectionTitle}`}>抹茶ミルク</div>
+							<div className={`${styles.verticalText} ${styles.sectionTitle}`}>ココア</div>
 							<div className={styles.customImageContainerSmall}>
 								<div className={styles.greenBorderStackSmall}></div>
 								<div className={styles.stackedContainer}>
@@ -151,37 +153,13 @@ const Homepage: FC = () => {
 					<div className="col-md-4 d-flex mb-3">
 						<div className={`${styles.drinkCard} pt-3 w-100 text-center d-flex flex-column justify-content-center`}>
 							<h3 className={styles.sectionSubtitle}>Hot or Cold</h3>
-							<p className={`${styles.sectionText} mb-1`}>ミルクで割るクリーミーな味わい</p>
-							<p className={`${styles.sectionText} text-center`}>洋も和も美味い</p>
+							<p className={`${styles.sectionText} text-center mb-1`}>ホット / アイス お選びください。</p>
 							<div className={`${styles.price} text-center`}>¥600</div>
 						</div>
 					</div>
 				</div>
 			</div>
 
-			<div className="border-bottom container mt-4"></div>
-
-			<div id="other-drinks" style={{ maxWidth: "900px" }} className={`${styles.container} container mt-4 mb-4`}>
-				{/* Other Drinks */}
-				<div className="col-12 pt-3 mb-3">
-					<div className={`${styles.drinkCard} text-center`}>
-						<div className={`${styles.sectionTitle} justify-content-center`}>Other Drinks</div>
-						<div className="row">
-							<div className="col-md-12">
-								<ul className={`${styles.sectionText}  text-center list-unstyled`}>
-									<li>烏龍茶</li>
-									<li>オレンジジュース</li>
-									<li>コーラ</li>
-									<li>ジンジャーエール</li>
-									<li>コーヒー</li>
-									<li>カフェオレ</li>
-								</ul>
-							</div>
-						</div>
-						<div className={`${styles.price} text-center`}>¥500</div>
-					</div>
-				</div>
-			</div>
 			<Footer />
 		</div>
 	);

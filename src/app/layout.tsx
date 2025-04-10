@@ -10,35 +10,9 @@ const robotoSans = Delius({
 	subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-	title: "ホロホロシーシャ",
-	description: "Holo Holo Shisha",
+import { holoHoloMetadata } from "@/lib/metadata/holoHolo";
 
-	openGraph: {
-		title: "ホロホロシーシャ",
-		description: "Holo Holo Shisha",
-		images: [
-			{
-				url: "/holo-holo/android-chrome-512x512.png?v=4",
-				width: 800,
-				height: 600,
-				alt: "Holo Holo Shisha",
-			},
-		],
-		type: "website",
-	},
-	robots: {
-		index: true,
-		follow: true,
-	},
-	icons: {
-		icon: ["/holo-holo/favicon.ico?v=5"],
-		apple: ["/holo-holo/apple-touch-icon.png?v=5"],
-		shortcut: ["/holo-holo/apple-touch-icon.png"],
-	},
-	manifest: "/holo-holo/site.webmanifest",
-};
-
+export const metadata = holoHoloMetadata;
 export default function RootLayout({
 	children,
 }: Readonly<{

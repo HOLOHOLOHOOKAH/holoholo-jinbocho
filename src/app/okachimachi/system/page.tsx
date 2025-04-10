@@ -2,12 +2,13 @@ import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
 import styles from "./system.module.css";
 import Image from "next/image";
-import { jinbochoMetadata } from "@/lib/metadata/jinbocho";
+import { holoHoloMetadata } from "@/lib/metadata/holoHolo";
+export const metadata = holoHoloMetadata;
 
 const config = {
 	shisha: {
 		image: {
-			src: "/img/jinbocho/shisha.jpg",
+			src: "/img/okachimachi/shisha.jpg",
 			alt: "Color Drink",
 			width: 300,
 			height: 300,
@@ -16,13 +17,16 @@ const config = {
 			{ label: "シーシャ", price: "¥1,800" },
 			{ label: "ドリンク", price: "¥500〜" },
 			{ label: "チャージ", price: "¥700" },
+			{ label: "深夜チャージ ", price: "¥500" },
+			{ label: "22時以降のご滞在)", price: "" },
+
 			{ label: "シェア", price: "¥1,000" },
 		],
 		note: "1台につき2名様まで",
 	},
 	options: {
 		image: {
-			src: "/img/jinbocho/shishaTop.jpg",
+			src: "/img/okachimachi/shishaTop.jpg",
 			alt: "Color Drink",
 			width: 300,
 			height: 300,
@@ -30,23 +34,21 @@ const config = {
 		items: [
 			{ label: "トップ替え", price: "¥1,500" },
 			{ label: "アイスホース", price: "¥300" },
-			{ label: "ジュースボトル", price: "¥700" },
+			{ label: "ジュースボトル", price: "¥500" },
 			{ label: "アルコールボトル", price: "¥1,000" },
 		],
 	},
 	wifi: {
-		ssid: "Holojinbocho_5G",
-		password: "5EEVK33762",
+		ssid: "HOLO HOLO",
+		password: "smokebase1",
 	},
-	notes: ["※ フードのみ持ち込み可能 ※シーシャ機材にはお手を触れないようお願い致します。", "※ ボトルやトップ等機材の破損の場合、実費を頂きます。", "※ 混雑時のみお席2時間制となります。"],
+	notes: ["※ シーシャ機材にはお手を触れないようにお願い致します。", "※ ボトルやトップ破損の場合実費を頂きます。", "※ フードのみ持ち込み可能です。"],
 };
-
-export const metadata = jinbochoMetadata;
 
 const Homepage: React.FC = () => {
 	return (
 		<div className="px-3">
-			<Header title="神保町ホロホロシーシャ" page="system-jinbocho" pageName="jinbocho" />
+			<Header title="御徒町ホロホロシーシャ" page="system-jinbocho" pageName="jinbocho" />
 			<div style={{ height: "130px" }}></div>
 
 			<h1 className="d-flex justify-content-center">システム</h1>
@@ -75,7 +77,7 @@ const Homepage: React.FC = () => {
 										<div>
 											{config.shisha.items.map((item, index) => (
 												<p key={index}>
-													{item.label} <span style={{ color: "grey" }}>..............................</span> {item.price}
+													{item.label} {item.price !== "" && <span style={{ color: "grey" }}>..............................</span>} {item.price}
 												</p>
 											))}
 											<p className="text-center">{config.shisha.note}</p>

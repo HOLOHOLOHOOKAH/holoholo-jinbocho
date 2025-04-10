@@ -6,8 +6,8 @@ const shops = [
 	{
 		title: "ホロホロシーシャ",
 		text: " 御徒町店",
-		img: "/img/holo-holo/holoholo.jpg",
-		url: "https://shop1.example.com",
+		img: "/img/okachimachi/holoholo.jpg",
+		url: "/okachimachi",
 		buttonClass: styles.btnShop1,
 	},
 	{

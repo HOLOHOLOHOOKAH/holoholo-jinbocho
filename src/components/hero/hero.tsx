@@ -1,21 +1,24 @@
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 
 import "./hero.css";
 
 interface HeroProps {
-	img?: StaticImageData;
+	img: string;
+	height: number;
+	width: number;
+	video: string;
 }
 
-const Hero: React.FC<HeroProps> = () => {
+const Hero: React.FC<HeroProps> = ({ img, height, width, video }) => {
 	return (
 		<>
 			<div id="home" className="hero section dark-background">
-				<video src="/img/jinbocho/video.mp4" autoPlay playsInline loop muted className="hero-video z-0 position-absolute"></video>
+				<video src={video} autoPlay playsInline loop muted className="hero-video z-0 position-absolute"></video>
 
 				<div className="container position-relative z-1">
 					<div className="row">
 						<div className="position-relative d-flex justify-content-center">
-							<Image loading="eager" style={{ height: "600px", width: "600px" }} className="position-relative fade-in" src="/img/jinbocho/logo.png" alt="Logo" width={230} height={230} />
+							<Image loading="eager" style={{ height: height, width: width }} className="position-relative fade-in" src={img} alt="Logo" width={230} height={230} />
 						</div>
 					</div>
 				</div>

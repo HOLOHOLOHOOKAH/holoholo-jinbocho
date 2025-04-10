@@ -15,7 +15,7 @@
 }
 
 .green-underline {
-	color: #cc8b00;
+	color: #edc806;
 	font-family: cursive;
 	font-size: 2.5rem;
 	font-weight: 500;
@@ -71,7 +71,7 @@ p {
 	width: 350px;
 	height: 500px;
 	background-color: transparent;
-	border: 10px solid #815e13de;
+	border: 10px solid #edc80673;
 	border-radius: 8px;
 	position: absolute;
 	top: 0;

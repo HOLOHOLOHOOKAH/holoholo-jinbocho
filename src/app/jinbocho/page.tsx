@@ -10,8 +10,8 @@ export const metadata = jinbochoMetadata;
 const Homepage: React.FC = () => {
 	return (
 		<span className="fade-in">
-			<Header page="homepage-jinbocho" pageName="jinbocho" />
-			<Hero />
+			<Header title="神保町ホロホロシーシャ" page="homepage-jinbocho" pageName="jinbocho" />
+			<Hero video="/img/jinbocho/video.mp4" img="/img/jinbocho/logo.png" height={600} width={600} />
 			<div id="system" style={{ backgroundColor: "#0d0d0d" }}>
 				{" "}
 				<CategoryPreview imageSrc="/img/jinbocho/bg12.png" title="システム" paragraph="ドリンクメニューも充実。アルコールはもちろん、豆挽きコーヒーやチャイなど豊富にご用意しております。" buttonText="もっと見る" buttonLink="/jinbocho/system" reverse={true} />
@@ -25,7 +25,7 @@ const Homepage: React.FC = () => {
 				<CategoryPreview imageSrc="/img/jinbocho/drinksimg.jpg" title="ドリンク＆フード" paragraph="ドリンクメニューも充実。アルコールはもちろん、豆挽きコーヒーやチャイなど豊富にご用意しております。" buttonText="もっと見る" buttonLink="/jinbocho/drinks-food" reverse={true} />
 			</div>
 
-			<Access />
+			<Access page="jinbocho" />
 			<Footer />
 		</span>
 	);

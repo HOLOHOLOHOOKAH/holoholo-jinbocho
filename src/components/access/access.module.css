@@ -13,7 +13,7 @@
 }
 
 .hoursBox {
-	border: 5px solid #815e13de;
+	border: 5px solid #edc80673;
 	padding: 2rem;
 	backdrop-filter: blur(8px);
 	height: 450px;
@@ -23,7 +23,7 @@
 .day {
 	display: flex;
 	justify-content: space-between;
-	border-bottom: 1px solid #815e13de;
+	border-bottom: 1px solid #edc80673;
 	padding: 0.5rem 0;
 }
 
