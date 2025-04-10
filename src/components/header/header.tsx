@@ -1,7 +1,4 @@
 import "./header.css";
-import { useScrollspy } from "@/hoooks/useScrollSpy";
-import { useMobileNavCloseOnLinkClick } from "@/hoooks/useMobileNavCloseOnLinkClick";
-import { useMobileNavToggle } from "@/hoooks/useMobileNav";
 import HeaderClient from "./headerClient";
 import Link from "next/dist/client/link";
 
