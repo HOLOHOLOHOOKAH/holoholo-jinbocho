@@ -3,35 +3,27 @@ import styles from "./drinksFood.module.css";
 import { FC } from "react";
 import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
-import { jinbochoMetadata } from "@/lib/metadata/jinbocho";
+import { holoHoloMetadata } from "@/lib/metadata/holoHolo";
+export const metadata = holoHoloMetadata;
 const config = {
-	liqueurs: ["ジン", "ウォッカ", "ピーチ", "マリブ", "グリーンバナナ", "カルーア", "アマレット", "ティフィン", "焼酎（甲類）"],
-	liqueurNote: "※ソフトドリンクからお好きな割り材をお選びください。",
-	beer: {
-		name: "ハイネケン",
-		price: "¥800〜",
-	},
+	liqueurs: ["ジン", "ウォッカ", "テキーラ", "ラム", "カンパリ", "カシス", "ピーチ", "マリブ", "ウイスキー", "知多 (¥1000)"],
+	beer: ["生ビール", "コロナ・エキストラ", "バドワイザー", "ハイネケン", "スミノフアイス", "スミノフレモネード", "スミノフワイルドグレープ"],
+
 	liqueurImage: {
-		src: "/img/jinbocho/drinks.jpeg",
-		alt: "Color Drink",
+		src: "/img/okachimachi/corona.jpg",
+		alt: "Beer",
 		width: 300,
 		height: 300,
 	},
-	snacks: [
-		{ name: "ポップコーン", price: "¥500" },
-		{ name: "チョコレート", price: "¥300" },
-		{ name: "マシュマロ＆ビスケット", price: "¥300" },
-		{ name: "燻製ミックスナッツ", price: "¥500" },
-	],
+	otherDrinks: ["テキーラショット", "イエガーショット (¥800)", "シャンパン ヴーヴクリコ (¥18000)", "シャンパン モエ (¥15000)"],
+
 	snackImage: {
-		src: "/img/jinbocho/drinksimg.jpg",
-		alt: "Fruit Tea",
+		src: "/img/okachimachi/shots.jpg",
+		alt: "Liqueur",
 		width: 300,
 		height: 300,
 	},
 };
-
-export const metadata = jinbochoMetadata;
 
 const Homepage: FC = () => {
 	return (
@@ -60,22 +52,19 @@ const Homepage: FC = () => {
 									<div>
 										<div className="row">
 											<div className="col-12">
-												<div className={styles.sectionTitle}>Liqueur</div>
-												<ul className={`${styles.sectionText} list-unstyled mb-0`} style={{ columns: 2 }}>
-													{config.liqueurs.map((item, index) => (
-														<li key={index}>
-															<strong>{item}</strong>
-														</li>
-													))}
-												</ul>
+												<div className={styles.sectionTitle}>Bottle/Beer</div>
+												<div className={`${styles.sectionText} mt-4 text-md-start text-center`}>
+													<ul className={`${styles.sectionText} list-unstyled mb-0`} style={{ columns: 2 }}>
+														{config.beer.map((item, index) => (
+															<li key={index}>
+																<strong>{item}</strong>
+															</li>
+														))}
+													</ul>
+												</div>
 											</div>
 										</div>
-										<p className={`${styles.sectionText} mt-4 text-center`}>{config.liqueurNote}</p>
-
-										<div className={styles.sectionTitle}>Beer</div>
-										<p className={`${styles.sectionText} mt-4 text-md-start text-center`}>
-											<strong>{config.beer.name} </strong> <span style={{ color: "grey" }}>..............</span> {config.beer.price}
-										</p>
+										<div className={styles.price}>¥800</div>
 									</div>
 								</div>
 							</div>
@@ -93,14 +82,21 @@ const Homepage: FC = () => {
 							{/* Snacks Text */}
 							<div className="col-12 col-md-6 d-flex justify-content-center justify-content-md-end align-items-center">
 								<div>
-									<div className={`${styles.sectionTitle} justify-content-center justify-content-md-end`}>Snacks</div>
+									<div className={`${styles.sectionTitle} justify-content-center justify-content-md-end`}>Liqueur</div>
 									<div className={styles.sectionText}>
 										<div className="text-center text-md-end mb-5">
-											{config.snacks.map((snack, index) => (
-												<p key={index}>
-													{snack.name} <span style={{ color: "grey" }}>.............</span> {snack.price}
-												</p>
-											))}
+											<div className="row">
+												<div className="col-12">
+													<ul className={`${styles.sectionText} text-center text-md-end list-unstyled mb-0`} style={{ columns: 2 }}>
+														{config.liqueurs.map((item, index) => (
+															<li key={index}>
+																<strong>{item}</strong>
+															</li>
+														))}
+													</ul>
+												</div>
+												<div className={`${styles.price} mt-4 text-center text-md-end`}>¥800</div>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -114,6 +110,25 @@ const Homepage: FC = () => {
 										<Image src={config.snackImage.src} alt={config.snackImage.alt} width={config.snackImage.width} height={config.snackImage.height} className={`${styles.drinkImage} ${styles.imageHover}`} />
 									</div>
 								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div className="border-bottom container mt-4"></div>
+
+			<div id="other-drinks" style={{ maxWidth: "900px" }} className={`${styles.container} container mt-4 mb-4`}>
+				{/* Other Drinks */}
+				<div className="col-12 pt-3 mb-3">
+					<div className={`${styles.drinkCard} text-center`}>
+						<div className={`${styles.sectionTitle} justify-content-center`}>Other Drinks</div>
+						<div className="row">
+							<div className="col-md-12">
+								<ul className={`${styles.sectionText}  text-center list-unstyled`}>
+									{config.otherDrinks.map((item, index) => (
+										<li key={index}>{item}</li>
+									))}
+								</ul>
 							</div>
 						</div>
 					</div>
