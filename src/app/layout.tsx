@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { Delius } from "next/font/google";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-icons/font/bootstrap-icons.css"; // JS initializer functions that may return cleanup functions
@@ -11,7 +10,6 @@ const robotoSans = Delius({
 });
 
 import { holoHoloMetadata } from "@/lib/metadata/holoHolo";
-
 export const metadata = holoHoloMetadata;
 export default function RootLayout({
 	children,
