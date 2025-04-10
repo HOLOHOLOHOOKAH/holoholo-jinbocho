@@ -1,9 +1,8 @@
-"use client";
-
 import "./header.css";
 import { useScrollspy } from "@/hoooks/useScrollSpy";
 import { useMobileNavCloseOnLinkClick } from "@/hoooks/useMobileNavCloseOnLinkClick";
 import { useMobileNavToggle } from "@/hoooks/useMobileNav";
+import HeaderClient from "./headerClient";
 import Link from "next/dist/client/link";
 
 type PageKey = "homepage-jinbocho" | "system-jinbocho" | "softDrinks-jinbocho" | "drinksFood-jinbocho" | "softDrinks-okachimachi";
@@ -53,10 +52,6 @@ interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = ({ page, pageName, title }) => {
-	useMobileNavToggle();
-	useMobileNavCloseOnLinkClick();
-	useScrollspy();
-
 	return (
 		<header id="header" className="header fixed-top">
 			<div className="branding d-flex align-items-cente">
@@ -71,7 +66,7 @@ const Header: React.FC<HeaderProps> = ({ page, pageName, title }) => {
 						<nav id="navmenu" className="navmenu">
 							<ul>
 								{sections[page].map(({ key, label }, index) => (
-									<li key={key}>
+									<li key={key} className="text-uppercase">
 										<a href={`#${key}`} className={index === 0 ? "active" : ""}>
 											{label}
 										</a>
@@ -83,6 +78,8 @@ const Header: React.FC<HeaderProps> = ({ page, pageName, title }) => {
 					)}
 				</div>
 			</div>
+
+			<HeaderClient />
 		</header>
 	);
 };
