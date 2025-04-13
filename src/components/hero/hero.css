@@ -53,6 +53,7 @@
 	.heroImg {
 		width: 350px !important;
 		height: 350px !important;
+		top: 50%;
 	}
 }
 

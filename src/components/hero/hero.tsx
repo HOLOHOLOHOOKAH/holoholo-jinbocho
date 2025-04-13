@@ -21,7 +21,7 @@ const Hero: React.FC<HeroProps> = ({ img, height, width, video }) => {
 				<div className="container position-relative z-1">
 					<div className="row">
 						<div className="position-relative d-flex justify-content-center">
-							<Image loading="eager" style={{ height: height, width: width }} className="position-relative fade-in logoImg" src={img} alt="Logo" width={230} height={230} />
+							<Image loading="eager" style={{ height: height, width: width }} className="position-relative fade-in heroImg" src={img} alt="Logo" width={230} height={230} />
 						</div>
 					</div>
 				</div>

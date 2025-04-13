@@ -49,7 +49,7 @@ const Homepage: React.FC = () => {
 			<Header title="神保町ホロホロシーシャ" page="system-jinbocho" pageName="jinbocho" />
 			<div style={{ height: "130px" }}></div>
 
-			<h1 className="d-flex justify-content-center">システム</h1>
+			<h1 className="d-flex justify-content-center ">システム</h1>
 			<div className="border-bottom container mt-3 mb-3 mt-md-5 mb-md-5"></div>
 
 			<div className={`${styles.menuContainer} container text-white py-5 px-4`}>
