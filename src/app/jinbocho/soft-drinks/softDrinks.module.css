@@ -3,7 +3,7 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	color: white;
+	color: var(--text-color);
 }
 
 .mainTitle {
@@ -15,7 +15,7 @@
 	height: 100%;
 	display: flex;
 	justify-content: center;
-	color: white;
+	color: var(--text-color);
 }
 
 .sectionSubtitle {
@@ -29,7 +29,7 @@
 	font-size: 2rem;
 	margin-bottom: 2rem;
 	margin-top: 1rem;
-	color: #cc8b00;
+	color: var(--nav-hover-color);
 }
 
 .subtitle {
@@ -70,7 +70,7 @@
 	width: 330px;
 	height: 450px;
 	background-color: transparent;
-	border: 10px solid #edc80673;
+	border: 10px solid var(--border-stack-color);
 	border-radius: 8px;
 	position: absolute;
 	top: 0;
@@ -112,7 +112,7 @@
 	width: 220px;
 	height: 300px;
 	background-color: transparent;
-	border: 8px solid #edc80673;
+	border: 8px solid var(--border-stack-color);
 	border-radius: 8px;
 	position: absolute;
 	top: 0;

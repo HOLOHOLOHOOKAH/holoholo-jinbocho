@@ -15,13 +15,14 @@
 	height: 100%;
 	display: flex;
 	justify-content: center;
-	color: white;
+	color: var(--text-color);
 }
 
 .sectionSubtitle {
 	font-size: 2rem;
 	letter-spacing: 2px;
 	margin-bottom: 1.5rem;
+	color: var(--title-color);
 }
 .sectionTitle {
 	display: flex;
@@ -29,12 +30,12 @@
 	font-size: 2rem;
 	margin-bottom: 2rem;
 	margin-top: 1rem;
-	color: #cc8b00;
+	color: var(--title-color);
 }
 
 .subtitle {
 	font-size: 0.95rem;
-	color: #888;
+	color: var(--title-color);
 	margin-bottom: 1rem;
 }
 
@@ -46,7 +47,7 @@
 .price {
 	font-weight: bold;
 	font-size: 2rem;
-	color: #d5d5d5;
+	color: var(--title-color);
 	margin-top: 1rem;
 	text-align: start;
 }
@@ -55,6 +56,7 @@
 	text-align: start;
 	font-size: 18px;
 	letter-spacing: 3px;
+	color: var(--text-color);
 }
 
 .customImageContainer {
@@ -70,7 +72,7 @@
 	width: 330px;
 	height: 450px;
 	background-color: transparent;
-	border: 10px solid #edc80673;
+	border: 10px solid var(--border-stack-color);
 	border-radius: 8px;
 	position: absolute;
 	top: 0;
@@ -112,7 +114,7 @@
 	width: 220px;
 	height: 300px;
 	background-color: transparent;
-	border: 8px solid #edc80673;
+	border: 8px solid var(--border-stack-color);
 	border-radius: 8px;
 	position: absolute;
 	top: 0;

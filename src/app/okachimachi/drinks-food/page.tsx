@@ -30,9 +30,9 @@ const Homepage: FC = () => {
 		<div className="fade-in">
 			<div className={styles.spacer}></div>
 
-			<Header title="御徒町ホロホロシーシャ" page="drinksFood-jinbocho" pageName="okachimachi" />
+			<Header title="御徒町ホロホロシーシャ" page="drinksFood-okachimachi" pageName="okachimachi" />
 
-			<div id="liqueur-beer" className={`${styles.container} container`}>
+			<div id="bottle-beer" className={`${styles.container} container`}>
 				<div className="row g-4">
 					<div className="col-md-12 d-flex pb-3">
 						<div className={`${styles.drinkCard} w-100 pt-3`}>
@@ -75,7 +75,7 @@ const Homepage: FC = () => {
 
 			<div className="border-bottom container mt-4"></div>
 
-			<div id="snacks" className={`${styles.container} container mt-4`}>
+			<div id="liqueur" className={`${styles.container} container mt-4`}>
 				<div className="col-md-12 d-flex pb-3">
 					<div className={`${styles.drinkCard} w-100 pt-3`}>
 						<div className="row">

@@ -11,8 +11,8 @@ const Homepage: React.FC = () => {
 	return (
 		<span className="fade-in">
 			<Header page="homepage-jinbocho" title="御徒町ホロホロシーシャ" pageName="okachimachi" />
-			<Hero video="/img/okachimachi/video.mp4" img="/img/okachimachi/logo.png" height={600} width={600} />
-			<div id="system" style={{ backgroundColor: "#0d0d0d" }}>
+			<Hero video="/img/okachimachi/holoholo.jpg" img="/img/okachimachi/logo.png" height={600} width={600} />
+			<div id="system" className="secondary-background">
 				{" "}
 				<CategoryPreview imageSrc="/img/okachimachi/holoholo.jpg" title="システム" paragraph="ドリンクメニューも充実。アルコールはもちろん、豆挽きコーヒーやチャイなど豊富にご用意しております。" buttonText="もっと見る" buttonLink="/okachimachi/system" reverse={true} />
 			</div>
@@ -20,7 +20,7 @@ const Homepage: React.FC = () => {
 				{" "}
 				<CategoryPreview imageSrc="/img/okachimachi/softdrink.jpg" title="ソフトドリンク" paragraph="フレーバーは「FUMARI」「AZURE」「AL FAKHER」の3メーカーを主に使用しています。ニコチンフリーフレーバーのご用意もしております。" buttonText="もっと見る" buttonLink="/okachimachi/soft-drinks" />
 			</div>
-			<div id="drinks-food" style={{ backgroundColor: "#0d0d0d" }}>
+			<div id="drinks-food" className="secondary-background">
 				{" "}
 				<CategoryPreview imageSrc="/img/okachimachi/food.jpg" title="ドリンク＆フード" paragraph="ドリンクメニューも充実。アルコールはもちろん、豆挽きコーヒーやチャイなど豊富にご用意しております。" buttonText="もっと見る" buttonLink="/okachimachi/drinks-food" reverse={true} />
 			</div>

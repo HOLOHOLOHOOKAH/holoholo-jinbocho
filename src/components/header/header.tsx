@@ -2,7 +2,7 @@ import "./header.css";
 import HeaderClient from "./headerClient";
 import Link from "next/dist/client/link";
 
-type PageKey = "homepage-jinbocho" | "system-jinbocho" | "softDrinks-jinbocho" | "drinksFood-jinbocho" | "softDrinks-okachimachi";
+type PageKey = "homepage-jinbocho" | "system-jinbocho" | "softDrinks-jinbocho" | "drinksFood-jinbocho" | "drinksFood-okachimachi" | "softDrinks-okachimachi";
 type PageName = "jinbocho" | "okachimachi";
 type Title = "神保町ホロホロシーシャ" | "御徒町ホロホロシーシャ";
 
@@ -39,6 +39,11 @@ const sections: Record<PageKey, SectionItem[]> = {
 	"drinksFood-jinbocho": [
 		{ key: "liqueur-beer", label: "Liqueur & Beer" },
 		{ key: "snacks", label: "Snacks" },
+	],
+	"drinksFood-okachimachi": [
+		{ key: "bottle-beer", label: "Bottle/Beer" },
+		{ key: "liqueur", label: "Liqueur" },
+		{ key: "other-drinks", label: "Other Drinks" },
 	],
 };
 

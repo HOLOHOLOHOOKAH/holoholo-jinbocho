@@ -31,14 +31,10 @@ body,
 	--nav-dropdown-background-color: #29261f; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
 	--nav-dropdown-color: #ffffff; /* Used for navigation links of the dropdown items in the navigation menu. */
 	--nav-dropdown-hover-color: #edc806; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
-}
-
-.dark-background {
-	--background-color: #000000;
-	--default-color: #ffffff;
-	--heading-color: #ffffff;
-	--surface-color: #1a1a1a;
-	--contrast-color: #ffffff;
+	--title-color: #edc806; /* Used for the title of the website */
+	--border-stack-color: #edc80673;
+	--text-color: #ffffff;
+	--border-color: rgba(255, 255, 255, 0.115);
 }
 
 /* Smooth scroll */
@@ -348,5 +344,13 @@ body,
 }
 
 .border-bottom {
-	border-color: rgba(255, 255, 255, 0.115) !important;
+	border-color: var(--border-color) !important;
+}
+
+.secondary-background {
+	background-color: var(--secondary-color);
+}
+
+.default-txt-color {
+	color: var(--text-color);
 }

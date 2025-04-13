@@ -1,7 +1,6 @@
 .overlay {
-	background-color: rgba(0, 0, 0, 0.6);
 	padding: 0rem;
-	color: white;
+	color: var(--text-color);
 	background-size: cover;
 }
 
@@ -13,7 +12,7 @@
 }
 
 .hoursBox {
-	border: 5px solid #edc80673;
+	border: 5px solid var(--border-stack-color);
 	padding: 2rem;
 	backdrop-filter: blur(8px);
 	height: 450px;
@@ -28,7 +27,7 @@
 }
 
 .title {
-	color: var(--nav-hover-color);
+	color: var(--text-color);
 	display: flex;
 	justify-content: center;
 	text-transform: uppercase;
@@ -45,5 +44,5 @@
 	transform: translateX(-50%);
 	width: 25%;
 	height: 5px;
-	background-color: #3d3608;
+	background-color: var(--text-color);
 }

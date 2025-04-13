@@ -28,8 +28,8 @@ const Access: React.FC<AccessProps> = ({ page }) => {
 					<iframe title="access" className={styles.map} src={link} width="600" height="450" allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
 				</div>
 				<div className="col-md-4">
-					<div className={`${styles.hoursBox} text-white`}>
-						<h2 className="fw-bold mb-4">営業時間</h2>
+					<div className={`${styles.hoursBox}`}>
+						<h2 className="fw-bold default-txt-color mb-4">営業時間</h2>
 						{schedule.map(({ day, hours }) => (
 							<div className={styles.day} key={day}>
 								<span>{day}</span>

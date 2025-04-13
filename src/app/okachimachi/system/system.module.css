@@ -44,7 +44,8 @@
 	width: 300px;
 	height: 350px;
 	background-color: transparent;
-	border: 10px solid #edc80673;
+	border: 10px solid var(--border-stack-color);
+
 	border-radius: 8px;
 	position: absolute;
 	top: 0;
@@ -96,7 +97,8 @@
 	font-size: 2rem;
 	margin-bottom: 2rem;
 	margin-top: 1rem;
-	color: #cc8b00;
+	color: var(--title-color);
+
 	text-transform: uppercase;
 	letter-spacing: 4px;
 }

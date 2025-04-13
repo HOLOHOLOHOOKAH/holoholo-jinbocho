@@ -13,7 +13,7 @@
 	object-fit: cover;
 	z-index: 1;
 }
-.hero img {
+.heroImg {
 	position: absolute;
 	inset: 0;
 	display: block;
@@ -50,7 +50,7 @@
 	.hero p {
 		font-size: 18px;
 	}
-	.hero img {
+	.heroImg {
 		width: 350px !important;
 		height: 350px !important;
 	}

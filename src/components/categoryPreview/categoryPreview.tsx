@@ -22,12 +22,7 @@ const CategoryPreview: React.FC<CategoryPreviewProps> = ({
 	hasBackgroundImage = false, // Default value for the background image flag
 }) => {
 	return (
-		<div
-			style={{
-				backgroundImage: hasBackgroundImage ? "url('/img/fabric.png')" : "none",
-			}}
-			className="container section-category"
-		>
+		<div className="container section-category">
 			<div className="row align-items-center">
 				{/* Image Column */}
 				<div className={`col-md-6 text-center mb-4 mb-md-0 ${reverse ? "order-md-2" : "order-md-1"}`}>

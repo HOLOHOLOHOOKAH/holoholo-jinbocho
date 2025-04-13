@@ -48,7 +48,7 @@ const config = {
 const Homepage: React.FC = () => {
 	return (
 		<div className="px-3">
-			<Header title="御徒町ホロホロシーシャ" page="system-jinbocho" pageName="jinbocho" />
+			<Header title="御徒町ホロホロシーシャ" page="system-jinbocho" pageName="okachimachi" />
 			<div style={{ height: "130px" }}></div>
 
 			<h1 className="d-flex justify-content-center">システム</h1>
