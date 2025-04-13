@@ -9,7 +9,6 @@ interface CategoryPreviewProps {
 	buttonText?: string;
 	buttonLink?: string;
 	imageSrc?: string; // New prop to specify the image source
-	hasBackgroundImage?: boolean; // New prop to control the background image
 }
 
 const CategoryPreview: React.FC<CategoryPreviewProps> = ({
@@ -19,7 +18,6 @@ const CategoryPreview: React.FC<CategoryPreviewProps> = ({
 	buttonText = "Book now",
 	buttonLink = "#",
 	imageSrc = "https://placehold.co/400", // Default image URL
-	hasBackgroundImage = false, // Default value for the background image flag
 }) => {
 	return (
 		<div className="container section-category">

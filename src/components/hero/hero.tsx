@@ -15,7 +15,7 @@ const Hero: React.FC<HeroProps> = ({ img, height, width, video }) => {
 	return (
 		<>
 			<div id="home" className="hero section dark-background">
-				{isVideo ? <video src={video} autoPlay playsInline loop muted className="hero-video z-0 absolute" /> : <img src={video} alt="Hero" className="hero-video z-0 absolute object-fit-cover" />}
+				{isVideo ? <video src={video} autoPlay playsInline loop muted className="hero-video z-0 absolute" /> : <Image src={video} alt="Hero" className="hero-video z-0 absolute object-fit-cover" height={1080} width={1920} />}
 				{/* You can add overlay content here */}
 
 				<div className="container position-relative z-1">
