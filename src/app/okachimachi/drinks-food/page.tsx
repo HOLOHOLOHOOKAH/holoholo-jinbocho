@@ -30,7 +30,7 @@ const Homepage: FC = () => {
 		<div className="fade-in">
 			<div className={styles.spacer}></div>
 
-			<Header title="御徒町ホロホロシーシャ" page="drinksFood-okachimachi" pageName="okachimachi" />
+			<Header title="湯島ホロホロシーシャ 上野・御徒町店" page="drinksFood-okachimachi" pageName="okachimachi" />
 
 			<div id="bottle-beer" className={`${styles.container} container`}>
 				<div className="row g-4">
@@ -135,7 +135,7 @@ const Homepage: FC = () => {
 				</div>
 			</div>
 
-			<Footer />
+			<Footer page="jinbocho" />
 		</div>
 	);
 };

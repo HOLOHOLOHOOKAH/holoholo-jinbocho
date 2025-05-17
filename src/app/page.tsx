@@ -4,22 +4,22 @@ import styles from "./style.module.css";
 import Image from "next/image";
 const shops = [
 	{
-		title: "ホロホロシーシャ",
-		text: " 御徒町店",
+		title: "湯島ホロホロシーシャ 上野",
+		text: "御徒町店",
 		img: "/img/okachimachi/holoholo.jpg",
 		url: "/okachimachi",
 		buttonClass: styles.btnShop1,
 	},
 	{
-		title: "ホロホロシーシャ",
-		text: "神保町店",
+		title: "神保町ホロホロシーシャ",
+		text: "神保町",
 		img: "/img/jinbocho/bg12.png",
 		url: "/jinbocho",
 		buttonClass: styles.btnShop2,
 	},
 	{
-		title: "アジル スモーク",
-		text: "上野 御徒町",
+		title: "上野・御徒町 シーシャバー ",
+		text: "Asile Smoke",
 		img: "/img/asile.jpg",
 		url: "https://www.asilesmokes.com/",
 		buttonClass: styles.btnShop3,

@@ -10,157 +10,132 @@ export const metadata = jinbochoMetadata;
 const Homepage: FC = () => {
 	return (
 		<div className="fade-in">
-			<div style={{ height: "130px" }}></div>
-
 			<Header title="神保町ホロホロシーシャ" page="softDrinks-jinbocho" pageName="jinbocho" />
-
+			<div style={{ height: "120px" }}></div>
 			<div className={`${styles.container} container`}>
-				<div className="row g-4">
-					<div id="color-drinks" className="col-md-12 d-flex pb-3">
+				<div className="d-flex justify-content-center">
+					<div id="color-drinks " className="pb-3">
 						<div className={`${styles.drinkCard} w-100 pt-3`}>
-							<div>
-								<div className="row">
-									<div className="col-12 col-md-6 d-flex justify-content-center align-items-center">
-										<div className={styles.customImageContainer}>
-											<div className={styles.greenBorderStack}></div>
-											<div className={styles.stackedContainer}>
-												<Image src="/img/jinbocho/drinksimg2.jpg" alt="Color Drink" width={300} height={300} className={`${styles.drinkImage} ${styles.imageHover}`} />
-											</div>
-										</div>
-									</div>
-									<div className={`${styles.borderLeft} col-12 col-md-6 d-flex text-center justify-content-center align-items-center`}>
-										<div>
-											<div className="row">
-												<div className="col-12">
-													<div className={styles.sectionTitle}>推しカラードリンク</div>
-													<ul className={`${styles.sectionText} list-unstyled mb-0`}>
-														<li>
-															<strong>Red:</strong> カシス
-														</li>
-														<li>
-															<strong>Blue:</strong> ブルー
-														</li>
-														<li>
-															<strong>Orange:</strong> マンゴー
-														</li>
-														<li>
-															<strong>Yellow:</strong> パッション ✕
-														</li>
-													</ul>
-												</div>
-												<div className="col-12">
-													<ul className={`${styles.sectionText} list-unstyled mb-0`}>
-														<li>
-															<strong>White:</strong> カルピス
-														</li>
-														<li>
-															<strong>Green:</strong> グリーンアップル
-														</li>
-														<li>
-															<strong>Purple:</strong> バタフライピー
-														</li>
-														<li>
-															<strong>Pink:</strong> ピーチ
-														</li>
-													</ul>
-												</div>
-											</div>
-											<p className={`${styles.sectionText} mt-2`}>
-												<strong>Base:</strong> Soda / Milk / Tonic
-											</p>
-											<div className={styles.price}>¥700</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div className="border-bottom container mt-4"></div>
-			<div id="fruit-tea" className={`${styles.container} container mt-4`}>
-				<div className="col-md-12 d-flex pb-3">
-					<div className={`${styles.drinkCard} w-100 pt-3`}>
-						<div>
-							<div className="row">
-								<div className="col-12 col-md-6 d-flex   justify-content-center justify-content-md-end align-items-center">
-									<div>
-										{" "}
-										<div className={`${styles.sectionTitle}  justify-content-center justify-content-md-end`}>フルーツティー</div>
-										<div className={styles.sectionText}>
-											<p className="text-center text-md-end">
-												<strong>ルイボス or ダージリン</strong>
-											</p>
-											<p className="text-center text-md-end">
-												冷凍フルーツを氷替わりに
-												<br />
-												溶けても薄くならない
-												<br />
-												フルーツティーの完成です
-											</p>
-											<div className={`${styles.price} text-center text-md-end mb-4`}>¥1,000</div>
-										</div>
-									</div>
-								</div>
-
-								<div className={`${styles.borderLeft} col-12 col-md-6 d-flex  justify-content-center  align-items-centerr`}>
+							<div className="d-block d-lg-flex justify-content-center">
+								<div className="mx-lg-5 px-lg-3">
 									<div className={styles.customImageContainer}>
 										<div className={styles.greenBorderStack}></div>
 										<div className={styles.stackedContainer}>
-											<Image src="/img/jinbocho/drinksimg.jpg" alt="Fruit Tea" width={300} height={300} className={`${styles.drinkImage} ${styles.imageHover}`} />
+											<Image src="/img/jinbocho/drinksimg2.jpg" alt="Color Drink" width={300} height={300} className={`${styles.drinkImage} ${styles.imageHover}`} />
 										</div>
-									</div>{" "}
+									</div>
+								</div>
+								<div className="mx-lg-5 px-lg-3 d-flex text-center justify-content-center align-items-center">
+									<div>
+										<div className={styles.sectionTitle}>推しカラードリンク</div>
+										<ul className={`${styles.sectionText} list-unstyled mb-0`}>
+											<li>
+												<span style={{ fontSize: "16px" }}>Red</span>: カシス
+											</li>
+											<li>
+												<span style={{ fontSize: "16px" }}>Blue:</span> ブルー
+											</li>
+											<li>
+												<span style={{ fontSize: "16px" }}>Orange:</span> マンゴー
+											</li>
+											<li>
+												<span style={{ fontSize: "16px" }}>Yellow:</span> パッション ✕
+											</li>
+										</ul>
+										<ul className={`${styles.sectionText} list-unstyled mb-0`}>
+											<li>
+												<span style={{ fontSize: "16px" }}>White:</span> カルピス
+											</li>
+											<li>
+												<span style={{ fontSize: "16px" }}>Green:</span> グリーンアップル
+											</li>
+											<li>
+												<span style={{ fontSize: "16px" }}>Purple:</span> バタフライピー
+											</li>
+											<li>
+												<span style={{ fontSize: "16px" }}>Pink:</span> ピーチ
+											</li>
+										</ul>
+
+										<p className={`${styles.sectionText} mt-2`}>
+											<strong>Base:</strong> Soda / Milk / Tonic
+										</p>
+										<div className={styles.price}>¥700</div>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div className="border-bottom container mt-4"></div>
-
-			<div id="chai-matcha" className="container mt-4">
-				<div className="row g-4">
-					{/* Chai */}
-					<div className="col-md-4 d-flex">
-						<div className={`${styles.drinkCard2} pt-3 w-100 d-flex align-items-center`}>
-							<div className={`${styles.verticalText} ${styles.sectionTitle}`}>チャイ</div>
-							<div className={styles.customImageContainerSmall}>
-								<div className={styles.greenBorderStackSmall}></div>
-								<div className={styles.stackedContainer}>
-									<Image src="/img/jinbocho/drinksimg3.jpg" alt="Chai" width={250} height={250} className={`${styles.drinkImage2} ${styles.imageHover}`} />
+			<div className="border-bottom container mt-4 mt-lg-5"></div>
+			<div id="fruit-tea" className={`${styles.container} container mt-5`}>
+				<div className="pb-3">
+					<div className={`${styles.drinkCard} w-100 pt-3`}>
+						<div className="d-block d-lg-flex justify-content-center">
+							<div className="order-lg-2 mx-lg-5 px-lg-3">
+								<div className={styles.customImageContainer}>
+									<div className={styles.greenBorderStack}></div>
+									<div className={styles.stackedContainer}>
+										<Image src="/img/jinbocho/drinksimg.jpg" alt="Fruit Tea" width={300} height={300} className={`${styles.drinkImage} ${styles.imageHover}`} />
+									</div>
 								</div>
-							</div>{" "}
-						</div>
-					</div>
-
-					{/* Matcha Milk */}
-					<div className="col-md-4 d-flex">
-						<div className={`${styles.drinkCard2} pt-3 w-100 d-flex align-items-center`}>
-							<div className={`${styles.verticalText} ${styles.sectionTitle}`}>抹茶ミルク</div>
-							<div className={styles.customImageContainerSmall}>
-								<div className={styles.greenBorderStackSmall}></div>
-								<div className={styles.stackedContainer}>
-									<Image src="/img/jinbocho/drinksimg4.jpg" alt="Matcha Milk" width={250} height={250} className={`${styles.drinkImage2} ${styles.imageHover}`} />
+							</div>
+							<div className="order-lg-1 mx-lg-5 px-lg-3">
+								<div>
+									{" "}
+									<div className={`${styles.sectionTitle}  justify-content-center justify-content-md-end`}>フルーツティー</div>
+									<div className={styles.sectionText}>
+										<p className="text-center text-md-end">
+											<strong>ルイボス or ダージリン</strong>
+										</p>
+										<p className="text-center text-md-end">
+											冷凍フルーツを氷替わりに
+											<br />
+											溶けても薄くならない
+											<br />
+											フルーツティーの完成です
+										</p>
+										<div className={`${styles.price} text-center text-md-end mb-4`}>¥1,000</div>
+									</div>
 								</div>
-							</div>{" "}
-						</div>
-					</div>
-
-					{/* Hot or Cold */}
-					<div className="col-md-4 d-flex mb-3">
-						<div className={`${styles.drinkCard} pt-3 w-100 text-center d-flex flex-column justify-content-center`}>
-							<h3 className={styles.sectionSubtitle}>Hot or Cold</h3>
-							<p className={`${styles.sectionText} mb-1`}>ミルクで割るクリーミーな味わい</p>
-							<p className={`${styles.sectionText} text-center`}>洋も和も美味い</p>
-							<div className={`${styles.price} text-center`}>¥600</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+			<div className="border-bottom container mt-4 mt-lg-5"></div>
+			<div className={`${styles.container} container mt-5`}>
+				<div className="d-flex justify-content-center">
+					<div id="chai-matcha" className="pb-3">
+						<div className={`${styles.drinkCard} w-100 pt-3`}>
+							<div className="d-block d-lg-flex justify-content-center">
+								<div className="mx-lg-5 px-lg-3">
+									<div className={styles.customImageContainer}>
+										<div className={styles.greenBorderStack}></div>
+										<div className={styles.stackedContainer}>
+											<Image src="/img/jinbocho/drinksimg3.jpg" alt="Color Drink" width={300} height={300} className={`${styles.drinkImage} ${styles.imageHover}`} />
+										</div>
+									</div>
+								</div>
+								<div className="mx-lg-5 px-lg-3 d-flex text-center justify-content-center align-items-center">
+									<div>
+										<div className={styles.sectionTitle}>チャイ - 抹茶ミルク</div>
 
-			<div className="border-bottom container mt-4"></div>
-
+										<div className={`${styles.drinkCard} pt-3 w-100 text-start d-flex flex-column justify-content-center`}>
+											<h3 className={styles.sectionSubtitle}>Hot or Cold</h3>
+											<p className={`${styles.sectionText} mb-1`}>ミルクで割るクリーミーな味わい</p>
+											<p className={`${styles.sectionText} t`}>洋も和も美味い</p>
+											<div className={`${styles.price} `}>¥600</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div className="border-bottom container mt-4 mt-lg-5"></div>
 			<div id="other-drinks" style={{ maxWidth: "900px" }} className={`${styles.container} container mt-4 mb-4`}>
 				{/* Other Drinks */}
 				<div className="col-12 pt-3 mb-3">
@@ -182,7 +157,7 @@ const Homepage: FC = () => {
 					</div>
 				</div>
 			</div>
-			<Footer />
+			<Footer page="jinbocho" />
 		</div>
 	);
 };

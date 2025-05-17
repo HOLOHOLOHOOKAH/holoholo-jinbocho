@@ -19,3 +19,20 @@
 p {
 	color: #333 !important;
 }
+.footer .icon {
+	color: black !important;
+	border-color: black !important;
+}
+
+.footer .credits {
+	color: black !important;
+	border-color: black !important;
+}
+
+.footer {
+	background-color: var(--secondary-color) !important;
+}
+
+.footer-title {
+	color: black !important;
+}

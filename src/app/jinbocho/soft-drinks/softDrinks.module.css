@@ -62,13 +62,13 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	height: 450px;
+	height: 400px;
 	position: relative;
 }
 
 .greenBorderStack {
 	width: 330px;
-	height: 450px;
+	height: 400px;
 	background-color: transparent;
 	border: 10px solid var(--border-stack-color);
 	border-radius: 8px;
@@ -86,7 +86,7 @@
 }
 
 .drinkImage {
-	height: 400px !important;
+	height: 350px !important;
 	border-radius: 12px;
 	width: 400px !important;
 	object-fit: cover;
@@ -167,6 +167,10 @@
 		justify-content: center;
 		margin-top: 2rem;
 		font-size: 1.6rem;
+	}
+
+	.sectionSubtitle {
+		text-align: center;
 	}
 
 	.price {

@@ -2,31 +2,43 @@ import React from "react";
 import "./footer.css";
 import Link from "next/link";
 
-const Footer: React.FC = () => {
+type PageName = "jinbocho" | "okachimachi";
+
+interface HeaderProps {
+	page: PageName;
+}
+
+const Footer: React.FC<HeaderProps> = ({ page }) => {
+	let shopName = "";
+	let address = "";
+	let instagramUrl = "";
+	let xUrl = "";
+
+	if (page === "jinbocho") {
+		shopName = "神保町ホロホロシーシャ";
+		address = "〒101-0051  東京都千代田区神田神保町1丁目19-6 KTビル 5階";
+		instagramUrl = "https://www.instagram.com/holoholojinbocho/";
+		xUrl = "https://x.com/holojinbocho";
+	} else if (page === "okachimachi") {
+		shopName = "湯島ホロホロシーシャ 上野・御徒町店";
+		address = "〒113-0034  東京都文京区湯島３丁目３８−１５ シャローム湯島 地下1階";
+		instagramUrl = "https://www.instagram.com/holoholohookah/";
+		xUrl = "https://x.com/HoloHoloHookah";
+	}
 	return (
-		<footer id="footer" className="footer">
-			<div className="container footer-top pt-3 pb-2">
-				<div className="social-links d-flex justify-content-center">
-					<Link aria-label="Open Instagram page" className="m-0 mx-2" rel="noreferrer" target="_blank" href="https://www.instagram.com/holoholojinbocho/">
-						<i className="bi bi-instagram" />
-					</Link>
-					<Link aria-label="Open X page" className="m-0 mx-2" rel="noreferrer" target="_blank" href="https://x.com/holojinbocho">
-						<i className="bi bi-twitter-x" />
-					</Link>
-				</div>
+		<footer className="footer custom-footer">
+			<div className="footer-wrapper">
+				<h2 className="footer-title">{shopName}</h2>
+				<p className="footer-address">{address}</p>
 			</div>
 
-			<div className="container copyright text-center mt-1">
-				<p style={{ fontSize: "16px" }} className="text-center">
-					© <span>Copyright</span> <strong className="px-1 sitename">Holo Holo Jinbocho,</strong> <span>All Rights Reserved</span>
-				</p>
-
-				<div className="credits">
-					Powered by <br /> ウェブサイ制作 <br />
-					<Link aria-label="Open startanalytics.net page" target="_blank" style={{ color: "rgb(53, 134, 239)", fontWeight: "bold", fontSize: "16px" }} rel="noreferrer" href="https://startanalytics.net/">
-						startanalytics.net
-					</Link>
-				</div>
+			<div className="social-links d-flex justify-content-center mt-3">
+				<Link aria-label="Open Instagram page" className="m-0 mx-2 icon" rel="noreferrer" target="_blank" href={instagramUrl}>
+					<i className="bi bi-instagram" />
+				</Link>
+				<Link aria-label="Open X page" className="m-0 mx-2 icon" rel="noreferrer" target="_blank" href={xUrl}>
+					<i className="bi bi-twitter-x" />
+				</Link>
 			</div>
 		</footer>
 	);

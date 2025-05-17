@@ -4,7 +4,7 @@ import Link from "next/dist/client/link";
 
 type PageKey = "homepage-jinbocho" | "system-jinbocho" | "softDrinks-jinbocho" | "drinksFood-jinbocho" | "drinksFood-okachimachi" | "softDrinks-okachimachi";
 type PageName = "jinbocho" | "okachimachi";
-type Title = "神保町ホロホロシーシャ" | "御徒町ホロホロシーシャ";
+type Title = "神保町ホロホロシーシャ" | "湯島ホロホロシーシャ 上野・御徒町店";
 
 type SectionItem = {
 	key: string;
@@ -17,7 +17,7 @@ const sections: Record<PageKey, SectionItem[]> = {
 		{ key: "system", label: "システム" },
 		{ key: "soft-drinks", label: "ソフトドリンク" },
 		{ key: "drinks-food", label: "ドリンク＆フード" },
-		{ key: "access", label: "アクセス" },
+		{ key: "information", label: "インフォメーション" },
 	],
 	"system-jinbocho": [
 		{ key: "shisha", label: "Shisha" },

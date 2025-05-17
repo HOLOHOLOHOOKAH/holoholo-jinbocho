@@ -47,8 +47,8 @@ const config = {
 
 const Homepage: React.FC = () => {
 	return (
-		<div className="px-3">
-			<Header title="御徒町ホロホロシーシャ" page="system-jinbocho" pageName="okachimachi" />
+		<div className="fade-in">
+			<Header title="湯島ホロホロシーシャ 上野・御徒町店" page="system-jinbocho" pageName="okachimachi" />
 			<div style={{ height: "130px" }}></div>
 
 			<h1 className="d-flex justify-content-center default-txt-color">システム</h1>
@@ -142,7 +142,7 @@ const Homepage: React.FC = () => {
 				</div>
 			</div>
 
-			<Footer />
+			<Footer page="jinbocho" />
 		</div>
 	);
 };

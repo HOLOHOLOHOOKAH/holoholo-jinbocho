@@ -12,7 +12,7 @@ const Homepage: FC = () => {
 		<div className="fade-in">
 			<div style={{ height: "130px" }}></div>
 
-			<Header title="御徒町ホロホロシーシャ" page="softDrinks-okachimachi" pageName="okachimachi" />
+			<Header title="湯島ホロホロシーシャ 上野・御徒町店" page="softDrinks-okachimachi" pageName="okachimachi" />
 
 			<div className={`${styles.container} container`}>
 				<div className="row g-4">
@@ -28,7 +28,7 @@ const Homepage: FC = () => {
 											</div>
 										</div>
 									</div>
-									<div className={`${styles.borderLeft} col-12 col-md-6 d-flex text-center justify-content-center align-items-center`}>
+									<div className={`col-12 col-md-6 d-flex text-center justify-content-center align-items-center`}>
 										<div>
 											<div className="row">
 												<div className="col-12">
@@ -106,7 +106,7 @@ const Homepage: FC = () => {
 									</div>
 								</div>
 
-								<div className={`${styles.borderLeft} col-12 col-md-6 d-flex  justify-content-center  align-items-centerr`}>
+								<div className={`col-12 col-md-6 d-flex  justify-content-center  align-items-centerr`}>
 									<div className={styles.customImageContainer}>
 										<div className={styles.greenBorderStack}></div>
 										<div className={styles.stackedContainer}>
@@ -121,7 +121,7 @@ const Homepage: FC = () => {
 			</div>
 			<div className="border-bottom container mt-4"></div>
 
-			<div id="chai-cocoa" className="container mt-4">
+			<div id="chai-cocoa" className="container mt-4 mb-5">
 				<div className="row g-4">
 					{/* Chai */}
 					<div className="col-md-4 d-flex">
@@ -160,7 +160,7 @@ const Homepage: FC = () => {
 				</div>
 			</div>
 
-			<Footer />
+			<Footer page="jinbocho" />
 		</div>
 	);
 };

@@ -10,7 +10,7 @@ export const metadata = holoHoloMetadata;
 const Homepage: React.FC = () => {
 	return (
 		<span className="fade-in">
-			<Header page="homepage-jinbocho" title="御徒町ホロホロシーシャ" pageName="okachimachi" />
+			<Header page="homepage-jinbocho" title="湯島ホロホロシーシャ 上野・御徒町店" pageName="okachimachi" />
 			<Hero video="/img/okachimachi/holoholo.jpg" img="/img/okachimachi/logo.png" height={600} width={600} />
 			<div id="system" className="secondary-background">
 				{" "}
@@ -25,8 +25,12 @@ const Homepage: React.FC = () => {
 				<CategoryPreview imageSrc="/img/okachimachi/food.jpg" title="ドリンク＆フード" paragraph="ドリンクメニューも充実。アルコールはもちろん、豆挽きコーヒーやチャイなど豊富にご用意しております。" buttonText="もっと見る" buttonLink="/okachimachi/drinks-food" reverse={true} />
 			</div>
 
-			<Access page="okachimachi" />
-			<Footer />
+			<div className="mb-5">
+				{" "}
+				<Access page="okachimachi" />
+			</div>
+
+			<Footer page="okachimachi" />
 		</span>
 	);
 };

@@ -35,7 +35,7 @@
 	font-size: 2rem;
 	margin-bottom: 2rem;
 	margin-top: 1rem;
-	color: #cc8b00;
+	color: var(--nav-hover-color);
 }
 
 .subtitle {

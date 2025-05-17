@@ -45,19 +45,16 @@ export const metadata = jinbochoMetadata;
 
 const Homepage: React.FC = () => {
 	return (
-		<div className="px-3">
+		<div>
 			<Header title="神保町ホロホロシーシャ" page="system-jinbocho" pageName="jinbocho" />
-			<div style={{ height: "130px" }}></div>
-
-			<h1 className="d-flex justify-content-center ">システム</h1>
-			<div className="border-bottom container mt-3 mb-3 mt-md-5 mb-md-5"></div>
+			<div style={{ height: "100px" }}></div>
 
 			<div className={`${styles.menuContainer} container text-white py-5 px-4`}>
 				{/* Shisha Section */}
 				<div id="shisha" className={styles.menuSection}>
-					<div className="row">
+					<div className="d-block d-lg-flex justify-content-center">
 						{/* Shisha Image */}
-						<div className="col-12 col-md-6 d-flex justify-content-center align-items-center">
+						<div className="d-flex  mx-lg-5 justify-content-center align-items-center">
 							<div className={styles.customImageContainer}>
 								<div className={styles.greenBorderStack}></div>
 								<div className={styles.stackedContainer}>
@@ -67,8 +64,8 @@ const Homepage: React.FC = () => {
 						</div>
 
 						{/* Shisha Text */}
-						<div className="col-12 col-md-6">
-							<div className="d-flex justify-content-center justify-content-md-start align-items-center h-100">
+						<div className="mx-lg-5">
+							<div className="d-flex justify-content-center justify-content-lg-start align-items-center h-100">
 								<div>
 									<div className={`${styles.sectionTitle} justify-content-center`}>Shisha</div>
 									<div className="d-flex text-justify justify-content-center align-items-center">
@@ -91,9 +88,9 @@ const Homepage: React.FC = () => {
 
 				{/* Options Section */}
 				<div id="options" className={styles.menuSection}>
-					<div className="row">
+					<div className="d-block d-lg-flex justify-content-center">
 						{/* Options Text */}
-						<div className="col-12 col-md-6">
+						<div className="mx-lg-5">
 							<div className="d-flex justify-content-center align-items-center h-100">
 								<div>
 									<div className={`${styles.sectionTitle} justify-content-center`}>Options</div>
@@ -111,7 +108,7 @@ const Homepage: React.FC = () => {
 						</div>
 
 						{/* Options Image */}
-						<div className="col-12 col-md-6 d-flex justify-content-center align-items-center">
+						<div className="d-flex mt-mx-0 mt-4 mx-lg-5 justify-content-center align-items-center">
 							<div className={styles.customImageContainer}>
 								<div className={styles.greenBorderStack}></div>
 								<div className={styles.stackedContainer}>
@@ -124,23 +121,27 @@ const Homepage: React.FC = () => {
 
 				<div className="border-bottom container mt-5 mb-5"></div>
 
-				{/* Wi-Fi Section */}
-				<div id="wifi" className={`${styles.menuSection} small text-center`}>
-					<div className={`${styles.sectionTitle} justify-content-center`}>Wi-Fi</div>
-					<p>SD: {config.wifi.ssid}</p>
-					<p>PW: {config.wifi.password}</p>
-				</div>
+				<div className="d-block d-md-flex justify-content-center">
+					{/* Notes Section */}
+					<div id="notes" style={{ maxWidth: "600px" }} className={`${styles.menuSection} small text-center mx-md-5`}>
+						<div className={`${styles.sectionTitle}  justify-content-center justify-content-md-start`}>Notes</div>
+						{config.notes.map((note, index) => (
+							<p className="text-center text-md-start" key={index}>
+								{note}
+							</p>
+						))}
+					</div>
 
-				{/* Notes Section */}
-				<div id="notes" className={`${styles.menuSection} small text-center`}>
-					<div className={`${styles.sectionTitle} justify-content-center`}>Notes</div>
-					{config.notes.map((note, index) => (
-						<p key={index}>{note}</p>
-					))}
+					{/* Wi-Fi Section */}
+					<div id="wifi" className={`${styles.menuSection} small text-center  mx-md-5`}>
+						<div className={`${styles.sectionTitle} justify-content-center`}>Wi-Fi</div>
+						<p>SD: {config.wifi.ssid}</p>
+						<p>PW: {config.wifi.password}</p>
+					</div>
 				</div>
 			</div>
 
-			<Footer />
+			<Footer page="jinbocho" />
 		</div>
 	);
 };
