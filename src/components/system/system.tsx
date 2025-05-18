@@ -91,8 +91,18 @@ const SystemPage: React.FC<SystemPageProps> = ({ config, page, title }) => {
 				{/* Options Section */}
 				<div id="options" className={styles.menuSection}>
 					<div className="d-block d-lg-flex justify-content-center">
+						{/* Options Image */}
+						<div className="order-lg-2 d-flex mt-mx-0 mt-4 mx-lg-5 justify-content-center align-items-center">
+							<div className={styles.customImageContainer}>
+								<div className={styles.greenBorderStack}></div>
+								<div className={styles.stackedContainer}>
+									<Image src={config.options.image.src} alt={config.options.image.alt} width={config.options.image.width} height={config.options.image.height} className={`${styles.drinkImage} ${styles.imageHover}`} />
+								</div>
+							</div>
+						</div>
+
 						{/* Options Text */}
-						<div className="mx-lg-5">
+						<div className="mx-lg-5 order-lg-1">
 							<div className="d-flex justify-content-center align-items-center h-100">
 								<div>
 									<div className={`${styles.sectionTitle} justify-content-center`}>Options</div>
@@ -108,34 +118,24 @@ const SystemPage: React.FC<SystemPageProps> = ({ config, page, title }) => {
 								</div>
 							</div>
 						</div>
-
-						{/* Options Image */}
-						<div className="d-flex mt-mx-0 mt-4 mx-lg-5 justify-content-center align-items-center">
-							<div className={styles.customImageContainer}>
-								<div className={styles.greenBorderStack}></div>
-								<div className={styles.stackedContainer}>
-									<Image src={config.options.image.src} alt={config.options.image.alt} width={config.options.image.width} height={config.options.image.height} className={`${styles.drinkImage} ${styles.imageHover}`} />
-								</div>
-							</div>
-						</div>
 					</div>
 				</div>
 
 				<div className="border-bottom container mt-5 mb-5"></div>
 
-				<div id="wifi" className="d-block d-md-flex justify-content-center">
+				<div id="wifi" className="d-block d-lg-flex justify-content-center">
 					{/* Notes Section */}
-					<div style={{ maxWidth: "600px" }} className={`${styles.menuSection} small text-center mx-md-5`}>
-						<div className={`${styles.sectionTitle} justify-content-center justify-content-md-start`}>Notes</div>
+					<div style={{ maxWidth: "600px" }} className={`${styles.menuSection} small text-center mx-lg-5`}>
+						<div className={`${styles.sectionTitle} justify-content-center justify-content-lg-start`}>Notes</div>
 						{config.notes.map((note, index) => (
-							<p className="text-center text-md-start" key={index}>
+							<p className="text-center text-lg-start" key={index}>
 								{note}
 							</p>
 						))}
 					</div>
 
 					{/* Wi-Fi Section */}
-					<div className={`${styles.menuSection} small text-center mx-md-5`}>
+					<div className={`${styles.menuSection} small text-center mx-lg-5`}>
 						<div className={`${styles.sectionTitle} justify-content-center`}>Wi-Fi</div>
 						<p>SD: {config.wifi.ssid}</p>
 						<p>PW: {config.wifi.password}</p>

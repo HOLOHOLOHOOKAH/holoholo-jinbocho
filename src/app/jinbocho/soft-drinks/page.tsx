@@ -12,9 +12,9 @@ const Homepage: FC = () => {
 		<div className="fade-in">
 			<Header title="神保町ホロホロシーシャ" page="softDrinks-jinbocho" pageName="jinbocho" />
 			<div style={{ height: "120px" }}></div>
-			<div className={`${styles.container} container`}>
+			<div id="color-drinks" className={`${styles.container} container`}>
 				<div className="d-flex justify-content-center">
-					<div id="color-drinks " className="pb-3">
+					<div className="pb-3">
 						<div className={`${styles.drinkCard} w-100 pt-3`}>
 							<div className="d-block d-lg-flex justify-content-center">
 								<div className="mx-lg-5 px-lg-3">
