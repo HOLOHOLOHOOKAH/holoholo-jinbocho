@@ -23,7 +23,6 @@ const sections: Record<PageKey, SectionItem[]> = {
 		{ key: "shisha", label: "Shisha" },
 		{ key: "options", label: "Options" },
 		{ key: "wifi", label: "Wi-Fi" },
-		{ key: "notes", label: "notes" },
 	],
 	"softDrinks-okachimachi": [
 		{ key: "soft-drinks", label: "Soft Drinks" },
