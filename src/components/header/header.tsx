@@ -40,7 +40,7 @@ const Header: React.FC<HeaderProps> = ({ page, pageName, title }) => {
 					{sections[page]?.length > 0 && (
 						<nav id="navmenu" className="navmenu">
 							<ul>
-								{sections[page].map(({ key, label }, index) => (
+								{sections[page].map(({ key, label }) => (
 									<li key={key} className="text-uppercase">
 										<a href={`/${pageName}/${key}`}>{label}</a>
 									</li>
