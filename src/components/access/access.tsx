@@ -46,25 +46,30 @@ const Access: React.FC<AccessProps> = ({ page }) => {
 			<div className="row g-4 align-items-stretch">
 				{/* Info Box */}
 				<div className="col-md-4 order-lg-2">
-					<div className={`${styles.infoBox} shadow`}>
-						<h3 className={styles.title}>インフォメーション</h3>
-						{infoItems.map(({ icon, label, value, isPhone }) => (
-							<div className={styles.infoItem} key={label}>
-								<span className={styles.label}>
-									<i className={`bi bi-${icon} me-2`} />
-									{label}
-								</span>
-								<span className={styles.value}>
-									{isPhone ? (
-										<a href={`tel:${value.replace(/[^0-9+]/g, "")}`} className={styles.phoneLink}>
-											{value}
-										</a>
-									) : (
-										value
-									)}
-								</span>
-							</div>
-						))}
+					<div className={styles.infoBox}>
+						<div className={styles.header}>
+							<h3 className={styles.title}>インフォメーション</h3>
+						</div>
+						<div className={styles.content}>
+							{infoItems.map(({ icon, label, value, isPhone }) => (
+								<div className={styles.infoItem} key={label}>
+									<div className={styles.label}>
+										<i className={`bi bi-${icon}`} />
+										<span>{label}</span>
+									</div>
+									<div className={styles.value}>
+										{isPhone ? (
+											<a href={`tel:${value.replace(/[^0-9+]/g, "")}`} className={styles.phoneLink}>
+												<i className={`bi bi-telephone-outbound-fill ${styles.phoneIcon}`} />
+												{value}
+											</a>
+										) : (
+											value
+										)}
+									</div>
+								</div>
+							))}
+						</div>
 					</div>
 				</div>
 				{/* Map */}

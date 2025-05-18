@@ -22,7 +22,6 @@
 
 .infoBox {
 	background: var(--background-color-infoBox);
-	border: 1px solid rgba(255, 255, 255, 0.1);
 	padding: 2.5rem;
 	backdrop-filter: blur(8px);
 	height: 100%;
@@ -39,7 +38,7 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: linear-gradient(45deg, rgba(237, 200, 6, 0.05) 0%, rgba(41, 38, 31, 0) 50%, rgba(237, 200, 6, 0.05) 100%);
+	background: var(--background-color-infoBox);
 	pointer-events: none;
 }
 
@@ -71,12 +70,8 @@
 	justify-content: space-between;
 	align-items: center;
 	padding: 1.2rem 0;
-	border-bottom: 1px solid rgba(237, 200, 6, 0.1);
+	border-bottom: 1px solid color-mix(in srgb, var(--border-stack-color) 50%, transparent);
 	position: relative;
-}
-
-.infoItem:last-child {
-	border-bottom: none;
 }
 
 .infoItem::before {
@@ -87,6 +82,14 @@
 	width: 100%;
 	height: 1px;
 	background: linear-gradient(to right, rgba(237, 200, 6, 0.1) 0%, rgba(237, 200, 6, 0.2) 50%, rgba(237, 200, 6, 0.1) 100%);
+}
+
+.infoItem:last-child {
+	border-bottom: 0px solid transparent;
+}
+
+.infoItem:last-child::before {
+	background: transparent;
 }
 
 .label {
@@ -115,28 +118,38 @@
 .phoneLink {
 	color: var(--nav-hover-color);
 	text-decoration: none;
-	transition: color 0.3s ease;
+	transition: all 0.3s ease;
 	position: relative;
-	padding-bottom: 2px;
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	padding: 6px 12px;
+	border-radius: 6px;
+	background: rgba(237, 200, 6, 0.1);
+	font-weight: 500;
 }
 
-.phoneLink::after {
+.phoneLink::before {
 	content: "";
 	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 0;
-	height: 1px;
-	background-color: #fff;
-	transition: width 0.3s ease;
+	inset: 0;
+	border-radius: 6px;
+	border: 1px solid rgba(237, 200, 6, 0.2);
+	transition: all 0.3s ease;
 }
 
 .phoneLink:hover {
-	color: #fff;
+	color: var(--nav-hover-color);
+	background: rgba(237, 200, 6, 0.15);
 }
 
-.phoneLink:hover::after {
-	width: 100%;
+.phoneLink:hover::before {
+	border-color: rgba(237, 200, 6, 0.3);
+}
+
+.phoneIcon {
+	font-size: 1.1em;
+	color: var(--nav-hover-color);
 }
 
 @media (max-width: 768px) {
@@ -151,6 +164,15 @@
 
 	.label {
 		font-size: 0.95rem;
+	}
+
+	.phoneLink {
+		padding: 4px 10px;
+		font-size: 0.9em;
+	}
+
+	.phoneIcon {
+		font-size: 1em;
 	}
 }
 
