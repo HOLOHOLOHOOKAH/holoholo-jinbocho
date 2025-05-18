@@ -1,5 +1,6 @@
 // components/ShopCards.tsx
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
 import styles from "./style.module.css";
 import Image from "next/image";
 import Link from "next/link";
@@ -53,7 +54,27 @@ const shops = [
 	},
 ];
 
+// Function to set the correct viewport height
+const setVH = () => {
+	const vh = window.innerHeight * 0.01;
+	document.documentElement.style.setProperty('--vh', `${vh}px`);
+};
+
 const Homepage = () => {
+	useEffect(() => {
+		// Set the height on initial load
+		setVH();
+		// Add event listener for resize and orientation change
+		window.addEventListener('resize', setVH);
+		window.addEventListener('orientationchange', setVH);
+
+		// Cleanup
+		return () => {
+			window.removeEventListener('resize', setVH);
+			window.removeEventListener('orientationchange', setVH);
+		};
+	}, []);
+
 	return (
 		<main className={styles.mainContainer}>
 			<section className={styles.heroSection}>

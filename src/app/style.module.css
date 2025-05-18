@@ -5,7 +5,7 @@
 }
 
 .heroSection {
-	height: 100vh; /* Fallback */
+	height: 100vh;
 	position: relative;
 	display: flex;
 	align-items: center;
@@ -18,7 +18,7 @@
 	top: 50%;
 	left: 50%;
 	min-width: 100%;
-	min-height: 100vh;
+	min-height: 100%;
 	width: auto;
 	height: auto;
 	transform: translate(-50%, -50%);
@@ -467,18 +467,6 @@
 }
 
 @media (max-width: 768px) {
-	.heroSection {
-		height: 100vh; /* Fallback */
-		height: -webkit-fill-available; /* iOS Safari */
-		height: 100dvh;
-	}
-
-	.videoBackground {
-		min-height: 100vh;
-		min-height: -webkit-fill-available;
-		min-height: 100dvh;
-	}
-
 	.heroTitle {
 		font-size: 2.8rem;
 	}
@@ -576,6 +564,10 @@
 
 	.imageWrapper {
 		height: 200px;
+	}
+
+	.heroSection {
+		min-height: -webkit-fill-available;
 	}
 }
 
