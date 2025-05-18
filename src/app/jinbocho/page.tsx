@@ -12,7 +12,7 @@ const Homepage: React.FC = () => {
 		<span className="fade-in">
 			<Header title="神保町ホロホロシーシャ" page="homepage" pageName="jinbocho" />
 			<Hero video="/img/jinbocho/video.mp4" img="/img/jinbocho/logo.png" height={600} width={600} />
-			<div id="system" style={{ backgroundColor: "#181818" }}>
+			<div id="system" style={{ backgroundColor: "#161616" }}>
 				{" "}
 				<CategoryPreview imageSrc="/img/jinbocho/bg12.png" title="システム" paragraph="ドリンクメニューも充実。アルコールはもちろん、豆挽きコーヒーやチャイなど豊富にご用意しております。" buttonText="もっと見る" buttonLink="/jinbocho/system" reverse={true} />
 			</div>
@@ -20,7 +20,7 @@ const Homepage: React.FC = () => {
 				{" "}
 				<CategoryPreview imageSrc="/img/jinbocho/shishaimg.jpg" title="ソフトドリンク" paragraph="フレーバーは「FUMARI」「AZURE」「AL FAKHER」の3メーカーを主に使用しています。ニコチンフリーフレーバーのご用意もしております。" buttonText="もっと見る" buttonLink="/jinbocho/soft-drinks" />
 			</div>
-			<div id="drinks-food" style={{ backgroundColor: "#181818" }}>
+			<div id="drinks-food" style={{ backgroundColor: "#161616" }}>
 				{" "}
 				<CategoryPreview imageSrc="/img/jinbocho/drinksimg.jpg" title="ドリンク＆フード" paragraph="ドリンクメニューも充実。アルコールはもちろん、豆挽きコーヒーやチャイなど豊富にご用意しております。" buttonText="もっと見る" buttonLink="/jinbocho/drinks-food" reverse={true} />
 			</div>
