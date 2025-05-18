@@ -48,7 +48,7 @@ interface SystemPageProps {
 const SystemPage: React.FC<SystemPageProps> = ({ config, page, title }) => {
 	return (
 		<div>
-			<Header title={title} page="system-jinbocho" pageName={page} />
+			<Header title={title} page="homepage" pageName={page} />
 			<div style={{ height: "100px" }}></div>
 
 			<div className={`${styles.menuContainer} container text-white py-5 px-4`}>

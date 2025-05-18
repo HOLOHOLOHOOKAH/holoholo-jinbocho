@@ -2,7 +2,7 @@ import "./header.css";
 import HeaderClient from "./headerClient";
 import Link from "next/dist/client/link";
 
-type PageKey = "homepage-jinbocho" | "system-jinbocho" | "softDrinks-jinbocho" | "drinksFood-jinbocho" | "drinksFood-okachimachi" | "softDrinks-okachimachi";
+type PageKey = "homepage";
 type PageName = "jinbocho" | "okachimachi";
 type Title = "神保町ホロホロシーシャ" | "湯島ホロホロシーシャ 上野・御徒町店";
 
@@ -12,37 +12,11 @@ type SectionItem = {
 };
 
 const sections: Record<PageKey, SectionItem[]> = {
-	"homepage-jinbocho": [
-		{ key: "home", label: "home" },
+	homepage: [
+		{ key: "", label: "home" },
 		{ key: "system", label: "システム" },
 		{ key: "soft-drinks", label: "ソフトドリンク" },
 		{ key: "drinks-food", label: "ドリンク＆フード" },
-		{ key: "information", label: "インフォメーション" },
-	],
-	"system-jinbocho": [
-		{ key: "shisha", label: "Shisha" },
-		{ key: "options", label: "Options" },
-		{ key: "wifi", label: "Wi-Fi" },
-	],
-	"softDrinks-okachimachi": [
-		{ key: "soft-drinks", label: "Soft Drinks" },
-		{ key: "tea-coffee", label: "Tea/Coffee" },
-		{ key: "chai-cocoa", label: "チャイ&ココア" },
-	],
-	"softDrinks-jinbocho": [
-		{ key: "color-drinks", label: "推しカラードリンク" },
-		{ key: "fruit-tea", label: "フルーツティー" },
-		{ key: "chai-matcha", label: "チャイ&抹茶ミルク" },
-		{ key: "other-drinks", label: "Other Drinks" },
-	],
-	"drinksFood-jinbocho": [
-		{ key: "liqueur-beer", label: "Liqueur & Beer" },
-		{ key: "snacks", label: "Snacks" },
-	],
-	"drinksFood-okachimachi": [
-		{ key: "bottle-beer", label: "Bottle/Beer" },
-		{ key: "liqueur", label: "Liqueur" },
-		{ key: "other-drinks", label: "Other Drinks" },
 	],
 };
 
@@ -68,9 +42,7 @@ const Header: React.FC<HeaderProps> = ({ page, pageName, title }) => {
 							<ul>
 								{sections[page].map(({ key, label }, index) => (
 									<li key={key} className="text-uppercase">
-										<a href={`#${key}`} className={index === 0 ? "active" : ""}>
-											{label}
-										</a>
+										<a href={`/${pageName}/${key}`}>{label}</a>
 									</li>
 								))}
 							</ul>

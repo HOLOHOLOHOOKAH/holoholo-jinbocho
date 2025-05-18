@@ -10,7 +10,7 @@ export const metadata = holoHoloMetadata;
 const Homepage: React.FC = () => {
 	return (
 		<span className="fade-in">
-			<Header page="homepage-jinbocho" title="湯島ホロホロシーシャ 上野・御徒町店" pageName="okachimachi" />
+			<Header page="homepage" title="湯島ホロホロシーシャ 上野・御徒町店" pageName="okachimachi" />
 			<Hero video="/img/okachimachi/holoholo.jpg" img="/img/okachimachi/logo.png" height={600} width={600} />
 			<div id="system" className="secondary-background">
 				{" "}

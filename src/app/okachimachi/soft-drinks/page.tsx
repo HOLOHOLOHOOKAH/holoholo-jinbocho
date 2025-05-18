@@ -11,7 +11,7 @@ const Homepage: FC = () => {
 	return (
 		<div className="fade-in">
 			<div style={{ height: "120px" }}></div>
-			<Header title="湯島ホロホロシーシャ 上野・御徒町店" page="softDrinks-okachimachi" pageName="okachimachi" />
+			<Header title="湯島ホロホロシーシャ 上野・御徒町店" page="homepage" pageName="okachimachi" />
 			<div className={`${styles.container} container`}>
 				<div className="d-flex justify-content-center">
 					<div id="soft-drinks" className="pb-3">

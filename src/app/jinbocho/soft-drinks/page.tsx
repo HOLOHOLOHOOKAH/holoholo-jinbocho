@@ -10,7 +10,7 @@ export const metadata = jinbochoMetadata;
 const Homepage: FC = () => {
 	return (
 		<div className="fade-in">
-			<Header title="神保町ホロホロシーシャ" page="softDrinks-jinbocho" pageName="jinbocho" />
+			<Header title="神保町ホロホロシーシャ" page="homepage" pageName="jinbocho" />
 			<div style={{ height: "120px" }}></div>
 			<div id="color-drinks" className={`${styles.container} container`}>
 				<div className="d-flex justify-content-center">

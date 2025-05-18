@@ -30,7 +30,7 @@ const Homepage: FC = () => {
 		<div className="fade-in">
 			<div className={styles.spacer}></div>
 
-			<Header title="湯島ホロホロシーシャ 上野・御徒町店" page="drinksFood-okachimachi" pageName="okachimachi" />
+			<Header title="湯島ホロホロシーシャ 上野・御徒町店" page="homepage" pageName="okachimachi" />
 
 			<div id="bottle-beer" className={`${styles.container} container`}>
 				<div className="pb-3">

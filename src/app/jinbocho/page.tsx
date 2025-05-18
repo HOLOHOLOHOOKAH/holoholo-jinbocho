@@ -10,7 +10,7 @@ export const metadata = jinbochoMetadata;
 const Homepage: React.FC = () => {
 	return (
 		<span className="fade-in">
-			<Header title="神保町ホロホロシーシャ" page="homepage-jinbocho" pageName="jinbocho" />
+			<Header title="神保町ホロホロシーシャ" page="homepage" pageName="jinbocho" />
 			<Hero video="/img/jinbocho/video.mp4" img="/img/jinbocho/logo.png" height={600} width={600} />
 			<div id="system" style={{ backgroundColor: "#181818" }}>
 				{" "}
