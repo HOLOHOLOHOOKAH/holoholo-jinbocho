@@ -56,6 +56,24 @@ const shops = [
 const Homepage = () => {
 	return (
 		<main className={styles.mainContainer}>
+			<section className={styles.heroSection}>
+				<video autoPlay muted loop playsInline className={styles.videoBackground}>
+					<source src="/img/smoke.mp4" type="video/mp4" />
+				</video>
+				<div className={styles.heroOverlay}></div>
+				<div className="container">
+					<div className={styles.heroContent}>
+						<h1 className={styles.heroTitle}>シーシャ体験</h1>
+						<p className={styles.heroSubtitle}>東京の上質な空間で、特別なひとときを</p>
+					</div>
+				</div>
+				<div className={styles.scrollIndicator}>
+					<div className={styles.scrollArrow}></div>
+					<div className={styles.scrollArrow}></div>
+					<div className={styles.scrollArrow}></div>
+				</div>
+			</section>
+
 			<section className={styles.locationsSection}>
 				<div className="container">
 					<h1 className={styles.sectionTitle}>店舗案内</h1>
