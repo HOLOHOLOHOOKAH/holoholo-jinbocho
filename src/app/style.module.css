@@ -1,68 +1,236 @@
+.mainContainer {
+	min-height: 100vh;
+	background: linear-gradient(to bottom, #1a1a1a, #2d2d2d);
+	color: #ffffff;
+}
+
+.locationsSection {
+	padding: 5rem 0;
+	background-color: rgba(255, 255, 255, 0.02);
+}
+
+.sectionTitle {
+	text-align: center;
+	font-size: 3rem;
+	margin-bottom: 4rem;
+	font-weight: 600;
+	color: #ffffff;
+	animation: fadeInUp 0.8s ease-out;
+}
+
 .cardWrapper {
 	margin: 0 auto;
+	max-width: 1400px;
 }
 
 .shopCard {
-	background-color: transparent;
-	border: none !important;
-	border-radius: 20px;
+	background: rgba(255, 255, 255, 0.05);
+	border-radius: 15px;
 	overflow: hidden;
-	transition: transform 0.3s ease, 0.3s ease;
-}
-
-.shopCard div {
-	border: none !important;
-	background-color: rgb(33, 33, 33);
-	color: white;
-}
-
-.shopCard img {
-	height: 230px;
-	object-fit: cover;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	height: 100%;
+	position: relative;
+	backdrop-filter: blur(10px);
+	animation: fadeInUp 0.8s ease-out;
+	display: flex;
+	flex-direction: column;
 }
 
 .shopCard:hover {
-	transform: scale(1.03);
+	transform: translateY(-10px);
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
-.card-img-top {
+.imageWrapper {
+	position: relative;
 	height: 250px;
-	object-fit: cover;
+	overflow: hidden;
 }
 
-.btnCustom {
-	padding: 0.5rem 1rem;
-	font-size: 1rem;
-	border-radius: 10px;
-	transition: background-color 0.3s ease;
+.cardImage {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 0.5s ease;
+}
+
+.shopCard:hover .cardImage {
+	transform: scale(1.1);
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.8));
+}
+
+.cardContent {
+	padding: 2rem;
+	position: relative;
+	z-index: 1;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+.cardMainContent {
+	flex: 1;
+}
+
+.cardTitle {
+	font-size: 1.5rem;
+	font-weight: 600;
+	margin-bottom: 0.5rem;
+	color: #ffffff;
+}
+
+.cardSubtitle {
+	font-size: 1.1rem;
+	color: rgba(255, 255, 255, 0.8);
+	margin-bottom: 1rem;
+}
+
+.cardDescription {
+	font-size: 0.95rem;
+	color: rgba(255, 255, 255, 0.7);
+	margin-bottom: 1.5rem;
+	line-height: 1.6;
+}
+
+.locationInfo {
+	margin-bottom: 1rem;
+	padding: 0.8rem;
+	background: rgba(255, 255, 255, 0.05);
+	border-radius: 8px;
+}
+
+.address {
+	color: rgba(255, 255, 255, 0.8);
+	text-decoration: none;
+	font-size: 0.9rem;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	transition: color 0.3s ease;
+}
+
+.address:hover {
+	color: white;
+}
+
+.cardActions {
+	margin-top: auto;
+	border-top: 1px solid rgba(255, 255, 255, 0.1);
+	padding-top: 1.5rem;
+}
+
+.socialLinks {
+	display: flex;
+	gap: 1rem;
+	margin-bottom: 1.5rem;
+	justify-content: center;
+}
+
+.socialLink {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.1);
+	color: rgba(255, 255, 255, 0.8);
+	transition: all 0.3s ease;
+}
+
+.socialLink:hover {
+	background: rgba(255, 255, 255, 0.2);
+	color: white;
+	transform: translateY(-2px);
+}
+
+.icon {
+	width: 18px;
+	height: 18px;
+}
+
+.cardButton {
+	display: block;
+	padding: 0.8rem 1.5rem;
+	border-radius: 25px;
+	text-decoration: none;
+	font-weight: 500;
+	transition: all 0.3s ease;
+	position: relative;
+	overflow: hidden;
+	text-align: center;
 }
 
 .btnShop1 {
-	border: 3px solid #5e7e9f;
-	color: #5e7e9f;
-}
-
-.btnShop1:hover {
-	border-color: #007bff;
-	color: #007bff;
+	background: linear-gradient(45deg, #5e7e9f, #3498db);
+	color: white;
 }
 
 .btnShop2 {
-	border: 3px solid #147038;
-	color: #147038;
-}
-
-.btnShop2:hover {
-	border-color: #1e7e34;
-	color: #1e7e34;
+	background: linear-gradient(45deg, #147038, #27ae60);
+	color: white;
 }
 
 .btnShop3 {
-	border: 3px solid #bd9728;
-	color: #bd9728;
+	background: linear-gradient(45deg, #bd9728, #f1c40f);
+	color: white;
 }
 
-.btnShop3:hover {
-	border-color: #e0a800;
-	color: #e0a800;
+.cardButton:hover {
+	transform: translateX(5px);
+	opacity: 0.9;
+	color: white;
+}
+
+.footer {
+	text-align: center;
+	padding: 2rem;
+	background-color: rgba(0, 0, 0, 0.3);
+	color: rgba(255, 255, 255, 0.6);
+}
+
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@media (max-width: 768px) {
+	.sectionTitle {
+		font-size: 2.2rem;
+		margin-bottom: 3rem;
+	}
+	
+	.cardContent {
+		padding: 1.5rem;
+	}
+	
+	.cardTitle {
+		font-size: 1.3rem;
+	}
+
+	.address {
+		font-size: 0.85rem;
+	}
+
+	.locationInfo {
+		padding: 0.6rem;
+	}
+
+	.cardActions {
+		padding-top: 1.2rem;
+	}
 }
