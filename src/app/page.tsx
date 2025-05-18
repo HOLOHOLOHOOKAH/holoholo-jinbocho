@@ -57,6 +57,9 @@ const Homepage = () => {
 	return (
 		<main className={styles.mainContainer}>
 			<section className={styles.heroSection}>
+				<video autoPlay muted loop playsInline className={styles.videoBackground}>
+					<source src="/img/smoke.mp4" type="video/mp4" />
+				</video>
 				<div className={styles.heroOverlay}></div>
 				<div className="container">
 					<div className={styles.heroContent}>

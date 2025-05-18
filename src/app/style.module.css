@@ -6,7 +6,6 @@
 
 .heroSection {
 	height: 100vh; /* Fallback */
-	height: 100dvh;
 	position: relative;
 	display: flex;
 	align-items: center;
