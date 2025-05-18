@@ -15,6 +15,7 @@
 	--border-stack-color: #df7f016b;
 	--text-color: #333;
 	--border-color: #0254ff36;
+	--background-color-infoBox: rgba(255, 255, 255, 0.12);
 }
 p {
 	color: #333 !important;

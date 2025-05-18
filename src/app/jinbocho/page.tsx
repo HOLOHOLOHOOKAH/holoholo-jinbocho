@@ -25,7 +25,10 @@ const Homepage: React.FC = () => {
 				<CategoryPreview imageSrc="/img/jinbocho/drinksimg.jpg" title="ドリンク＆フード" paragraph="ドリンクメニューも充実。アルコールはもちろん、豆挽きコーヒーやチャイなど豊富にご用意しております。" buttonText="もっと見る" buttonLink="/jinbocho/drinks-food" reverse={true} />
 			</div>
 
-			<Access page="jinbocho" />
+			<div className="mb-5">
+				{" "}
+				<Access page="jinbocho" />
+			</div>
 			<Footer page="jinbocho" />
 		</span>
 	);

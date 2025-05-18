@@ -35,6 +35,7 @@ body,
 	--border-stack-color: #edc80673;
 	--text-color: #ffffff;
 	--border-color: rgba(255, 255, 255, 0.115);
+	--background-color-infoBox: rgba(33, 33, 33, 0.12);
 }
 
 /* Smooth scroll */
