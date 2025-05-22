@@ -118,9 +118,9 @@ const Homepage = () => {
 													詳しく見る →
 												</a>
 											) : (
-												<Link href={shop.url} className={`${styles.cardButton} ${shop.buttonClass}`}>
+												<a href={shop.url} className={`${styles.cardButton} ${shop.buttonClass}`}>
 													詳しく見る →
-												</Link>
+												</a>
 											)}
 										</div>
 									</div>
