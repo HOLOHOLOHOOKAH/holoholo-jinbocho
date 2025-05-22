@@ -64,6 +64,9 @@ const Homepage = () => {
 					<div className={styles.heroContent}>
 						<h1 className={styles.heroTitle}>シーシャ体験</h1>
 						<p className={styles.heroSubtitle}>東京の上質な空間で、特別なひとときを</p>
+						<a href="#locations" className={styles.heroButton}>
+							店舗を見る
+						</a>
 					</div>
 				</div>
 				<div className={styles.scrollIndicator}>
@@ -74,7 +77,7 @@ const Homepage = () => {
 			</section>
 
 			<section className={styles.locationsSection}>
-				<div className="container">
+				<div id="locations" className="container">
 					<h1 className={styles.sectionTitle}>店舗案内</h1>
 					<div className={`row g-4 justify-content-center ${styles.cardWrapper}`}>
 						{shops.map((shop, index) => (
