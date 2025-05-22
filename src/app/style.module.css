@@ -47,6 +47,7 @@
 	letter-spacing: 0.15em;
 	position: relative;
 	display: inline-block;
+	text-align: center;
 }
 
 .heroTitle::after {
@@ -60,6 +61,7 @@
 }
 
 .heroSubtitle {
+	text-align: center;
 	font-size: 1.5rem;
 	font-weight: 300;
 	letter-spacing: 0.1em;
@@ -469,7 +471,7 @@
 	}
 
 	.heroSubtitle {
-		font-size: 1.2rem;
+		font-size: 1.1rem;
 	}
 
 	.introText {
