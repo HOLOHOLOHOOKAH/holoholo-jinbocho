@@ -21,7 +21,7 @@ const Footer: React.FC<HeaderProps> = ({ page }) => {
 		xUrl = "https://x.com/holojinbocho";
 	} else if (page === "okachimachi") {
 		shopName = "湯島ホロホロシーシャ 上野・御徒町店";
-		address = "〒113-0034  東京都文京区湯島３丁目３８−１５ シャローム湯島 地下1階";
+		address = "〒110-0005 東京都台東区上野１丁目５−３ 市川ビル 2F";
 		instagramUrl = "https://www.instagram.com/holoholohookah/";
 		xUrl = "https://x.com/HoloHoloHookah";
 	}
