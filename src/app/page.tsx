@@ -62,7 +62,7 @@ const Homepage = () => {
 				<div className="container">
 					<div className={styles.heroContent}>
 						<h1 className={styles.heroTitle}>シーシャ体験</h1>
-						<p className={styles.heroSubtitle}>東京の上質な空間で、p特別なひとときを</p>
+						<p className={styles.heroSubtitle}>東京の上質な空間で、特別なひとときを</p>
 						<a href="#locations" className={styles.heroButton}>
 							店舗一覧を見る
 						</a>
