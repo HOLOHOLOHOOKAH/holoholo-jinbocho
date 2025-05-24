@@ -13,7 +13,8 @@ type SectionItem = {
 
 const sections: Record<PageKey, SectionItem[]> = {
 	homepage: [
-		{ key: "", label: "home" },
+		{ key: "root", label: "店舗一覧" },
+		{ key: "", label: "トップページ" },
 		{ key: "system", label: "システム" },
 		{ key: "soft-drinks", label: "ソフトドリンク" },
 		{ key: "drinks-food", label: "ドリンク＆フード" },
@@ -40,12 +41,19 @@ const Header: React.FC<HeaderProps> = ({ page, pageName, title }) => {
 					{sections[page]?.length > 0 && (
 						<nav id="navmenu" className="navmenu">
 							<ul>
-								{sections[page].map(({ key, label }) => (
-									<li key={key} className="text-uppercase">
-										<a href={`/${pageName}/${key}`}>{label}</a>
-									</li>
-								))}
+								{sections[page].map(({ key, label }) => {
+									const href =
+										key === "root"
+											? "/" // go to root
+											: `/${pageName}${key === "" ? "/" : `/${key}`}`;
+									return (
+										<li key={key} className="text-uppercase">
+											<Link href={href}>{label}</Link>
+										</li>
+									);
+								})}
 							</ul>
+
 							<i className="mobile-nav-toggle d-xl-none bi bi-list" />
 						</nav>
 					)}

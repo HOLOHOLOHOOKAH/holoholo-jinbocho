@@ -11,7 +11,7 @@ const Homepage: React.FC = () => {
 	return (
 		<span className="fade-in">
 			<Header title="神保町ホロホロシーシャ" page="homepage" pageName="jinbocho" />
-			<Hero video="/img/jinbocho/video.mp4" img="/img/jinbocho/logo.png" height={600} width={600} />
+			<Hero video="/img/jinbocho/video.mp4" img="/img/jinbocho/logo.png" height={550} width={550} />
 			<div id="system" style={{ backgroundColor: "#161616" }}>
 				{" "}
 				<CategoryPreview imageSrc="/img/jinbocho/bg12.png" title="システム" paragraph="ドリンクメニューも充実。アルコールはもちろん、豆挽きコーヒーやチャイなど豊富にご用意しております。" buttonText="もっと見る" buttonLink="/jinbocho/system" reverse={true} />

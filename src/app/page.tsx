@@ -62,9 +62,9 @@ const Homepage = () => {
 				<div className="container">
 					<div className={styles.heroContent}>
 						<h1 className={styles.heroTitle}>シーシャ体験</h1>
-						<p className={styles.heroSubtitle}>東京の上質な空間で、特別なひとときを</p>
+						<p className={styles.heroSubtitle}>東京の上質な空間で、p特別なひとときを</p>
 						<a href="#locations" className={styles.heroButton}>
-							店舗を見る
+							店舗一覧を見る
 						</a>
 					</div>
 				</div>
@@ -77,7 +77,7 @@ const Homepage = () => {
 
 			<section className={styles.locationsSection}>
 				<div id="locations" className="container">
-					<h1 className={styles.sectionTitle}>店舗案内</h1>
+					<h1 className={styles.sectionTitle}>店舗一覧</h1>
 					<div className={`row g-4 justify-content-center ${styles.cardWrapper}`}>
 						{shops.map((shop, index) => (
 							<div className="col-md-4" key={index}>
