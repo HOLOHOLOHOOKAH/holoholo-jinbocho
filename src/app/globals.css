@@ -45,6 +45,7 @@ body,
 	--glass-bg: rgb(19, 19, 19);
 	--glass-border: rgba(126, 126, 126, 0.1);
 	--highlight: #ffc107;
+	--logo-opacity: 0.85 !important;
 }
 
 /* Smooth scroll */

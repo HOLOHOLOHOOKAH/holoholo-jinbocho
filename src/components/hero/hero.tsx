@@ -16,12 +16,13 @@ const Hero: React.FC<HeroProps> = ({ img, height, width, video }) => {
 		<>
 			<div id="home" className="hero section dark-background">
 				{isVideo ? <video src={video} autoPlay playsInline loop muted className="hero-video z-0 absolute" /> : <Image src={video} alt="Hero" className="hero-video z-0 absolute object-fit-cover" height={1080} width={1920} />}
+				{/* You can add overlay content here */}
 
 				<div className="container position-relative z-1">
-					<div className="logo-container">
-						{" "}
-						{/* Add this wrapper */}
-						<Image loading="eager" style={{ height, width }} className="fade-in heroImg" src={img} alt="Logo" width={width} height={height} />
+					<div className="row">
+						<div className="position-relative d-flex justify-content-center">
+							<Image loading="eager" style={{ height: height, width: width }} className="position-relative fade-in heroImg" src={img} alt="Logo" width={230} height={230} />
+						</div>
 					</div>
 				</div>
 
@@ -29,7 +30,6 @@ const Hero: React.FC<HeroProps> = ({ img, height, width, video }) => {
 					Scroll ↓
 				</div>
 			</div>
-
 			<div className="position-absolute w-100 white-line"></div>
 		</>
 	);
