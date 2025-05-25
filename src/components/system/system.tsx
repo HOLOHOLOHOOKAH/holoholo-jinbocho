@@ -73,11 +73,9 @@ const SystemPage: React.FC<SystemPageProps> = ({ config, page, title }) => {
 									<div className="d-flex text-justify justify-content-center align-items-center">
 										<div>
 											{config.shisha.items.map((item, index) => (
-												<div key={index} className={styles.menuItemRow}>
-													<span className={styles.menuItemLabel}>{item.label}</span>
-													<span className={styles.menuItemLine}></span>
-													<span className={styles.menuItemLabel}>{item.price}</span>
-												</div>
+												<p key={index}>
+													{item.label} <span style={{ color: "grey" }}>..............................</span> {item.price}
+												</p>
 											))}
 											<p className="text-center">{config.shisha.note}</p>
 										</div>
@@ -111,11 +109,9 @@ const SystemPage: React.FC<SystemPageProps> = ({ config, page, title }) => {
 									<div className="d-flex text-center justify-content-center align-items-center">
 										<div>
 											{config.options.items.map((item, index) => (
-												<div key={index} className={styles.menuItemRow}>
-													<span className={styles.menuItemLabel}>{item.label}</span>
-													<span className={styles.menuItemLine}></span>
-													<span className={styles.menuItemLabel}>{item.price}</span>
-												</div>
+												<p key={index}>
+													{item.label} <span style={{ color: "grey" }}>...........................</span> {item.price}
+												</p>
 											))}
 										</div>
 									</div>

@@ -16,6 +16,9 @@
 }
 
 @media (max-width: 768px) {
+	.menuSection p {
+		font-size: 14px;
+	}
 	.sectionTitle {
 		justify-content: center;
 		margin-top: 2rem;
@@ -85,23 +88,6 @@
 		width: 300px !important;
 		height: 300px !important;
 	}
-
-	.menuItemLabel {
-		font-weight: 500;
-		font-size: 1em !important;
-		color: #fff;
-		flex: 0 0 auto;
-		white-space: nowrap;
-	}
-
-	.menuSection p {
-		font-size: 1em !important;
-	}
-}
-
-.menuSection p {
-	margin-top: 1rem;
-	color: rgb(221, 221, 221);
 }
 
 .sectionTitle {
@@ -113,27 +99,4 @@
 	color: var(--title-color);
 	text-transform: uppercase;
 	letter-spacing: 4px;
-}
-.menuItemRow {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	gap: 1rem;
-	padding: 0.4rem 0;
-}
-
-.menuItemLabel {
-	font-weight: 500;
-	font-size: 1.08em;
-	color: #fff;
-	flex: 0 0 auto;
-	white-space: nowrap;
-}
-
-.menuItemLine {
-	flex: 1 1 auto;
-	border-bottom: 1.5px solid rgba(255, 255, 255, 0.18);
-	margin: 0 0.7rem;
-	min-width: 70px;
-	opacity: 0.7;
 }
