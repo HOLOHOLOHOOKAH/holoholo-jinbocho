@@ -76,7 +76,7 @@ const Homepage: FC = () => {
 
 								<div className={styles.sectionTitle}>Beer</div>
 								<p className={`${styles.sectionText} mt-4 text-md-start text-center`}>
-									<strong>{config.beer.name} </strong> <span style={{ color: "grey" }}>..............</span> {config.beer.price}
+									<strong>{config.beer.name} </strong> <span className="separator"></span> {config.beer.price}
 								</p>
 							</div>
 						</div>
@@ -108,7 +108,7 @@ const Homepage: FC = () => {
 										<div className="text-center text-md-end mb-5">
 											{config.snacks.map((snack, index) => (
 												<p key={index}>
-													{snack.name} <span style={{ color: "grey" }}>.............</span> {snack.price}
+													{snack.name} <span className="separator"></span> {snack.price}
 												</p>
 											))}
 										</div>

@@ -355,3 +355,15 @@ body,
 .default-txt-color {
 	color: var(--text-color);
 }
+
+.separator {
+	flex: 1;
+	border-bottom: 1px solid #aaa;
+	margin: 0 0.7rem;
+	opacity: 0.5;
+	min-width: 100px;
+	display: inline-block;
+	height: 0.9em;
+	position: relative;
+	top: 0.1em;
+}

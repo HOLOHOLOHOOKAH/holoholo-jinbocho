@@ -125,20 +125,7 @@ const SystemPage: React.FC<SystemPageProps> = ({ config, page, title }) => {
 											{config.options.items.map((item, index) => (
 												<p key={index}>
 													{item.label}
-													<span
-														style={{
-															flex: 1,
-															borderBottom: "1px solid #aaa",
-															margin: "0 0.7rem",
-															opacity: 0.5,
-															minWidth: "100px",
-															display: "inline-block",
-															height: "0.9em",
-															position: "relative",
-															top: "0.1em",
-														}}
-													/>{" "}
-													{item.price}
+													<span className="separator" /> {item.price}
 												</p>
 											))}
 										</div>
