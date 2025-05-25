@@ -70,11 +70,25 @@ const SystemPage: React.FC<SystemPageProps> = ({ config, page, title }) => {
 							<div className="d-flex justify-content-center justify-content-lg-start align-items-center h-100">
 								<div>
 									<div className={`${styles.sectionTitle} justify-content-center`}>Shisha</div>
-									<div className="d-flex text-justify justify-content-center align-items-center">
+									<div className="d-flex text-center justify-content-center align-items-center">
 										<div>
 											{config.shisha.items.map((item, index) => (
 												<p key={index}>
-													{item.label} <span style={{ color: "grey" }}>..............................</span> {item.price}
+													{item.label}{" "}
+													<span
+														style={{
+															flex: 1,
+															borderBottom: "1px solid #aaa",
+															margin: "0 0.7rem",
+															opacity: 0.5,
+															minWidth: "100px",
+															display: "inline-block",
+															height: "0.9em",
+															position: "relative",
+															top: "0.1em",
+														}}
+													/>{" "}
+													{item.price}
 												</p>
 											))}
 											<p className="text-center">{config.shisha.note}</p>
@@ -110,7 +124,21 @@ const SystemPage: React.FC<SystemPageProps> = ({ config, page, title }) => {
 										<div>
 											{config.options.items.map((item, index) => (
 												<p key={index}>
-													{item.label} <span style={{ color: "grey" }}>...........................</span> {item.price}
+													{item.label}
+													<span
+														style={{
+															flex: 1,
+															borderBottom: "1px solid #aaa",
+															margin: "0 0.7rem",
+															opacity: 0.5,
+															minWidth: "100px",
+															display: "inline-block",
+															height: "0.9em",
+															position: "relative",
+															top: "0.1em",
+														}}
+													/>{" "}
+													{item.price}
 												</p>
 											))}
 										</div>
