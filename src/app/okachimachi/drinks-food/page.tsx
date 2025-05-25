@@ -71,7 +71,7 @@ const Homepage: FC = () => {
 				</div>
 			</div>
 
-			<div className="border-bottom container mt-4"></div>
+			<div className="section-divider mt-4 mt-lg-5"></div>
 
 			<div id="liqueur" className={`${styles.container} container mt-4`}>
 				<div className="pb-3">
@@ -113,7 +113,7 @@ const Homepage: FC = () => {
 					</div>
 				</div>
 			</div>
-			<div className="border-bottom container mt-4"></div>
+			<div className="section-divider mt-4 mt-lg-5"></div>
 
 			<div id="other-drinks" style={{ maxWidth: "900px" }} className={`${styles.container} container mt-4 mb-4`}>
 				{/* Other Drinks */}

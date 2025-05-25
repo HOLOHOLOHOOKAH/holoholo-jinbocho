@@ -84,7 +84,7 @@ const Homepage: FC = () => {
 				</div>
 			</div>
 
-			<div className="border-bottom container mt-4 mt-lg-5"></div>
+			<div className="section-divider mt-4 mt-lg-5"></div>
 
 			<div id="snacks" className={`${styles.container} container mt-4 mb-3 mt-lg-5`}>
 				<div className="pb-3">

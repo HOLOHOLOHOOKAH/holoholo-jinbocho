@@ -19,10 +19,10 @@
 }
 
 .sectionSubtitle {
-	font-size: 2rem;
+	font-size: 1.5rem;
 	letter-spacing: 2px;
 	margin-bottom: 1.5rem;
-	color: var(--title-color);
+	color: #333;
 }
 .sectionTitle {
 	display: flex;

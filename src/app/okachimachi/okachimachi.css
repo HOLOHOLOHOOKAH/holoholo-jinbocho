@@ -41,3 +41,9 @@ p {
 .footer-title {
 	color: black !important;
 }
+.section-divider {
+	height: 1px;
+	background: linear-gradient(to right, transparent, rgb(185, 185, 185), transparent) !important;
+	margin: 0 auto;
+	width: 60%;
+}

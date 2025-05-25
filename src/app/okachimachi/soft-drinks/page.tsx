@@ -46,7 +46,7 @@ const Homepage: FC = () => {
 					</div>
 				</div>
 			</div>
-			<div className="border-bottom container mt-4 mt-lg-5"></div>
+			<div className="section-divider mt-4 mt-lg-5"></div>
 			<div id="tea-coffee" className={`${styles.container} container mt-5`}>
 				<div className="pb-3">
 					<div className={`${styles.drinkCard} w-100 pt-3`}>
@@ -88,7 +88,7 @@ const Homepage: FC = () => {
 					</div>
 				</div>
 			</div>
-			<div className="border-bottom container mt-4 mt-lg-5"></div>
+			<div className="section-divider mt-4 mt-lg-5"></div>
 			<div className={`${styles.container} container mt-5`}>
 				<div className="d-flex justify-content-center">
 					<div id="chai-cocoa" className="pb-3">

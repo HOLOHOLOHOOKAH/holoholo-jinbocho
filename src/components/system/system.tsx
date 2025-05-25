@@ -100,7 +100,7 @@ const SystemPage: React.FC<SystemPageProps> = ({ config, page, title }) => {
 					</div>
 				</div>
 
-				<div className="border-bottom container mt-5 mb-5"></div>
+				<div className="section-divider my-5"></div>
 
 				{/* Options Section */}
 				<div id="options" className={styles.menuSection}>
@@ -136,7 +136,7 @@ const SystemPage: React.FC<SystemPageProps> = ({ config, page, title }) => {
 					</div>
 				</div>
 
-				<div className="border-bottom container mt-5 mb-5"></div>
+				<div className="section-divider my-5"></div>
 
 				<div id="wifi" className="d-block d-lg-flex justify-content-center">
 					{/* Notes Section */}

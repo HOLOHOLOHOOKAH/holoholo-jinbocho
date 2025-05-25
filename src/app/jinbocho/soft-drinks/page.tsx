@@ -68,7 +68,9 @@ const Homepage: FC = () => {
 					</div>
 				</div>
 			</div>
-			<div className="border-bottom container mt-4 mt-lg-5"></div>
+
+			<div className="section-divider mt-4 mt-lg-5"></div>
+
 			<div id="fruit-tea" className={`${styles.container} container mt-5`}>
 				<div className="pb-3">
 					<div className={`${styles.drinkCard} w-100 pt-3`}>
@@ -104,7 +106,7 @@ const Homepage: FC = () => {
 					</div>
 				</div>
 			</div>
-			<div className="border-bottom container mt-4 mt-lg-5"></div>
+			<div className="section-divider mt-4 mt-lg-5"></div>
 			<div className={`${styles.container} container mt-5`}>
 				<div className="d-flex justify-content-center">
 					<div id="chai-matcha" className="pb-3">
@@ -135,7 +137,7 @@ const Homepage: FC = () => {
 					</div>
 				</div>
 			</div>
-			<div className="border-bottom container mt-4 mt-lg-5"></div>
+			<div className="section-divider mt-4 mt-lg-5"></div>
 			<div id="other-drinks" style={{ maxWidth: "900px" }} className={`${styles.container} container mt-4 mb-4`}>
 				{/* Other Drinks */}
 				<div className="col-12 pt-3 mb-3">
