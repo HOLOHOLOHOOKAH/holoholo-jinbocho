@@ -64,6 +64,14 @@
 	letter-spacing: 3px;
 	color: var(--text-color);
 }
+.sectionTextCol {
+	text-align: start;
+	font-size: 18px;
+	letter-spacing: 3px;
+	color: var(--text-color);
+	columns: 2;
+	-webkit-columns: 2;
+}
 
 .customImageContainer {
 	display: flex;
@@ -170,6 +178,13 @@
 	.sectionText {
 		text-align: center;
 		font-size: 17px;
+	}
+
+	.sectionTextCol {
+		text-align: center;
+		font-size: 17px;
+		columns: 1;
+		-webkit-columns: 1;
 	}
 
 	.sectionTitle {

@@ -59,7 +59,7 @@ const Homepage: FC = () => {
 								<div className="row">
 									<div className="col-12">
 										<div className={styles.sectionTitle}>Liqueur</div>
-										<ul className={`${styles.sectionText} list-unstyled mb-0`} style={{ columns: 2 }}>
+										<ul className={`${styles.sectionTextCol} list-unstyled mb-0`}>
 											{config.liqueurs.map((item, index) => (
 												<li key={index}>
 													<strong>{item}</strong>

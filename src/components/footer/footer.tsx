@@ -1,44 +1,51 @@
+"use client";
+
 import React from "react";
-import "./footer.css";
 import Link from "next/link";
+import "./footer.css";
 
 type PageName = "jinbocho" | "okachimachi";
 
-interface HeaderProps {
+interface FooterProps {
 	page: PageName;
 }
 
-const Footer: React.FC<HeaderProps> = ({ page }) => {
-	let shopName = "";
-	let address = "";
-	let instagramUrl = "";
-	let xUrl = "";
+const shopData = {
+	jinbocho: {
+		name: "神保町ホロホロシーシャ",
+		address: "〒101-0051 東京都千代田区神田神保町1丁目19-6 KTビル 5階",
+		instagram: "https://www.instagram.com/holoholojinbocho/",
+		x: "https://x.com/holojinbocho",
+	},
+	okachimachi: {
+		name: "湯島ホロホロシーシャ 上野・御徒町店",
+		address: "〒110-0005 東京都台東区上野１丁目５−３ 市川ビル 2F",
+		instagram: "https://www.instagram.com/holoholohookah/",
+		x: "https://x.com/HoloHoloHookah",
+	},
+};
 
-	if (page === "jinbocho") {
-		shopName = "神保町ホロホロシーシャ";
-		address = "〒101-0051  東京都千代田区神田神保町1丁目19-6 KTビル 5階";
-		instagramUrl = "https://www.instagram.com/holoholojinbocho/";
-		xUrl = "https://x.com/holojinbocho";
-	} else if (page === "okachimachi") {
-		shopName = "湯島ホロホロシーシャ 上野・御徒町店";
-		address = "〒110-0005 東京都台東区上野１丁目５−３ 市川ビル 2F";
-		instagramUrl = "https://www.instagram.com/holoholohookah/";
-		xUrl = "https://x.com/HoloHoloHookah";
-	}
+const Footer: React.FC<FooterProps> = ({ page }) => {
+	const { name, address, instagram, x } = shopData[page];
+
 	return (
-		<footer className="footer custom-footer">
-			<div className="footer-wrapper">
-				<h2 className="footer-title">{shopName}</h2>
-				<p className="footer-address">{address}</p>
+		<footer className="glass-footer">
+			<div className="glass-footer__content">
+				<div className="glass-footer__brand">
+					<h3>{name}</h3>
+					<p>{address}</p>
+				</div>
+				<div className="glass-footer__social">
+					<Link href={instagram} aria-label="Instagram" target="_blank" rel="noreferrer">
+						<i className="bi bi-instagram" />
+					</Link>
+					<Link href={x} aria-label="X" target="_blank" rel="noreferrer">
+						<i className="bi bi-twitter-x" />
+					</Link>
+				</div>
 			</div>
-
-			<div className="social-links d-flex justify-content-center mt-3">
-				<Link aria-label="Open Instagram page" className="m-0 mx-2 icon" rel="noreferrer" target="_blank" href={instagramUrl}>
-					<i className="bi bi-instagram" />
-				</Link>
-				<Link aria-label="Open X page" className="m-0 mx-2 icon" rel="noreferrer" target="_blank" href={xUrl}>
-					<i className="bi bi-twitter-x" />
-				</Link>
+			<div className="glass-footer__bottom">
+				<small>&copy; {new Date().getFullYear()} HoloHolo — All rights reserved.</small>
 			</div>
 		</footer>
 	);

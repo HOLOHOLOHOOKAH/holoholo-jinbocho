@@ -15,11 +15,14 @@
 	--border-stack-color: #e176556b;
 	--text-color: #333;
 	--border-color: #0254ff36;
-	--background-color-infoBox: rgba(255, 255, 255, 0.12);
+	--background-color-infoBox: rgb(255, 255, 255);
 	--btn-color: rgb(234, 132, 101);
 	--btn-text-color: #0e0e0f;
 	--btn-hover-bg: rgba(232, 114, 77, 0.85);
 	--btn-glow: rgba(255, 87, 34, 0.12);
+	--glass-bg: #f3f4f6;
+	--glass-border: rgba(113, 113, 113, 0.1);
+	--highlight: #ff6b6b;
 }
 p {
 	color: #333 !important;

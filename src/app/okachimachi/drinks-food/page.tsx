@@ -53,7 +53,7 @@ const Homepage: FC = () => {
 										<div className="col-12">
 											<div className={`${styles.sectionTitle} justify-content-center justify-content-lg-start`}>Bottle/Beer</div>
 											<div className={`${styles.sectionText} mt-4 text-lg-start text-center`}>
-												<ul className={`${styles.sectionText} text-center text-lg-start list-unstyled mb-0`} style={{ columns: 2 }}>
+												<ul className={`${styles.sectionTextCol} text-center text-lg-start list-unstyled mb-0`}>
 													{config.beer.map((item, index) => (
 														<li key={index}>
 															<strong>{item}</strong>
@@ -95,7 +95,7 @@ const Homepage: FC = () => {
 										<div className="text-center text-lg-end mb-5">
 											<div className="row">
 												<div className="col-12">
-													<ul className={`${styles.sectionText} text-center text-lg-end list-unstyled mb-0`} style={{ columns: 2 }}>
+													<ul className={`${styles.sectionTextCol} text-center text-lg-end list-unstyled mb-0`}>
 														{config.liqueurs.map((item, index) => (
 															<li key={index}>
 																<strong>{item}</strong>
