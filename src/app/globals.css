@@ -26,16 +26,21 @@ body,
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
 	--nav-color: #ffffff; /* The default color of the main navmenu links */
-	--nav-hover-color: #edc806; /* Applied to main navmenu links when they are hovered over or active */
+	--nav-hover-color: #ffc107; /* Applied to main navmenu links when they are hovered over or active */
 	--nav-mobile-background-color: #29261f; /* Used as the background color for mobile navigation menu */
 	--nav-dropdown-background-color: #29261f; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
 	--nav-dropdown-color: #ffffff; /* Used for navigation links of the dropdown items in the navigation menu. */
-	--nav-dropdown-hover-color: #edc806; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
-	--title-color: #edc806; /* Used for the title of the website */
-	--border-stack-color: #edc80673;
+	--nav-dropdown-hover-color: #ffc107; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+	--title-color: #ffc107; /* Used for the title of the website */
+	--border-stack-color: #ffc10773;
 	--text-color: #ffffff;
 	--border-color: rgba(255, 255, 255, 0.115);
 	--background-color-infoBox: rgba(33, 33, 33, 0.12);
+
+	--btn-color: #ffc107;
+	--btn-text-color: #0e0e0f;
+	--btn-hover-bg: rgba(255, 193, 7, 0.85);
+	--btn-glow: rgba(255, 193, 7, 0.12);
 }
 
 /* Smooth scroll */
@@ -366,4 +371,23 @@ body,
 	height: 0.9em;
 	position: relative;
 	top: 0.1em;
+}
+
+.section-divider {
+	height: 1px;
+	background: linear-gradient(to right, transparent, #333, transparent);
+	margin: 0 auto;
+	width: 60%;
+}
+
+.btn-yellow {
+	--btn-color: #ffc107;
+	--btn-hover-bg: rgba(255, 193, 7, 0.85);
+	--btn-glow: rgba(255, 193, 7, 0.12);
+}
+
+.btn-orange {
+	--btn-color: #ff5722;
+	--btn-hover-bg: rgba(255, 87, 34, 0.85);
+	--btn-glow: rgba(255, 87, 34, 0.12);
 }

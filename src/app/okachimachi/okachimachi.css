@@ -1,21 +1,25 @@
 :root {
 	--nav-color: #ffffff; /* The default color of the main navmenu links */
-	--nav-hover-color: #df7d01; /* Applied to main navmenu links when they are hovered over or active */
+	--nav-hover-color: #e17655; /* Applied to main navmenu links when they are hovered over or active */
 	--nav-mobile-background-color: #29261f; /* Used as the background color for mobile navigation menu */
 	--nav-dropdown-background-color: #29261f; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
 	--nav-dropdown-color: #ffffff; /* Used for navigation links of the dropdown items in the navigation menu. */
-	--nav-dropdown-hover-color: #df7d01; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+	--nav-dropdown-hover-color: #e17655; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 	--background-color: #f9fafb !important;
 	--default-color: #ffffff;
 	--heading-color: #ffffff;
 	--surface-color: #1a1a1a;
 	--contrast-color: #ffffff;
 	--secondary-color: #f3f4f6 !important;
-	--title-color: #2c3e50;
-	--border-stack-color: #df7f016b;
+	--title-color: #e17655;
+	--border-stack-color: #e176556b;
 	--text-color: #333;
 	--border-color: #0254ff36;
 	--background-color-infoBox: rgba(255, 255, 255, 0.12);
+	--btn-color: rgb(234, 132, 101);
+	--btn-text-color: #0e0e0f;
+	--btn-hover-bg: rgba(232, 114, 77, 0.85);
+	--btn-glow: rgba(255, 87, 34, 0.12);
 }
 p {
 	color: #333 !important;
