@@ -24,8 +24,9 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 100vh; /* or adjust to your layout needs */
+	height: 100dvh; /* Use dynamic viewport unit */
 }
+
 .hero:before {
 	content: "";
 	position: absolute;
