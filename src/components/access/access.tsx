@@ -42,7 +42,7 @@ const Access: React.FC<AccessProps> = ({ page }) => {
 	];
 
 	return (
-		<div id="information" className={`px-3 pt-5 ${styles.overlay}`}>
+		<div id="information" className={`px-3 pt-5 container ${styles.overlay}`}>
 			<div className="row g-4 align-items-stretch">
 				{/* Info Box */}
 				<div className="col-md-4 order-lg-2">
