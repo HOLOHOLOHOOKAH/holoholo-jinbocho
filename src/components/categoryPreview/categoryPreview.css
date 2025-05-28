@@ -190,3 +190,22 @@ p {
 	transition: opacity 0.5s ease-out 0.3s, transform 0.5s ease-out 0.3s;
 	pointer-events: auto;
 }
+
+/* 🔁 Mobile overrides (animations from top to bottom) */
+@media (max-width: 768px) {
+	.image-hidden {
+		transform: translateY(-40px); /* from top */
+	}
+
+	.image-visible {
+		transform: translateY(0);
+	}
+
+	.content-hidden {
+		transform: translateY(-60px); /* from higher up instead of below */
+	}
+
+	.content-visible {
+		transform: translateY(0);
+	}
+}
