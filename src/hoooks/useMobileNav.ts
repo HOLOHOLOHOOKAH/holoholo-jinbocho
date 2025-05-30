@@ -8,15 +8,19 @@ export function useMobileNavToggle() {
 		if (!toggleButton) return;
 
 		const toggleMobileNav = () => {
-			document.body.classList.toggle("mobile-nav-active");
-			toggleButton.classList.toggle("bi-list");
-			toggleButton.classList.toggle("bi-x");
-			setIsMobileNavActive((prev) => !prev);
+			setIsMobileNavActive((prev) => {
+				const newState = !prev;
+				document.body.classList.toggle("mobile-nav-active", newState);
+				return newState;
+			});
 		};
 
 		toggleButton.addEventListener("click", toggleMobileNav);
 
-		return () => toggleButton.removeEventListener("click", toggleMobileNav);
+		return () => {
+			toggleButton.removeEventListener("click", toggleMobileNav);
+			document.body.classList.remove("mobile-nav-active");
+		};
 	}, []);
 
 	return { isMobileNavActive };

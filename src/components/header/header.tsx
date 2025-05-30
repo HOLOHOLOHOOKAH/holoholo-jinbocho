@@ -54,13 +54,11 @@ const Header: React.FC<HeaderProps> = ({ page, pageName, title }) => {
 								})}
 							</ul>
 
-							<i className="mobile-nav-toggle d-xl-none bi bi-list" />
+							<HeaderClient />
 						</nav>
 					)}
 				</div>
 			</div>
-
-			<HeaderClient />
 		</header>
 	);
 };
