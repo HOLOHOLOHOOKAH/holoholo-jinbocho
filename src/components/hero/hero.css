@@ -28,7 +28,7 @@
 	position: absolute;
 	inset: 0;
 	z-index: 1;
-	background-color: rgba(0, 0, 0, 0.219);
+	background-color: rgba(0, 0, 0, 0.42);
 }
 .hero .container {
 	position: relative;

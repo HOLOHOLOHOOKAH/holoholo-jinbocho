@@ -23,7 +23,7 @@
 	--glass-bg: #f3f4f6;
 	--glass-border: rgba(113, 113, 113, 0.1);
 	--highlight: #ff6b6b;
-	--logo-opacity: 1;
+	--logo-opacity: 1 !important;
 }
 p {
 	color: #333 !important;
