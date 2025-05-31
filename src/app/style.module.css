@@ -13,6 +13,18 @@
 	overflow: hidden;
 }
 
+.heroSection::after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 200px;
+	background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.8));
+	z-index: 1;
+	pointer-events: none;
+}
+
 .videoBackground {
 	position: absolute;
 	top: 50%;
@@ -36,7 +48,12 @@
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background: rgba(0, 0, 0, 0.63);
+	background: linear-gradient(
+		to bottom,
+		rgba(0, 0, 0, 0.63) 0%,
+		rgba(0, 0, 0, 0.7) 50%,
+		rgba(0, 0, 0, 0.8) 100%
+	);
 	z-index: 1;
 }
 
@@ -72,7 +89,11 @@
 
 .infoSection {
 	padding: 6rem 0;
-	background: #050505;
+	background: linear-gradient(
+		to bottom,
+		rgba(0, 0, 0, 0.8) 0%,
+		#050505 100%
+	);
 }
 
 .introContent {
