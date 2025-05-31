@@ -34,8 +34,11 @@ const Hero: React.FC<HeroProps> = ({ img, height, width, video }) => {
 					</div>
 				</div>
 
-				<div style={{ textShadow: "rgb(0 0 0) 3px 2px 5px" }} className="scroll-down mb-3 z-3 w-100">
-					Scroll ↓
+				<div className="scroll-progress">
+					<div className="progress-text">Scroll</div>
+					<div className="progress-track">
+						<div className="progress-bar"></div>
+					</div>
 				</div>
 			</div>
 			<div className="position-absolute w-100 white-line"></div>

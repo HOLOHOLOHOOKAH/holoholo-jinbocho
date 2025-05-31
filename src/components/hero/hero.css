@@ -12,6 +12,7 @@
 	height: 100%;
 	object-fit: cover;
 	z-index: 1;
+	object-position: center left;
 }
 .heroImg {
 	position: absolute;
@@ -64,4 +65,409 @@
 	bottom: 0;
 	z-index: 100;
 	filter: blur(10px);
+}
+
+/* Elegant Scroll */
+.elegant-scroll {
+	position: absolute;
+	bottom: 3rem;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 3;
+	opacity: 0;
+	animation: fadeIn 1.5s ease forwards 1s;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1rem;
+}
+
+.scroll-line {
+	width: 1px;
+	height: 60px;
+	background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.2));
+	position: relative;
+	overflow: hidden;
+}
+
+.scroll-line::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(255, 255, 255, 0.8);
+	animation: scrollLine 2s ease-in-out infinite;
+}
+
+.scroll-text {
+	color: rgba(255, 255, 255, 0.7);
+	font-size: 0.85rem;
+	letter-spacing: 0.3em;
+	text-transform: uppercase;
+	font-weight: 300;
+	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	animation: textFade 2s ease-in-out infinite;
+}
+
+@keyframes scrollLine {
+	0% {
+		transform: translateY(-100%);
+		opacity: 0;
+	}
+	50% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+	100% {
+		transform: translateY(100%);
+		opacity: 0;
+	}
+}
+
+@keyframes textFade {
+	0%,
+	100% {
+		opacity: 0.4;
+	}
+	50% {
+		opacity: 0.8;
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+/* Scroll Wheel */
+.scroll-wheel {
+	position: absolute;
+	bottom: 2rem;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 3;
+	opacity: 0;
+	animation: fadeIn 1s ease forwards 1s;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.wheel {
+	width: 30px;
+	height: 50px;
+	border: 2px solid rgba(255, 255, 255, 0.6);
+	border-radius: 15px;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	padding: 5px 0;
+}
+
+.wheel-line {
+	width: 4px;
+	height: 8px;
+	background: rgba(255, 255, 255, 0.6);
+	border-radius: 2px;
+}
+
+.scroll-track {
+	width: 2px;
+	height: 20px;
+	background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
+	animation: scrollTrack 2s infinite;
+}
+
+@keyframes scrollTrack {
+	0% {
+		height: 0;
+		opacity: 0;
+	}
+	50% {
+		height: 20px;
+		opacity: 1;
+	}
+	100% {
+		height: 0;
+		opacity: 0;
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+/* Modern Scroll */
+.modern-scroll {
+	position: absolute;
+	bottom: 3rem;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 3;
+	opacity: 0;
+	animation: fadeIn 1s ease forwards 1s;
+}
+
+.scroll-circle {
+	width: 40px;
+	height: 40px;
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	transition: all 0.3s ease;
+}
+
+.scroll-circle::before {
+	content: "";
+	position: absolute;
+	inset: -2px;
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 50%;
+	animation: rotate 2s linear infinite;
+}
+
+.scroll-circle svg {
+	color: rgba(255, 255, 255, 0.7);
+	transform: translateY(0);
+	animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes rotate {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes bounce {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(5px);
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+/* Minimal Scroll */
+.minimal-scroll {
+	position: absolute;
+	bottom: 2rem;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 3;
+	opacity: 0;
+	animation: fadeIn 1s ease forwards 1s;
+}
+
+.scroll-bar {
+	width: 1px;
+	height: 40px;
+	background: rgba(255, 255, 255, 0.3);
+	position: relative;
+	overflow: hidden;
+}
+
+.scroll-bar::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(255, 255, 255, 0.8);
+	animation: scrollDown 2s ease-in-out infinite;
+}
+
+@keyframes scrollDown {
+	0% {
+		transform: translateY(-100%);
+	}
+	50% {
+		transform: translateY(0);
+	}
+	100% {
+		transform: translateY(100%);
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+/* Scroll Hint */
+.scroll-hint {
+	position: absolute;
+	bottom: 2rem;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 3;
+	opacity: 0;
+	animation: fadeIn 1s ease forwards 1s;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.scroll-text {
+	color: rgba(255, 255, 255, 0.6);
+	font-size: 0.8rem;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	font-weight: 300;
+	animation: textPulse 2s ease-in-out infinite;
+}
+
+.scroll-chevron {
+	position: relative;
+	width: 20px;
+	height: 20px;
+}
+
+.chevron {
+	position: absolute;
+	width: 8px;
+	height: 8px;
+	border-right: 1px solid rgba(255, 255, 255, 0.6);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+	transform: rotate(45deg);
+	animation: chevronDown 2s ease-in-out infinite;
+}
+
+.chevron:nth-child(2) {
+	animation-delay: 0.2s;
+}
+
+@keyframes chevronDown {
+	0% {
+		opacity: 0;
+		transform: rotate(45deg) translateY(-5px);
+	}
+	50% {
+		opacity: 1;
+		transform: rotate(45deg) translateY(0);
+	}
+	100% {
+		opacity: 0;
+		transform: rotate(45deg) translateY(5px);
+	}
+}
+
+@keyframes textPulse {
+	0%,
+	100% {
+		opacity: 0.4;
+	}
+	50% {
+		opacity: 0.8;
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+/* Scroll Progress */
+.scroll-progress {
+	position: absolute;
+	bottom: 2rem;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 3;
+	opacity: 0;
+	animation: fadeIn 1s ease forwards 1s;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.75rem;
+}
+
+.progress-text {
+	color: rgba(255, 255, 255, 0.7);
+	font-size: 0.75rem;
+	letter-spacing: 0.3em;
+	text-transform: uppercase;
+	font-weight: 300;
+}
+
+.progress-track {
+	width: 1px;
+	height: 50px;
+	background: rgba(255, 255, 255, 0.1);
+	position: relative;
+	overflow: hidden;
+}
+
+.progress-bar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(255, 255, 255, 0.8);
+	transform-origin: top;
+	animation: progressFill 2s ease-in-out infinite;
+}
+
+@keyframes progressFill {
+	0% {
+		transform: scaleY(0);
+		opacity: 0;
+	}
+	50% {
+		transform: scaleY(1);
+		opacity: 1;
+	}
+	100% {
+		transform: scaleY(0);
+		opacity: 0;
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
