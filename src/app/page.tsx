@@ -117,11 +117,11 @@ const Homepage = () => {
 
 											{shop.external ? (
 												<a href={shop.url} className={`${styles.cardButton} ${shop.buttonClass}`} target="_blank" rel="noopener noreferrer">
-													詳しく見る →
+													詳しく見る
 												</a>
 											) : (
 												<a href={shop.url} className={`${styles.cardButton} ${shop.buttonClass}`}>
-													詳しく見る →
+													詳しく見る
 												</a>
 											)}
 										</div>

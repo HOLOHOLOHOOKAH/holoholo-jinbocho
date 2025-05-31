@@ -58,11 +58,7 @@
 	transform: translateX(-50%);
 	width: 40px;
 	height: 2px;
-	background: linear-gradient(90deg, 
-		transparent 0%,
-		rgba(255, 255, 255, 0.8) 50%,
-		transparent 100%
-	);
+	background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.8) 50%, transparent 100%);
 }
 
 .heroSubtitle {
@@ -146,7 +142,9 @@
 
 .locationsSection {
 	padding: 8rem 0;
-	background-color: transparent;
+	background: linear-gradient(135deg, rgba(0, 0, 0, 0.97) 0%, rgba(0, 0, 0, 0.95) 100%);
+	position: relative;
+	overflow: hidden;
 }
 
 .sectionTitle {
@@ -170,18 +168,21 @@
 	right: 0;
 	bottom: -0.5rem;
 	height: 1px;
-	background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.3) 50%, transparent 100%);
+	background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
 }
 
 .cardWrapper {
 	margin: 0 auto;
-	max-width: 1200px;
+	max-width: 1400px;
 	padding: 0 2rem;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+	gap: 2.5rem;
 }
 
 .shopCard {
 	background: rgba(255, 255, 255, 0.02);
-	border-radius: 12px;
+	border-radius: 24px;
 	overflow: hidden;
 	transition: all 0.3s ease;
 	height: 100%;
@@ -191,29 +192,28 @@
 	display: flex;
 	flex-direction: column;
 	border: 1px solid rgba(255, 255, 255, 0.05);
+	min-width: 380px;
 }
 
 .shopCard:hover {
 	transform: translateY(-8px);
 	background: rgba(255, 255, 255, 0.04);
 	border-color: rgba(255, 255, 255, 0.1);
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
 
 .imageWrapper {
 	position: relative;
-	height: 220px;
+	height: 250px;
 	overflow: hidden;
+	border-radius: 20px 20px 0 0;
 }
 
 .cardImage {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-	transform: none;
-}
-
-.shopCard:hover .cardImage {
-	transform: none;
+	transition: transform 0.5s ease;
 }
 
 .cardContent {
@@ -223,10 +223,7 @@
 	flex: 1;
 	display: flex;
 	flex-direction: column;
-}
-
-.cardMainContent {
-	flex: 1;
+	background: linear-gradient(to bottom, rgba(255, 255, 255, 0.02), transparent);
 }
 
 .cardTitle {
@@ -256,7 +253,7 @@
 	margin-bottom: 1rem;
 	padding: 0.75rem;
 	background: rgba(255, 255, 255, 0.03);
-	border-radius: 8px;
+	border-radius: 16px;
 	border: 1px solid rgba(255, 255, 255, 0.05);
 	transition: all 0.3s ease;
 }
@@ -264,6 +261,7 @@
 .locationInfo:hover {
 	background: rgba(255, 255, 255, 0.05);
 	border-color: rgba(255, 255, 255, 0.1);
+	transform: translateY(-2px);
 }
 
 .address {
@@ -304,15 +302,14 @@
 	width: 34px;
 	height: 34px;
 	border-radius: 50%;
-	background: transparent;
+	background: rgba(255, 255, 255, 0.03);
 	color: rgba(255, 255, 255, 0.7);
 	transition: all 0.3s ease;
 	border: 1px solid rgba(255, 255, 255, 0.1);
-	padding: 0.5rem;
 }
 
 .socialLink:hover {
-	background: rgba(255, 255, 255, 0.05);
+	background: rgba(255, 255, 255, 0.08);
 	color: white;
 	border-color: rgba(255, 255, 255, 0.2);
 	transform: translateY(-2px);
@@ -326,7 +323,7 @@
 
 .cardButton {
 	padding: 0.6rem 1.2rem;
-	border-radius: 6px;
+	border-radius: 50px;
 	text-decoration: none;
 	font-weight: 300;
 	transition: all 0.3s ease;
@@ -335,8 +332,23 @@
 	text-align: center;
 	letter-spacing: 0.05em;
 	font-size: 0.85rem;
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
 	border: 1px solid rgba(255, 255, 255, 0.1);
 	flex-shrink: 0;
+}
+
+.cardButton::after {
+	content: "→";
+	transition: transform 0.3s ease;
+	opacity: 0.7;
+	margin-left: 0.3rem;
+}
+
+.cardButton:hover::after {
+	transform: translateX(4px);
+	opacity: 1;
 }
 
 .btnShop1 {
@@ -362,6 +374,7 @@
 	background: rgba(255, 255, 255, 0.1);
 	border-color: rgba(255, 255, 255, 0.2);
 	color: white;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .footer {
@@ -499,29 +512,28 @@
 		font-size: 2.2rem;
 		margin-bottom: 3rem;
 		padding: 0 2rem;
-		letter-spacing: 0.1em;
 	}
 
-	.sectionTitle::after {
-		bottom: -0.3rem;
+	.cardWrapper {
+		padding: 0 1rem;
+		gap: 1.5rem;
+		grid-template-columns: 1fr;
+	}
+
+	.shopCard {
+		min-width: unset;
+	}
+
+	.imageWrapper {
+		height: 220px;
 	}
 
 	.cardContent {
 		padding: 1.25rem;
 	}
 
-	.cardTitle {
-		font-size: 1.1rem;
-	}
-
-	.cardSubtitle {
-		font-size: 0.85rem;
-		margin-bottom: 0.75rem;
-	}
-
 	.locationInfo {
-		padding: 0.6rem;
-		margin-bottom: 0.75rem;
+		border-radius: 12px;
 	}
 
 	.address {
@@ -555,14 +567,6 @@
 
 	.locationsSection {
 		padding: 4rem 0;
-	}
-
-	.cardWrapper {
-		padding: 0 1rem;
-	}
-
-	.imageWrapper {
-		height: 200px;
 	}
 
 	.heroSection {
@@ -636,12 +640,7 @@
 	left: -100%;
 	width: 100%;
 	height: 100%;
-	background: linear-gradient(
-		90deg,
-		transparent,
-		rgba(255, 255, 255, 0.1),
-		transparent
-	);
+	background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
 	transition: 0.5s;
 }
 
