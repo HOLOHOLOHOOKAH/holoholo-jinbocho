@@ -53,7 +53,7 @@ const SystemPage: React.FC<SystemPageProps> = ({ config, page, title }) => {
 
 			<div className={styles.menuContainer}>
 				{/* Shisha Menu Section */}
-				<div className={styles.menuSection}>
+				<div className={`${styles.menuSection} ${styles.shisha}`}>
 					<div className={styles.menuContent}>
 						<div className={styles.customImageContainer}>
 							<div className={styles.greenBorderStack}></div>
@@ -76,7 +76,7 @@ const SystemPage: React.FC<SystemPageProps> = ({ config, page, title }) => {
 				</div>
 
 				{/* Options Menu Section */}
-				<div className={styles.menuSection}>
+				<div className={`${styles.menuSection} ${styles.options}`}>
 					<div className={`${styles.menuContent} ${styles.reverse}`}>
 						<div className={styles.customImageContainer}>
 							<div className={styles.greenBorderStack}></div>
@@ -98,7 +98,7 @@ const SystemPage: React.FC<SystemPageProps> = ({ config, page, title }) => {
 				</div>
 
 				{/* Info and WiFi Section */}
-				<div className={styles.menuSection}>
+				<div className={`${styles.menuSection} ${styles.info}`}>
 					<div className={styles.infoSection}>
 						<div>
 							<h2 className={styles.sectionTitle}>Notes</h2>
