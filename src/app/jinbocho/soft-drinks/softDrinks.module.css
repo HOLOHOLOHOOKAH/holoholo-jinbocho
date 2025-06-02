@@ -1,9 +1,5 @@
 .drinkCard {
-	height: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	color: var(--text-color);
+	padding: 2rem;
 }
 
 .mainTitle {
@@ -18,18 +14,58 @@
 	color: var(--text-color);
 }
 
-.sectionSubtitle {
-	font-size: 1.5rem;
-	letter-spacing: 2px;
-	margin-bottom: 1.5rem;
-}
 .sectionTitle {
-	display: flex;
-	font-weight: bold;
-	font-size: 2rem;
+	font-size: 1.8rem;
+	font-weight: 300;
+	letter-spacing: 0.2em;
+	color: var(--title-color);
 	margin-bottom: 2rem;
-	margin-top: 1rem;
-	color: var(--nav-hover-color);
+	text-align: center;
+	position: relative;
+}
+
+.sectionTitle::after {
+	content: "";
+	position: absolute;
+	bottom: -0.75rem;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 40px;
+	height: 1px;
+	background: var(--border-stack-color);
+	opacity: 0.5;
+}
+
+.sectionSubtitle {
+	font-size: 1.2rem;
+	font-weight: 300;
+	letter-spacing: 0.15em;
+	color: var(--title-color);
+	margin-bottom: 1.5rem;
+	text-align: center;
+}
+
+.sectionText {
+	font-size: 1.1rem;
+	line-height: 2;
+	letter-spacing: 0.1em;
+	color: rgba(255, 255, 255, 0.8);
+	text-align: center;
+}
+
+.sectionText.large {
+	font-size: 1.2rem;
+	line-height: 2.2;
+	letter-spacing: 0.12em;
+}
+
+.price {
+	font-size: 1.6rem;
+	color: rgba(255, 255, 255, 0.9);
+	letter-spacing: 0.1em;
+	margin-top: 1.5rem;
+	font-family: "Courier New", monospace;
+	text-align: center;
 }
 
 .subtitle {
@@ -43,60 +79,44 @@
 	line-height: 1.6;
 }
 
-.price {
-	font-weight: bold;
-	font-size: 2rem;
-	color: #d5d5d5;
-	margin-top: 1rem;
-	text-align: start;
-}
-
-.sectionText {
-	text-align: start;
-	font-size: 18px;
-	letter-spacing: 3px;
-}
-
 .customImageContainer {
 	display: flex;
-	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	width: 400px;
 	height: 400px;
 	position: relative;
+	margin: 0 auto;
 }
 
 .greenBorderStack {
-	width: 330px;
-	height: 400px;
+	width: 100%;
+	height: 100%;
 	background-color: transparent;
-	border: 10px solid var(--border-stack-color);
-	border-radius: 8px;
+	border: 1px solid var(--border-stack-color);
+	border-radius: 12px;
 	position: absolute;
-	top: 0;
-	z-index: 0;
+	transform: translate(12px, 12px);
 }
 
 .stackedContainer {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
 	position: relative;
 	z-index: 1;
+	width: 100%;
+	height: 100%;
 }
 
 .drinkImage {
-	height: 350px !important;
-	border-radius: 12px;
-	width: 400px !important;
+	width: 100% !important;
+	height: 100% !important;
 	object-fit: cover;
-	transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+	border-radius: 12px;
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+	transition: transform 0.3s ease;
 }
 
-.imageHover:hover {
-	transform: scale(1.05) rotate(3deg);
-	box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
-	filter: brightness(1.1);
+.drinkImage:hover {
+	transform: scale(1.02);
 }
 
 .customImageContainerSmall {
@@ -159,27 +179,109 @@
 }
 
 @media (max-width: 768px) {
-	.sectionText {
-		text-align: center;
-		font-size: 17px;
+	.drinkCard {
+		padding: 1.5rem;
 	}
+
 	.sectionTitle {
-		justify-content: center;
-		margin-top: 2rem;
-		font-size: 1.6rem;
+		font-size: 1.5rem;
+		margin-bottom: 1.5rem;
 	}
 
 	.sectionSubtitle {
-		text-align: center;
+		font-size: 1.1rem;
+		margin-bottom: 1.25rem;
+	}
+
+	.customImageContainer {
+		width: 300px;
+		height: 300px;
+	}
+
+	.greenBorderStack {
+		transform: translate(8px, 8px);
+	}
+
+	.menuLabel,
+	.menuPrice {
+		font-size: 0.95rem;
 	}
 
 	.price {
-		text-align: center;
+		font-size: 1.4rem;
 	}
 }
+
+@media (max-width: 480px) {
+	.drinkCard {
+		padding: 1.25rem;
+	}
+
+	.sectionTitle {
+		font-size: 1.3rem;
+		margin-bottom: 1.25rem;
+	}
+
+	.sectionSubtitle {
+		font-size: 1rem;
+		margin-bottom: 1rem;
+	}
+
+	.customImageContainer {
+		width: 260px;
+		height: 260px;
+	}
+
+	.greenBorderStack {
+		transform: translate(6px, 6px);
+	}
+
+	.menuLabel,
+	.menuPrice {
+		font-size: 0.9rem;
+	}
+
+	.price {
+		font-size: 1.3rem;
+	}
+}
+
 .verticalText {
 	writing-mode: vertical-rl; /* vertical right-to-left */
 	text-orientation: upright;
 	font-size: 1.5rem; /* adjust as needed */
 	margin-right: 1rem; /* spacing between text and image */
+}
+
+/* Menu Items */
+.menuList {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.menuItem {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	padding: 0.5rem 0;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+	color: rgba(255, 255, 255, 0.95);
+}
+
+.menuItem:last-child {
+	border-bottom: none;
+}
+
+.menuLabel {
+	font-size: 1rem;
+	color: rgba(255, 255, 255, 0.95);
+	letter-spacing: 0.1em;
+}
+
+.menuPrice {
+	font-size: 1rem;
+	color: rgba(255, 255, 255, 0.6);
+	letter-spacing: 0.1em;
+	font-family: "Courier New", monospace;
 }

@@ -74,6 +74,7 @@ const SystemPage: React.FC<SystemPageProps> = ({ config, page, title }) => {
 						</div>
 					</div>
 				</div>
+				<div className="section-divider my-4"></div>
 
 				{/* Options Menu Section */}
 				<div className={`${styles.menuSection} ${styles.options}`}>
@@ -96,6 +97,8 @@ const SystemPage: React.FC<SystemPageProps> = ({ config, page, title }) => {
 						</div>
 					</div>
 				</div>
+
+				<div className="section-divider my-4"></div>
 
 				{/* Info and WiFi Section */}
 				<div className={`${styles.menuSection} ${styles.info}`}>

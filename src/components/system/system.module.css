@@ -13,89 +13,9 @@
 }
 
 .menuSection {
-	margin-bottom: 8rem;
+	margin-bottom: 4rem;
 	position: relative;
 	padding: 2rem 0;
-}
-
-.menuSection:not(:last-child)::after {
-	content: "";
-	position: absolute;
-	bottom: -4rem;
-	left: 50%;
-	transform: translateX(-50%);
-	width: 80%;
-	height: 1px;
-	background: linear-gradient(to right, transparent, rgba(var(--text-color), 0.1), rgba(var(--text-color), 0.1), transparent);
-}
-
-.menuSection.shisha::after,
-.menuSection.options::before,
-.menuSection.options::after,
-.menuSection.info::before {
-	content: "";
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
-	width: 30%;
-	height: 1px;
-	background: linear-gradient(
-		to right,
-		transparent,
-		rgba(255, 255, 255, 0.05),
-		rgba(255, 255, 255, 0.1),
-		rgba(255, 255, 255, 0.15),
-		rgba(255, 255, 255, 0.1),
-		rgba(255, 255, 255, 0.05),
-		transparent
-	);
-	box-shadow: 
-		0 0 15px rgba(255, 255, 255, 0.05),
-		0 0 30px rgba(255, 255, 255, 0.02);
-}
-
-.menuSection.shisha::after {
-	bottom: -4rem;
-}
-
-.menuSection.options::before,
-.menuSection.info::before {
-	top: -4rem;
-}
-
-.menuSection.options::after {
-	bottom: -4rem;
-}
-
-.menuSection.shisha::before,
-.menuSection.options::before,
-.menuSection.options::after,
-.menuSection.info::after {
-	content: "";
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
-	width: 4px;
-	height: 4px;
-	background: rgba(255, 255, 255, 0.2);
-	border-radius: 50%;
-	box-shadow: 
-		0 0 10px rgba(255, 255, 255, 0.1),
-		0 0 20px rgba(255, 255, 255, 0.05);
-	animation: pulse 2s infinite;
-}
-
-.menuSection.shisha::before {
-	bottom: -4rem;
-}
-
-.menuSection.options::before,
-.menuSection.info::after {
-	top: -4rem;
-}
-
-.menuSection.options::after {
-	bottom: -4rem;
 }
 
 @keyframes pulse {
@@ -310,11 +230,7 @@
 	}
 
 	.menuSection {
-		margin-bottom: 5rem;
-	}
-
-	.menuSection:not(:last-child)::after {
-		bottom: -2.5rem;
+		margin-bottom: 2rem;
 	}
 
 	.customImageContainer {
@@ -383,11 +299,7 @@
 	}
 
 	.menuSection {
-		margin-bottom: 4rem;
-	}
-
-	.menuSection:not(:last-child)::after {
-		bottom: -2rem;
+		margin-bottom: 2rem;
 	}
 
 	.customImageContainer {
