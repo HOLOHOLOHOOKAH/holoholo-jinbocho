@@ -46,6 +46,8 @@ body,
 	--glass-border: rgba(126, 126, 126, 0.1);
 	--highlight: #ffc107;
 	--logo-opacity: 0.85 !important;
+	--text-color-lighter: rgba(255, 255, 255, 0.5);
+	--text-color-rgb: 255, 255, 255;
 }
 
 /* Smooth scroll */

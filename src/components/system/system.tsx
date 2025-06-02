@@ -47,113 +47,83 @@ interface SystemPageProps {
 
 const SystemPage: React.FC<SystemPageProps> = ({ config, page, title }) => {
 	return (
-		<div>
+		<div className={styles.pageContainer}>
 			<Header title={title} page="homepage" pageName={page} />
-			<div style={{ height: "100px" }}></div>
+			<div style={{ height: "140px" }}></div>
 
-			<div className={`${styles.menuContainer} container text-white py-5 px-4`}>
-				{/* Shisha Section */}
-				<div id="shisha" className={styles.menuSection}>
-					<div className="d-block d-lg-flex justify-content-center">
-						{/* Shisha Image */}
-						<div className="d-flex mx-lg-5 justify-content-center align-items-center">
-							<div className={styles.customImageContainer}>
-								<div className={styles.greenBorderStack}></div>
-								<div className={styles.stackedContainer}>
-									<Image src={config.shisha.image.src} alt={config.shisha.image.alt} width={config.shisha.image.width} height={config.shisha.image.height} className={`${styles.drinkImage} ${styles.imageHover}`} />
-								</div>
+			<div className={styles.menuContainer}>
+				{/* Shisha Menu Section */}
+				<div className={styles.menuSection}>
+					<div className={styles.menuContent}>
+						<div className={styles.customImageContainer}>
+							<div className={styles.greenBorderStack}></div>
+							<div className={styles.stackedContainer}>
+								<Image src={config.shisha.image.src} alt={config.shisha.image.alt} width={config.shisha.image.width} height={config.shisha.image.height} className={styles.drinkImage} />
 							</div>
 						</div>
+						<div className={styles.menuItems}>
+							<h2 className={styles.sectionTitle}>Shisha</h2>
 
-						{/* Shisha Text */}
-						<div className="mx-lg-5">
-							<div className="d-flex justify-content-center justify-content-lg-start align-items-center h-100">
-								<div>
-									<div className={`${styles.sectionTitle} justify-content-center`}>Shisha</div>
-									<div className="d-flex text-center justify-content-center align-items-center">
-										<div>
-											{config.shisha.items.map((item, index) => (
-												<p key={index}>
-													{item.label}{" "}
-													<span
-														style={{
-															flex: 1,
-															borderBottom: "1px solid #aaa",
-															margin: "0 0.7rem",
-															opacity: 0.5,
-															minWidth: "100px",
-															display: "inline-block",
-															height: "0.9em",
-															position: "relative",
-															top: "0.1em",
-														}}
-													/>{" "}
-													{item.price}
-												</p>
-											))}
-											<p className="text-center">{config.shisha.note}</p>
-										</div>
-									</div>
+							{config.shisha.items.map((item, index) => (
+								<div key={index} className={styles.menuItem}>
+									<span className={styles.itemLabel}>{item.label}</span>
+									<span className={styles.itemPrice}>{item.price}</span>
 								</div>
-							</div>
+							))}
+							<div className={styles.menuNote}>{config.shisha.note}</div>
 						</div>
 					</div>
 				</div>
 
-				<div className="section-divider my-5"></div>
-
-				{/* Options Section */}
-				<div id="options" className={styles.menuSection}>
-					<div className="d-block d-lg-flex justify-content-center">
-						{/* Options Image */}
-						<div className="order-lg-2 d-flex mt-mx-0 mt-4 mx-lg-5 justify-content-center align-items-center">
-							<div className={styles.customImageContainer}>
-								<div className={styles.greenBorderStack}></div>
-								<div className={styles.stackedContainer}>
-									<Image src={config.options.image.src} alt={config.options.image.alt} width={config.options.image.width} height={config.options.image.height} className={`${styles.drinkImage} ${styles.imageHover}`} />
-								</div>
+				{/* Options Menu Section */}
+				<div className={styles.menuSection}>
+					<div className={`${styles.menuContent} ${styles.reverse}`}>
+						<div className={styles.customImageContainer}>
+							<div className={styles.greenBorderStack}></div>
+							<div className={styles.stackedContainer}>
+								<Image src={config.options.image.src} alt={config.options.image.alt} width={config.options.image.width} height={config.options.image.height} className={styles.drinkImage} />
 							</div>
 						</div>
+						<div className={styles.menuItems}>
+							<h2 className={styles.sectionTitle}>Options</h2>
 
-						{/* Options Text */}
-						<div className="mx-lg-5 order-lg-1">
-							<div className="d-flex justify-content-center align-items-center h-100">
-								<div>
-									<div className={`${styles.sectionTitle} justify-content-center`}>Options</div>
-									<div className="d-flex text-center justify-content-center align-items-center">
-										<div>
-											{config.options.items.map((item, index) => (
-												<p key={index}>
-													{item.label}
-													<span className="separator" /> {item.price}
-												</p>
-											))}
-										</div>
-									</div>
+							{config.options.items.map((item, index) => (
+								<div key={index} className={styles.menuItem}>
+									<span className={styles.itemLabel}>{item.label}</span>
+									<span className={styles.itemPrice}>{item.price}</span>
 								</div>
-							</div>
+							))}
 						</div>
 					</div>
 				</div>
 
-				<div className="section-divider my-5"></div>
+				{/* Info and WiFi Section */}
+				<div className={styles.menuSection}>
+					<div className={styles.infoSection}>
+						<div>
+							<h2 className={styles.sectionTitle}>Notes</h2>
+							<div className={styles.notesList}>
+								{config.notes.map((note, index) => (
+									<div key={index} className={styles.noteItem}>
+										{note}
+									</div>
+								))}
+							</div>
+						</div>
 
-				<div id="wifi" className="d-block d-lg-flex justify-content-center">
-					{/* Notes Section */}
-					<div style={{ maxWidth: "600px" }} className={`${styles.menuSection} small text-center mx-lg-5`}>
-						<div className={`${styles.sectionTitle} justify-content-center justify-content-lg-start`}>Notes</div>
-						{config.notes.map((note, index) => (
-							<p className="text-center text-lg-start" key={index}>
-								{note}
-							</p>
-						))}
-					</div>
-
-					{/* Wi-Fi Section */}
-					<div className={`${styles.menuSection} small text-center mx-lg-5`}>
-						<div className={`${styles.sectionTitle} justify-content-center`}>Wi-Fi</div>
-						<p>SD: {config.wifi.ssid}</p>
-						<p>PW: {config.wifi.password}</p>
+						<div>
+							<h2 className={styles.sectionTitle}>Wi-Fi</h2>
+							<div className={styles.wifiInfo}>
+								<div className={styles.wifiItem}>
+									<span className={styles.wifiLabel}>ネットワーク</span>
+									<span className={styles.wifiValue}>{config.wifi.ssid}</span>
+								</div>
+								<div className={styles.wifiItem}>
+									<span className={styles.wifiLabel}>パスワード</span>
+									<span className={styles.wifiValue}>{config.wifi.password}</span>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>

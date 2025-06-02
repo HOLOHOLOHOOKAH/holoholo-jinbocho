@@ -13,7 +13,7 @@
 	--secondary-color: #f3f4f6 !important;
 	--title-color: #e17655;
 	--border-stack-color: #e176556b;
-	--text-color: #333;
+	--text-color: #000;
 	--border-color: #0254ff36;
 	--background-color-infoBox: rgb(255, 255, 255);
 	--btn-color: rgb(234, 132, 101);
@@ -24,6 +24,8 @@
 	--glass-border: rgba(113, 113, 113, 0.1);
 	--highlight: #ff6b6b;
 	--logo-opacity: 1 !important;
+	--text-color-lighter: rgba(76, 76, 76, 0.5);
+	--text-color-rgb: 0, 0, 0;
 }
 p {
 	color: #333 !important;

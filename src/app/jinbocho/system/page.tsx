@@ -1,4 +1,4 @@
-import SystemPage, { SystemConfig } from '@/components/system/system';
+import SystemPage, { SystemConfig } from "@/components/system/system";
 import { jinbochoMetadata } from "@/lib/metadata/jinbocho";
 
 export const metadata = jinbochoMetadata;
@@ -37,17 +37,11 @@ const config: SystemConfig = {
 		ssid: "Holojinbocho_5G",
 		password: "5EEVK33762",
 	},
-	notes: ["※ フードのみ持ち込み可能 ※シーシャ機材にはお手を触れないようお願い致します。", "※ ボトルやトップ等機材の破損の場合、実費を頂きます。", "※ 混雑時のみお席2時間制となります。"],
+	notes: ["フードのみ持ち込み可能 ※シーシャ機材にはお手を触れないようお願い致します。", "ボトルやトップ等機材の破損の場合、実費を頂きます。", "混雑時のみお席2時間制となります。"],
 };
 
 const Homepage = () => {
-	return (
-		<SystemPage 
-			config={config} 
-			page="jinbocho" 
-			title="神保町ホロホロシーシャ"
-		/>
-	);
+	return <SystemPage config={config} page="jinbocho" title="神保町ホロホロシーシャ" />;
 };
 
 export default Homepage;

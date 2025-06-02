@@ -1,55 +1,88 @@
-.menuContainer {
-	position: relative;
-	overflow: hidden;
-	font-size: 20px !important;
+.pageContainer {
+	min-height: 100vh;
+	background: var(--background-color);
+	color: var(--text-color);
+	overflow-x: hidden;
+	padding: 1rem 0;
 }
 
-.menuContainer > * {
-	position: relative;
-	z-index: 2;
+.menuContainer {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 2rem;
 }
 
 .menuSection {
-	margin-bottom: 1.5rem;
-	padding: 0.5rem 1rem;
-	border-radius: 15px;
+	margin-bottom: 8rem;
+	position: relative;
 }
 
-@media (max-width: 768px) {
-	.menuSection p {
-		font-size: 17px;
-		font-weight: 500;
-	}
-	.sectionTitle {
-		justify-content: center;
-		margin-top: 2rem;
-		font-size: 1.6rem;
-	}
+.menuSection:not(:last-child)::after {
+	content: "";
+	position: absolute;
+	bottom: -4rem;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 80%;
+	height: 1px;
+	background: linear-gradient(to right, transparent, rgba(var(--text-color), 0.1), rgba(var(--text-color), 0.1), transparent);
+}
 
-	.menuContainer {
-		padding-left: 10px !important;
-		padding-right: 10px !important;
-	}
+.sectionTitle {
+	font-size: 2.5rem;
+	font-weight: 300;
+	letter-spacing: 0.2em;
+	color: var(--title-color);
+	margin-bottom: 2rem;
+	text-align: center;
+	position: relative;
+}
+
+.sectionTitle::after {
+	content: "";
+	position: absolute;
+	bottom: -0.75rem;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 40px;
+	height: 2px;
+	background: var(--border-stack-color);
+	opacity: 0.5;
+}
+
+.menuContent {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 2rem;
+	align-items: center;
+}
+
+.menuContent.reverse {
+	direction: rtl;
+}
+
+.menuContent.reverse > * {
+	direction: ltr;
 }
 
 .customImageContainer {
 	display: flex;
-	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	height: 350px;
+	height: 400px;
 	position: relative;
 }
 
 .greenBorderStack {
-	width: 300px;
-	height: 350px;
+	width: 400px;
+	height: 400px;
 	background-color: transparent;
-	border: 10px solid var(--border-stack-color);
-	border-radius: 8px;
+	border: 2px solid var(--border-stack-color);
+	border-radius: 10px;
 	position: absolute;
 	top: 0;
 	z-index: 0;
+	transform: translate(20px, 20px);
 }
 
 .stackedContainer {
@@ -61,43 +94,246 @@
 }
 
 .drinkImage {
-	height: 300px !important;
-	border-radius: 12px;
 	width: 400px !important;
+	height: 400px !important;
 	object-fit: cover;
-	transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+	border-radius: 10px;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.imageHover:hover {
-	transform: scale(1.05) rotate(3deg);
-	box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
-	filter: brightness(1.1);
+.menuItems {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
 }
 
-/* Responsive adjustments */
+.menuItem {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	padding: 0.75rem 0;
+	border-bottom: 1px solid rgba(var(--text-color-rgb), 0.1);
+}
+
+.itemLabel {
+	font-size: 1.2rem;
+	color: rgba(var(--text-color), 0.98);
+	letter-spacing: 0.1em;
+}
+
+.itemPrice {
+	font-size: 1.2rem;
+	color: rgba(var(--text-color), 0.57);
+	letter-spacing: 0.1em;
+	font-family: "Courier New", monospace;
+}
+
+.menuNote {
+	color: rgba(var(--text-color), 0.7);
+	font-size: 1.1rem;
+	line-height: 1.6;
+	letter-spacing: 0.05em;
+}
+
+.infoSection {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 4rem;
+	align-items: start;
+}
+
+.notesList {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	max-width: 100%;
+	margin: 0;
+}
+
+.noteItem {
+	color: var(--text-color);
+	font-size: 1.1rem;
+	line-height: 1.8;
+	letter-spacing: 0.05em;
+	position: relative;
+	padding-left: 1.5rem;
+}
+
+.noteItem::before {
+	content: "•";
+	position: absolute;
+	left: 0;
+	color: var(--border-stack-color);
+	font-size: 1.5rem;
+	line-height: 1;
+}
+
+.wifiInfo {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	max-width: 100%;
+	margin: 0;
+}
+
+.wifiItem {
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+}
+
+.wifiLabel {
+	color: var(--text-color-lighter);
+	font-size: 0.9rem;
+	letter-spacing: 0.15em;
+	text-transform: uppercase;
+}
+
+.wifiValue {
+	color: var(--text-color);
+	font-size: 1.3rem;
+	font-family: "Courier New", monospace;
+	letter-spacing: 0.1em;
+	padding: 0.5rem 0;
+	border-bottom: 1px solid rgba(var(--text-color-rgb), 0.1);
+}
+
+/* Responsive Design */
 @media (max-width: 1199px) {
+	.menuContent {
+		gap: 2rem;
+	}
+}
+
+@media (max-width: 768px) {
+	.menuContainer {
+		padding: 0 2rem;
+	}
+
+	.menuContent {
+		grid-template-columns: 1fr;
+		gap: 2rem;
+	}
+
+	.menuContent.reverse {
+		direction: ltr;
+	}
+
+	.sectionTitle {
+		font-size: 1.8rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.menuSection {
+		margin-bottom: 5rem;
+	}
+
+	.menuSection:not(:last-child)::after {
+		bottom: -2.5rem;
+	}
+
 	.customImageContainer {
-		height: 350px;
+		height: 300px;
 	}
 
 	.greenBorderStack {
-		width: 250px;
-		height: 350px;
+		width: 300px;
+		height: 300px;
+		transform: translate(15px, 15px);
 	}
 
 	.drinkImage {
 		width: 300px !important;
 		height: 300px !important;
 	}
+
+	.infoSection {
+		grid-template-columns: 1fr;
+		gap: 3rem;
+		text-align: center;
+	}
+
+	.notesList {
+		align-items: center;
+	}
+
+	.noteItem {
+		font-size: 1rem;
+		padding-left: 0;
+		text-align: center;
+	}
+
+	.noteItem::before {
+		display: none;
+	}
+
+	.wifiInfo {
+		align-items: center;
+	}
+
+	.wifiItem {
+		align-items: center;
+		width: 100%;
+	}
+
+	.wifiValue {
+		font-size: 1.2rem;
+		text-align: center;
+		width: 100%;
+	}
 }
 
-.sectionTitle {
-	display: flex;
-	font-weight: 500;
-	font-size: 2rem;
-	margin-bottom: 2rem;
-	margin-top: 1rem;
-	color: var(--title-color);
-	text-transform: uppercase;
-	letter-spacing: 4px;
+@media (max-width: 480px) {
+	.pageContainer {
+		padding: 0.5rem 0;
+	}
+
+	.menuContainer {
+		padding: 0 1.5rem;
+	}
+
+	.sectionTitle {
+		font-size: 1.5rem;
+		margin-bottom: 1.25rem;
+	}
+
+	.menuSection {
+		margin-bottom: 4rem;
+	}
+
+	.menuSection:not(:last-child)::after {
+		bottom: -2rem;
+	}
+
+	.customImageContainer {
+		height: 250px;
+	}
+
+	.greenBorderStack {
+		width: 250px;
+		height: 250px;
+		transform: translate(12px, 12px);
+	}
+
+	.drinkImage {
+		width: 250px !important;
+		height: 250px !important;
+	}
+
+	.itemLabel,
+	.itemPrice {
+		font-size: 0.9rem;
+	}
+
+	.menuNote {
+		font-size: 0.85rem;
+	}
+
+	.noteItem {
+		font-size: 0.9rem;
+	}
+
+	.wifiValue {
+		font-size: 1.1rem;
+	}
 }
