@@ -83,36 +83,36 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 400px;
 	height: 400px;
 	position: relative;
-	margin: 0 auto;
 }
 
 .greenBorderStack {
-	width: 100%;
-	height: 100%;
+	width: 400px;
+	height: 400px;
 	background-color: transparent;
-	border: 1px solid var(--border-stack-color);
-	border-radius: 12px;
+	border: 2px solid var(--border-stack-color);
+	border-radius: 10px;
 	position: absolute;
-	transform: translate(12px, 12px);
+	top: 0;
+	z-index: 0;
+	transform: translate(20px, 20px);
 }
 
 .stackedContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	position: relative;
 	z-index: 1;
-	width: 100%;
-	height: 100%;
 }
 
 .drinkImage {
-	width: 100% !important;
-	height: 100% !important;
+	width: 400px !important;
+	height: 400px !important;
 	object-fit: cover;
-	border-radius: 12px;
-	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-	transition: transform 0.3s ease;
+	border-radius: 10px;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .drinkImage:hover {
@@ -154,8 +154,9 @@
 	}
 
 	.greenBorderStack {
-		width: 250px;
-		height: 350px;
+		width: 300px;
+		height: 300px;
+		transform: translate(15px, 15px);
 	}
 
 	.drinkImage {
@@ -194,12 +195,18 @@
 	}
 
 	.customImageContainer {
-		width: 300px;
 		height: 300px;
 	}
 
 	.greenBorderStack {
-		transform: translate(8px, 8px);
+		width: 300px;
+		height: 300px;
+		transform: translate(15px, 15px);
+	}
+
+	.drinkImage {
+		width: 300px !important;
+		height: 300px !important;
 	}
 
 	.menuLabel,
@@ -228,12 +235,18 @@
 	}
 
 	.customImageContainer {
-		width: 260px;
-		height: 260px;
+		height: 250px;
 	}
 
 	.greenBorderStack {
-		transform: translate(6px, 6px);
+		width: 250px;
+		height: 250px;
+		transform: translate(12px, 12px);
+	}
+
+	.drinkImage {
+		width: 250px !important;
+		height: 250px !important;
 	}
 
 	.menuLabel,
