@@ -1,3 +1,239 @@
+.pageContainer {
+	min-height: 100vh;
+	background: var(--background-color);
+	color: var(--text-color);
+	overflow-x: hidden;
+	padding: 1rem 0;
+}
+
+.menuContainer {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 2rem;
+}
+
+.menuSection {
+	margin-bottom: 4rem;
+	position: relative;
+	padding: 2rem 0;
+}
+
+.menuContent {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 2rem;
+	align-items: center;
+}
+
+.menuContent.reverse {
+	direction: rtl;
+}
+
+.menuContent.reverse > * {
+	direction: ltr;
+}
+
+.sectionTitle {
+	font-size: 2.5rem;
+	font-weight: 300;
+	letter-spacing: 0.2em;
+	color: var(--title-color);
+	margin-bottom: 2rem;
+	text-align: center;
+	position: relative;
+}
+
+.sectionTitle::after {
+	content: "";
+	position: absolute;
+	bottom: -0.75rem;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 40px;
+	height: 2px;
+	background: var(--border-stack-color);
+	opacity: 0.5;
+}
+
+.customImageContainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 400px;
+	position: relative;
+}
+
+.greenBorderStack {
+	width: 400px;
+	height: 400px;
+	background-color: transparent;
+	border: 2px solid var(--border-stack-color);
+	border-radius: 10px;
+	position: absolute;
+	top: 0;
+	z-index: 0;
+	transform: translate(20px, 20px);
+}
+
+.stackedContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+	z-index: 1;
+}
+
+.drinkImage {
+	width: 400px !important;
+	height: 400px !important;
+	object-fit: cover;
+	border-radius: 10px;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.menuItems {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.menuList {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 0.5rem;
+}
+
+.menuList.singleColumn {
+	grid-template-columns: 1fr;
+}
+
+.menuItem {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	padding: 0.5rem 0;
+	border-bottom: 1px solid rgba(var(--text-color-rgb), 0.1);
+}
+
+.itemLabel {
+	font-size: 1.1rem;
+	color: rgba(var(--text-color), 0.98);
+	letter-spacing: 0.1em;
+}
+
+.itemPrice {
+	font-size: 1.1rem;
+	color: rgba(var(--text-color), 0.57);
+	letter-spacing: 0.1em;
+	font-family: "Courier New", monospace;
+}
+
+.menuNote {
+	color: rgba(var(--text-color), 0.7);
+	font-size: 1.1rem;
+	line-height: 1.6;
+	letter-spacing: 0.05em;
+	margin-top: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1199px) {
+	.menuContent {
+		gap: 2rem;
+	}
+}
+
+@media (max-width: 768px) {
+	.menuContainer {
+		padding: 0 2rem;
+	}
+
+	.menuContent {
+		grid-template-columns: 1fr;
+		gap: 2rem;
+	}
+
+	.menuContent.reverse {
+		direction: ltr;
+	}
+
+	.sectionTitle {
+		font-size: 1.8rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.menuSection {
+		margin-bottom: 2rem;
+	}
+
+	.customImageContainer {
+		height: 300px;
+	}
+
+	.greenBorderStack {
+		width: 300px;
+		height: 300px;
+		transform: translate(15px, 15px);
+	}
+
+	.drinkImage {
+		width: 300px !important;
+		height: 300px !important;
+	}
+
+	.itemLabel,
+	.itemPrice {
+		font-size: 1rem;
+	}
+
+	.menuNote {
+		font-size: 0.95rem;
+	}
+}
+
+@media (max-width: 480px) {
+	.pageContainer {
+		padding: 0.5rem 0;
+	}
+
+	.menuContainer {
+		padding: 0 1.5rem;
+	}
+
+	.sectionTitle {
+		font-size: 1.5rem;
+		margin-bottom: 1.25rem;
+	}
+
+	.menuSection {
+		margin-bottom: 2rem;
+	}
+
+	.customImageContainer {
+		height: 250px;
+	}
+
+	.greenBorderStack {
+		width: 250px;
+		height: 250px;
+		transform: translate(12px, 12px);
+	}
+
+	.drinkImage {
+		width: 250px !important;
+		height: 250px !important;
+	}
+
+	.itemLabel,
+	.itemPrice {
+		font-size: 0.9rem;
+	}
+
+	.menuNote {
+		font-size: 0.85rem;
+	}
+}
+
 .spacer {
 	height: 130px;
 }
@@ -27,15 +263,6 @@
 	font-size: 2rem;
 	letter-spacing: 2px;
 	margin-bottom: 1.5rem;
-}
-
-.sectionTitle {
-	display: flex;
-	font-weight: bold;
-	font-size: 2rem;
-	margin-bottom: 2rem;
-	margin-top: 1rem;
-	color: var(--nav-hover-color);
 }
 
 .subtitle {
@@ -70,48 +297,6 @@
 	-webkit-columns: 2;
 }
 
-.customImageContainer {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	height: 450px;
-	position: relative;
-}
-
-.greenBorderStack {
-	width: 330px;
-	height: 450px;
-	background-color: transparent;
-	border: 10px solid #edc80673;
-	border-radius: 8px;
-	position: absolute;
-	top: 0;
-	z-index: 0;
-}
-
-.stackedContainer {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	position: relative;
-	z-index: 1;
-}
-
-.drinkImage {
-	height: 400px !important;
-	border-radius: 12px;
-	width: 400px !important;
-	object-fit: cover;
-	transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
-}
-
-.imageHover:hover {
-	transform: scale(1.05) rotate(3deg);
-	box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
-	filter: brightness(1.1);
-}
-
 .customImageContainerSmall {
 	display: flex;
 	flex-direction: column;
@@ -140,58 +325,10 @@
 	transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
 }
 
-/* Responsive adjustments */
-@media (max-width: 1199px) {
-	.customImageContainer {
-		height: 350px;
-	}
-
-	.greenBorderStack {
-		width: 250px;
-		height: 350px;
-	}
-
-	.drinkImage {
-		width: 300px !important;
-		height: 300px !important;
-	}
-
-	.customImageContainerSmall {
-		height: 250px;
-	}
-
-	.greenBorderStackSmall {
-		width: 180px;
-		height: 200px;
-	}
-
-	.drinkImage2 {
-		width: 200px;
-		height: 200px;
-	}
-}
-
-@media (max-width: 768px) {
-	.sectionText {
-		text-align: center;
-		font-size: 17px;
-	}
-	.sectionTextCol {
-		text-align: center;
-		font-size: 17px;
-		columns: 1;
-		-webkit-columns: 1;
-	}
-
-	.sectionTitle {
-		justify-content: center;
-		margin-top: 2rem;
-		font-size: 1.6rem;
-	}
-
-	.price {
-		text-align: center;
-	}
+.imageHover:hover {
+	transform: scale(1.05) rotate(3deg);
+	box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+	filter: brightness(1.1);
 }
 
 .verticalText {
@@ -199,4 +336,31 @@
 	text-orientation: upright;
 	font-size: 1.5rem; /* adjust as needed */
 	margin-right: 1rem; /* spacing between text and image */
+}
+
+.liqueurGrid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 0.75rem;
+	margin-bottom: 1rem;
+}
+
+.liqueurItem {
+	padding: 0.5rem;
+	background: rgba(255, 255, 255, 0.03);
+	border-radius: 8px;
+	border: 1px solid rgba(255, 255, 255, 0.05);
+	transition: all 0.3s ease;
+}
+
+.liqueurItem:hover {
+	background: rgba(255, 255, 255, 0.05);
+	transform: translateY(-2px);
+	border-color: rgba(255, 255, 255, 0.1);
+}
+
+.liqueurItem .itemLabel {
+	font-size: 1rem;
+	text-align: center;
+	display: block;
 }

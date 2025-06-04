@@ -4,6 +4,7 @@ import { FC } from "react";
 import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
 import { jinbochoMetadata } from "@/lib/metadata/jinbocho";
+
 const config = {
 	liqueurs: ["ジン", "ウォッカ", "ピーチ", "マリブ", "グリーンバナナ", "カルーア", "アマレット", "ティフィン", "焼酎（甲類）"],
 	liqueurNote: "※ソフトドリンクからお好きな割り材をお選びください。",
@@ -13,9 +14,9 @@ const config = {
 	},
 	liqueurImage: {
 		src: "/img/jinbocho/drinks.jpeg",
-		alt: "Color Drink",
-		width: 300,
-		height: 300,
+		alt: "Liqueur Selection",
+		width: 400,
+		height: 400,
 	},
 	snacks: [
 		{ name: "ポップコーン", price: "¥500" },
@@ -25,9 +26,9 @@ const config = {
 	],
 	snackImage: {
 		src: "/img/jinbocho/drinksimg.jpg",
-		alt: "Fruit Tea",
-		width: 300,
-		height: 300,
+		alt: "Snacks Selection",
+		width: 400,
+		height: 400,
 	},
 };
 
@@ -35,85 +36,60 @@ export const metadata = jinbochoMetadata;
 
 const Homepage: FC = () => {
 	return (
-		<div className="fade-in">
-			<div className={styles.spacer}></div>
-
+		<div className={styles.pageContainer}>
 			<Header title="神保町ホロホロシーシャ" page="homepage" pageName="jinbocho" />
+			<div style={{ height: "140px" }}></div>
 
-			<div id="liqueur-beer" className={`${styles.container} container`}>
-				<div className=" pb-3">
-					<div className={`${styles.drinkCard} w-100 pt-3`}>
-						<div className="d-block d-lg-flex justify-content-center">
-							{/* Image Section */}
-							<div className="mx-lg-5">
-								<div className={styles.customImageContainer}>
-									<div className={styles.greenBorderStack}></div>
-									<div className={styles.stackedContainer}>
-										<Image src={config.liqueurImage.src} alt={config.liqueurImage.alt} width={config.liqueurImage.width} height={config.liqueurImage.height} className={`${styles.drinkImage} ${styles.imageHover}`} />
-									</div>
-								</div>
+			<div className={styles.menuContainer}>
+				{/* Liqueur and Beer Section */}
+				<div className={styles.menuSection}>
+					<div className={styles.menuContent}>
+						<div className={styles.customImageContainer}>
+							<div className={styles.greenBorderStack}></div>
+							<div className={styles.stackedContainer}>
+								<Image src={config.liqueurImage.src} alt={config.liqueurImage.alt} width={config.liqueurImage.width} height={config.liqueurImage.height} className={styles.drinkImage} />
 							</div>
-
-							{/* Text Section */}
-							<div className="mx-lg-5">
-								<div className="row">
-									<div className="col-12">
-										<div className={styles.sectionTitle}>Liqueur</div>
-										<ul className={`${styles.sectionTextCol} list-unstyled mb-0`}>
-											{config.liqueurs.map((item, index) => (
-												<li key={index}>
-													<strong>{item}</strong>
-												</li>
-											))}
-										</ul>
+						</div>
+						<div className={styles.menuItems}>
+							<h2 className={styles.sectionTitle}>Liqueur</h2>
+							<div className={styles.menuList}>
+								{config.liqueurs.map((item, index) => (
+									<div key={index} className={styles.menuItem}>
+										<span className={styles.itemLabel}>{item}</span>
 									</div>
-								</div>
-								<div className="d-flex justify-content-center w-100">
-									<p style={{ maxWidth: "400px" }} className={`${styles.sectionText} mt-4 text-center`}>
-										{config.liqueurNote}
-									</p>
-								</div>
+								))}
+							</div>
+							<div className={styles.menuNote}>{config.liqueurNote}</div>
 
-								<div className={styles.sectionTitle}>Beer</div>
-								<p className={`${styles.sectionText} mt-4 text-md-start text-center`}>
-									<strong>{config.beer.name} </strong> <span className="separator"></span> {config.beer.price}
-								</p>
+							<h2 className={`${styles.sectionTitle} mt-5`}>Beer</h2>
+							<div className={styles.menuItem}>
+								<span className={styles.itemLabel}>{config.beer.name}</span>
+								<span className={styles.itemPrice}>{config.beer.price}</span>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
 
-			<div className="section-divider mt-4 mt-lg-5"></div>
+				<div className="section-divider my-4"></div>
 
-			<div id="snacks" className={`${styles.container} container mt-4 mb-3 mt-lg-5`}>
-				<div className="pb-3">
-					<div className={`${styles.drinkCard} w-100 pt-3`}>
-						<div className="d-block d-lg-flex justify-content-center">
-							{/* Snacks Image */}
-							<div className=" order-lg-2 mx-lg-5">
-								<div className={styles.customImageContainer}>
-									<div className={styles.greenBorderStack}></div>
-									<div className={styles.stackedContainer}>
-										<Image src={config.snackImage.src} alt={config.snackImage.alt} width={config.snackImage.width} height={config.snackImage.height} className={`${styles.drinkImage} ${styles.imageHover}`} />
-									</div>
-								</div>
+				{/* Snacks Section */}
+				<div className={styles.menuSection}>
+					<div className={`${styles.menuContent} ${styles.reverse}`}>
+						<div className={styles.customImageContainer}>
+							<div className={styles.greenBorderStack}></div>
+							<div className={styles.stackedContainer}>
+								<Image src={config.snackImage.src} alt={config.snackImage.alt} width={config.snackImage.width} height={config.snackImage.height} className={styles.drinkImage} />
 							</div>
-
-							{/* Snacks Text */}
-							<div className=" order-lg-1 mx-lg-5 d-flex justify-content-center justify-content-md-end align-items-center">
-								<div>
-									<div className={`${styles.sectionTitle} justify-content-center justify-content-md-end`}>Snacks</div>
-									<div className={styles.sectionText}>
-										<div className="text-center text-md-end mb-5">
-											{config.snacks.map((snack, index) => (
-												<p key={index}>
-													{snack.name} <span className="separator"></span> {snack.price}
-												</p>
-											))}
-										</div>
+						</div>
+						<div className={styles.menuItems}>
+							<h2 className={styles.sectionTitle}>Snacks</h2>
+							<div className={`${styles.menuList} ${styles.singleColumn}`}>
+								{config.snacks.map((snack, index) => (
+									<div key={index} className={styles.menuItem}>
+										<span className={styles.itemLabel}>{snack.name}</span>
+										<span className={styles.itemPrice}>{snack.price}</span>
 									</div>
-								</div>
+								))}
 							</div>
 						</div>
 					</div>
