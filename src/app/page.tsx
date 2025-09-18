@@ -37,7 +37,7 @@ const shops = [
 		title: "上野・御徒町 シーシャバー",
 		subtitle: "Asile Smoke",
 		img: "/img/asile.jpg",
-		url: "https://www.asilesmokes.com/",
+		url: "https://asilesmokes.com/",
 		buttonClass: styles.btnShop3,
 		external: true,
 		location: {
