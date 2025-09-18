@@ -12,7 +12,7 @@ const config: SystemConfig = {
 			height: 300,
 		},
 		items: [
-			{ label: "シーシャ", price: "¥2,200" },
+			{ label: "シーシャ", price: "¥2,100" },
 			{ label: "ドリンク", price: "¥500〜" },
 			{ label: "チャージ", price: "¥700" },
 			{ label: "シェア", price: "¥1,000" },
